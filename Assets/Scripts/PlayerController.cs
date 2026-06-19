@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,9 @@ public class PlayerController : MonoBehaviour
 
     
     private Rigidbody2D _rb;
+    private Animator _animator;
+    [SerializeField]
+    private ParticleSystem _dustParticles;
     [Tooltip("What is considered ground for grounded checks")]
     [SerializeField]
     private LayerMask _floorMask;
@@ -129,6 +133,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _moveAction.performed += OnMove;
         _moveAction.canceled += StopMovement;
@@ -141,6 +146,8 @@ public class PlayerController : MonoBehaviour
         _jumpRequested = 0;
         _dashCooldownTimer = 0;
         _dashDurationTimer = 0;
+        _dustParticles.Pause();
+        _lookingRight = false;
     }
 
     private void HandleRideHeight()
@@ -230,9 +237,11 @@ public class PlayerController : MonoBehaviour
         }
 
         _hasLanded = !_wasGrounded && grounded;
+
         _wasGrounded = grounded;
         if (_hasLanded && !_isJumping)
         {
+            _animator.SetTrigger("Landed");
             _numberOfJumps = 0;
             _mayJump = 0;
         }
@@ -255,6 +264,34 @@ public class PlayerController : MonoBehaviour
             _jumpRequested += Time.fixedDeltaTime;
             _mayJump += Time.fixedDeltaTime;
         }
+    }
+
+    private void HandleAnimations()
+    {
+        _animator.SetBool("Walking", _isWalking);
+
+        if (_lookingRight && _move < 0 || !_lookingRight && _move > 0)
+        {
+            FlipCharacter();
+            if (Grounded())
+                _dustParticles.Play();
+        }
+            
+            
+    }
+
+    void FlipCharacter()
+    {
+        if (_lookingRight)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            _lookingRight = false;
+        } else
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+            _lookingRight = true;
+        }
+
     }
 
     void OnMove(InputAction.CallbackContext context)
@@ -291,7 +328,8 @@ public class PlayerController : MonoBehaviour
     {
        
         if (_dashCooldownTimer > _dashCooldown)
-        {               
+        {   
+            _animator.SetTrigger("Dashed");
             //add force in the direction we're going
             _rb.AddForceX(_dashForce * _move, ForceMode2D.Impulse);
             //reset vertical velocity
@@ -305,7 +343,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-         
+        _animator.SetTrigger("Jumped");
         _rb.AddForceY(_jumpForce * (_numberOfJumps > 0? _additionalJumpsMultiplier : 1), ForceMode2D.Impulse);
         _isJumping = true;
         Debug.Log("Jumps: " + _numberOfJumps);
@@ -330,6 +368,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        HandleAnimations();
+
         if (_isStopped)
         {
             _rb.linearVelocity = Vector2.zero;
