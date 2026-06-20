@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class WheelSpinning : MonoBehaviour
 {
 
+    private Animator _animator;
     private bool _isSpinning = false;
     [SerializeField]
     private float _spinSpeed;
@@ -34,6 +35,7 @@ public class WheelSpinning : MonoBehaviour
         _isSpinning = false;
         _rewardNumber = -1;
         Spin();
+        _animator = GetComponent<Animator>();
 
         //add some randomness
         _spinSpeed = Random.Range(_spinSpeed-_spinSpeedRandomness, _spinSpeed+_spinSpeedRandomness);
@@ -70,6 +72,7 @@ public class WheelSpinning : MonoBehaviour
         else if (_rewardNumber != -1)
         {
             Debug.Log("Reward given!");
+            _animator.SetTrigger("Exit");
             _rewards[_rewardNumber].Execute();
             _rewardNumber = -1;
         }
