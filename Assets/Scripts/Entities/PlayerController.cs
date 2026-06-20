@@ -136,13 +136,11 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
-        _moveAction.performed += OnMove;
-        _moveAction.canceled += StopMovement;
+
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
-        _jumpAction.performed += OnJump;
-        _jumpAction.canceled += OnJumpRelease;
+        
         _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
-        _dashAction.performed += OnDash;
+        
         _numberOfJumps = 0;
         _jumpRequested = 0;
         _dashCooldownTimer = 0;
@@ -392,14 +390,35 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        _moveAction.Enable();
-        _jumpAction.Enable();
+        _moveAction.performed += OnMove;
+        _moveAction.canceled += StopMovement;
+
+        _jumpAction.performed += OnJump;
+        _jumpAction.canceled += OnJumpRelease;
+
+        _dashAction.performed += OnDash;
+
+        _moveAction?.Enable();
+        _jumpAction?.Enable();
+        _dashAction?.Enable();
     }
 
     private void OnDisable()
     {
         _moveAction.Disable();
         _jumpAction.Disable();
+        _dashAction.Disable();
+    }
+
+    private void OnDestroy()
+    {
+        _moveAction.performed -= OnMove;
+        _moveAction.canceled -= StopMovement;
+
+        _jumpAction.performed -= OnJump;
+        _jumpAction.canceled -= OnJumpRelease;
+
+        _dashAction.performed -= OnDash;
     }
 
     void OnDrawGizmos()
