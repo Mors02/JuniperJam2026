@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5077436801140871343}
   - component: {fileID: 6631422898162231678}
   - component: {fileID: 6676589175641477251}
+  - component: {fileID: 2601935508210363800}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,6 +253,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2601935508210363800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612126018321344961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
+  _animator: {fileID: 6676589175641477251}
+  _lives: 3
+  _canTakeDamage: 0
+  _invicibilityTime: 2
+  OnHitReceived:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2083603171620641557
 GameObject:
   m_ObjectHideFlags: 0

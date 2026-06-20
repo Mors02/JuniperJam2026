@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("What is considered ground for grounded checks")]
     [SerializeField]
     private LayerMask _floorMask;
+    private ContactFilter2D _contactFilter;
 
     #region Input actions
     [SerializeField]
@@ -147,19 +148,26 @@ public class PlayerController : MonoBehaviour
         _dashCooldownTimer = 0;
         _dashDurationTimer = 0;
         _dustParticles.Pause();
+        _contactFilter = new ContactFilter2D
+        {
+            useTriggers = false,
+            useLayerMask = true
+        };
+        _contactFilter.SetLayerMask(_floorMask);
     }
 
     private void HandleRideHeight()
     {
-        RaycastHit2D rayHit = Physics2D.Raycast(this.transform.position, -this.transform.up, _rayLength, _floorMask);
+        RaycastHit2D[] hits = new RaycastHit2D[1]; 
+        int howManyHits = Physics2D.Raycast(this.transform.position, -this.transform.up, _contactFilter, hits, _rayLength);
 
-        if (rayHit)
+        if (howManyHits > 0)
         {
             Vector2 vel = _rb.linearVelocity;
             Vector2 rayDir = transform.TransformDirection(new Vector2(0, -1));
 
             Vector2 otherVel = Vector3.zero;
-            Rigidbody2D hitBody = rayHit.rigidbody;
+            Rigidbody2D hitBody = hits[0].rigidbody;
 
             if (hitBody != null)
             {
@@ -171,14 +179,14 @@ public class PlayerController : MonoBehaviour
 
             float relVel = rayDirVel - otherDirVel;
 
-            float x = rayHit.distance - _rideHeight;
+            float x = hits[0].distance - _rideHeight;
             float springForce = (x * _rideSpringForceStrength) - (relVel * _rideSpringDamper);
 
             _rb.AddForce(rayDir * springForce);
 
             if (hitBody != null)
             {
-                hitBody.AddForceAtPosition(rayDir * -springForce, rayHit.point);
+                hitBody.AddForceAtPosition(rayDir * -springForce, hits[0].point);
             }
         }
     }
@@ -302,7 +310,8 @@ public class PlayerController : MonoBehaviour
         }
 
         _move = context.ReadValue<Vector2>().x;
-        _isWalking = true;
+        if (_move != 0)
+            _isWalking = true;
     }
 
     void StopMovement(InputAction.CallbackContext context)
