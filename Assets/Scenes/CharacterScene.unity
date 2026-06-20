@@ -731,6 +731,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea501b790c9d617448ad382cff1ed5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spikes
+--- !u!1 &791505485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 612126018321344961, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+  m_PrefabInstance: {fileID: 2923993718328312501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &791505492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6857651498396704654, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+  m_PrefabInstance: {fileID: 2923993718328312501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &858555867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1543,72 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1558691660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558691661}
+  - component: {fileID: 1558691662}
+  m_Layer: 6
+  m_Name: AbilityLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558691661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558691660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 791505492}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558691662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558691660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd15b4f54c169c24c80ffd316fc0d759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.ParasiteBehaviour.ParasiteBehaviourLibrary
+  abilityOwner: {fileID: 791505485}
+  abilityShelfs:
+  - tag: Non Interrupt
+    parasiteBHolders:
+    - name: Fireball
+      parasiteBehaviour:
+        rid: 2533004779431133334
+    - name: Stasis
+      parasiteBehaviour:
+        rid: 2533004779431133346
+  parasiteSOHolders: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2533004779431133334
+      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
+    - rid: 2533004779431133346
+      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
 --- !u!1 &1580990837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2168,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5077436801140871343, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+      propertyPath: testAbility
+      value: Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077436801140871343, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+      propertyPath: abilityLibrary
+      value: 
+      objectReference: {fileID: 1558691662}
     - target: {fileID: 5454628764811485191, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2146,7 +2230,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6857651498396704654, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1558691661}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
 --- !u!1660057539 &9223372036854775807
