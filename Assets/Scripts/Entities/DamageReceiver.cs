@@ -10,6 +10,7 @@ public class DamageReceiver : MonoBehaviour
     
     [SerializeField]
     private int _lives;
+    public int Lives => _lives;
     private int _currentLives;
 
     [SerializeField]
@@ -23,7 +24,7 @@ public class DamageReceiver : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _currentLives = _lives;
+        _currentLives = GameManager.Instance.CurrentLives;
         if (OnHitReceived == null)
             OnHitReceived = new UnityEvent<int>();
     }
@@ -35,6 +36,7 @@ public class DamageReceiver : MonoBehaviour
 
         _animator.SetTrigger("Hit");
         this._currentLives--;
+        UpdateGameManager();
        
         OnHitReceived.Invoke(_currentLives);
         _canTakeDamage = false;
@@ -48,6 +50,8 @@ public class DamageReceiver : MonoBehaviour
     public void Heal()
     {
         this._currentLives++;
+        UpdateGameManager();
+
         OnHitReceived.Invoke(_currentLives);
 
         if (_currentLives >= _lives)
@@ -61,5 +65,10 @@ public class DamageReceiver : MonoBehaviour
         _animator.SetBool("Invincible", false);
     }
 
+
+    private void UpdateGameManager()
+    {
+        GameManager.Instance.CurrentLives = _currentLives;
+    }
 
 }
