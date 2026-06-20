@@ -147,7 +147,6 @@ public class PlayerController : MonoBehaviour
         _dashCooldownTimer = 0;
         _dashDurationTimer = 0;
         _dustParticles.Pause();
-        _lookingRight = false;
     }
 
     private void HandleRideHeight()
@@ -284,11 +283,11 @@ public class PlayerController : MonoBehaviour
     {
         if (_lookingRight)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 180, 0);
             _lookingRight = false;
         } else
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
             _lookingRight = true;
         }
 
@@ -316,7 +315,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Grounded() || (_mayJump < _coyoteTime && !_isJumping) || _numberOfJumps < _totalJumps)
         {
-            Debug.Log("Jumps: " + _numberOfJumps + " Grounded: " + Grounded() + " Coyote: " + (_mayJump < _coyoteTime && !_isJumping) + " jumps: " + (_numberOfJumps < _totalJumps));
            Jump();
         } else
         {

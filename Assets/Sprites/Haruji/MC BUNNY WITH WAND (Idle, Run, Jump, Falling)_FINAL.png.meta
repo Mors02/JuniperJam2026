@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 0c5d88fe42c87fc4b982d452f54ac47c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4420211392207304954
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_0
+  - first:
+      213: -6463545608116494387
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_1
+  - first:
+      213: -1905173014878090423
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_2
+  - first:
+      213: 8465812461292354120
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_3
+  - first:
+      213: -455928842401714762
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_4
+  - first:
+      213: -8385819354947449904
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_5
+  - first:
+      213: 815458199679498618
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_6
+  - first:
+      213: -2496285480714031
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_7
+  - first:
+      213: -5851928397270075181
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_8
+  - first:
+      213: 4229729038308890501
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_9
+  - first:
+      213: -8820306658965137635
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_10
+  - first:
+      213: 9005937541289555172
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_11
+  - first:
+      213: -7842818973347680248
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_12
+  - first:
+      213: 4540863700176780612
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_13
+  - first:
+      213: -1002456913193700597
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_14
+  - first:
+      213: 2854492388825426437
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_15
+  - first:
+      213: -7521491078449296908
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_16
+  - first:
+      213: 8113493411400390290
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_17
+  - first:
+      213: -4248363907159618697
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_18
+  - first:
+      213: 4805910962357783501
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_19
+  - first:
+      213: -2227921442246084417
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_20
+  - first:
+      213: -674977922274319647
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_21
+  - first:
+      213: -6894363422881542207
+    second: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8b6a887deb75d30800000000000000
+      internalID: 4420211392207304954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf1ea6c38fdc46a0800000000000000
+      internalID: -6463545608116494387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b088cac377f85e0800000000000000
+      internalID: -1905173014878090423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84af76a649b9c7570800000000000000
+      internalID: 8465812461292354120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd6ac922273ca9f0800000000000000
+      internalID: -455928842401714762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db03c50ab59f9b80800000000000000
+      internalID: -8385819354947449904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79731189e6115b00800000000000000
+      internalID: 815458199679498618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d00aae34a127fff0800000000000000
+      internalID: -2496285480714031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_8
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d832b5a026c9cea0800000000000000
+      internalID: -5851928397270075181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_9
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5875e88762403ba30800000000000000
+      internalID: 4229729038308890501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_10
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 2
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17de5e53d9f79580800000000000000
+      internalID: -8820306658965137635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_11
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e43be17a748bfc70800000000000000
+      internalID: 9005937541289555172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_12
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 0
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800faef52b5b82390800000000000000
+      internalID: -7842818973347680248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44db08e0a73640f30800000000000000
+      internalID: 4540863700176780612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 0
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03747aafbe8612f0800000000000000
+      internalID: -1002456913193700597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_15
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50aeef134b13d9720800000000000000
+      internalID: 2854492388825426437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_16
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 5
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f982c7f6bb4e9790800000000000000
+      internalID: -7521491078449296908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_17
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 9
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2961ef1454be89070800000000000000
+      internalID: 8113493411400390290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_18
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 5
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b09250987ca05c0800000000000000
+      internalID: -4248363907159618697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_19
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 2
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbcd75be8602b240800000000000000
+      internalID: 4805910962357783501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_20
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 0
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb832779045d411e0800000000000000
+      internalID: -2227921442246084417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_21
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 0
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2ab97e72ff1a6f0800000000000000
+      internalID: -674977922274319647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_22
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 0
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf03baaefc4250a0800000000000000
+      internalID: -6894363422881542207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_0: 4420211392207304954
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_1: -6463545608116494387
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_10: -8820306658965137635
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_11: 9005937541289555172
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_12: -7842818973347680248
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_13: 4540863700176780612
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_14: -1002456913193700597
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_15: 2854492388825426437
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_16: -7521491078449296908
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_17: 8113493411400390290
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_18: -4248363907159618697
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_19: 4805910962357783501
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_2: -1905173014878090423
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_20: -2227921442246084417
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_21: -674977922274319647
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_22: -6894363422881542207
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_3: 8465812461292354120
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_4: -455928842401714762
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_5: -8385819354947449904
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_6: 815458199679498618
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_7: -2496285480714031
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_8: -5851928397270075181
+      MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_9: 4229729038308890501
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
