@@ -348,6 +348,8 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        if(_numberOfJumps > 0)
+            _rb.linearVelocityY = 0;
         _animator.SetTrigger("Jumped");
         _rb.AddForceY(_jumpForce * (_numberOfJumps > 0? _additionalJumpsMultiplier : 1), ForceMode2D.Impulse);
         _isJumping = true;
