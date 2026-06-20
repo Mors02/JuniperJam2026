@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
     private bool _wasGrounded;
     private bool Grounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, _rideHeight, _floorMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, _rideHeight + .05f, _floorMask);
         if (hit)
         {   
             return true;
@@ -396,7 +396,9 @@ public class PlayerController : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, -transform.up * _rayLength);
+        Gizmos.DrawRay(transform.position, -transform.up * _rideHeight);
+
+        Gizmos.DrawSphere(transform.position - (transform.up * _rideHeight), 0.05f);
     }
 
 
