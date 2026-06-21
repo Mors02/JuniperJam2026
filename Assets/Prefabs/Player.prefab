@@ -192,7 +192,7 @@ MonoBehaviour:
   _dashDuration: 0.2
   _canMoveDuringDash: 1
   abilityLibrary: {fileID: 4318134865794734330}
-  testAbility: Fireball
+  testAbility: Stasis
   _isWalking: 0
   _isJumping: 0
   _hasLanded: 0

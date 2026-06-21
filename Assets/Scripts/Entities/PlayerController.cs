@@ -126,8 +126,10 @@ public class PlayerController : MonoBehaviour
     private bool _wasGrounded;
     private bool Grounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, _rideHeight + .05f, _floorMask);
-        if (hit)
+        RaycastHit2D[] hits = new RaycastHit2D[1]; 
+        int howManyHits = Physics2D.Raycast(this.transform.position, -this.transform.up, _contactFilter, hits, _rideHeight + .05f);
+        
+        if (howManyHits > 0)
         {   
             return true;
         }            
@@ -358,7 +360,6 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger("Jumped");
         _rb.AddForceY(_jumpForce * (_numberOfJumps > 0? _additionalJumpsMultiplier : 1), ForceMode2D.Impulse);
         _isJumping = true;
-        Debug.Log("Jumps: " + _numberOfJumps);
         _numberOfJumps++;
     }
 

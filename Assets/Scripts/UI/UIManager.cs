@@ -1,8 +1,12 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     PlayerController _playerController;
+    [SerializeField]
+    WinconUI _winconUI;
     DamageReceiver _playerDamage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,14 +19,18 @@ public class UIManager : MonoBehaviour
         _playerDamage.OnHitReceived.AddListener(UpdateLifeUI);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateLifeUI(int _currentLives)
     {
         Debug.Log("Now has " + _currentLives);
+    }
+
+    public void UpdateWinConUI(string progressText, bool completed)
+    {
+        _winconUI.UpdateWinConUI(progressText, completed);
+    }
+
+    public void UpdateWinConDescriptionUI(WinCon winCon)
+    {
+        _winconUI.UpdateWinConDescriptionUI(winCon);
     }
 }

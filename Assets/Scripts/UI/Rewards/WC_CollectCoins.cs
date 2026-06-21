@@ -5,6 +5,6 @@ public class WC_CollectCoins : WheelReward
 {   
     public override void Execute()
     {
-        Debug.Log("Changes the gameObject boolean to check the correct win con");
+        GameManager.Instance.SetCurrentWinCondition(WinConType.CollectCoins, this);
     }
 }

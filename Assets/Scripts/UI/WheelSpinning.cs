@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class WheelSpinning : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class WheelSpinning : MonoBehaviour
     [Range(0.5f, 4f)]
     [SerializeField]
     private float _fastToSlowValue;
+
+    [SerializeField]
+    private TMP_Text _announcementText;
 
     [SerializeField]
     private List<WheelReward> _rewards;
@@ -71,8 +75,9 @@ public class WheelSpinning : MonoBehaviour
         } 
         else if (_rewardNumber != -1)
         {
-            Debug.Log("Reward given!");
+
             _animator.SetTrigger("Exit");
+            _announcementText.text = _rewards[_rewardNumber].Name;
             _rewards[_rewardNumber].Execute();
             _rewardNumber = -1;
         }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Curtains
+  - Coin
+  - Canvas
   layers:
   - Default
   - TransparentFX
