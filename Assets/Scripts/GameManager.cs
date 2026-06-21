@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 
 public class GameManager
@@ -37,6 +36,8 @@ public class GameManager
 
     public SurviveManager SurviveManager;
 
+    public RingLeaderBehaviour RingLeader;
+
     /// <summary>
     /// Change current wincondition
     /// </summary>
@@ -68,12 +69,12 @@ public class GameManager
                 //activate stealth mode for every enemy which visualizes the line sight cone
                 break;
             case WinConType.RingLeader:
-                //activate the gameobject that shoots projectiles
+                CurrentWinCon = new RingLeaderWinCon(reward.Description);
                 break;
             case WinConType.Survive:
 
-                CurrentWinCon = new SurviveWinCon(20f, reward.Description);
-                SurviveManager.Activate();
+                CurrentWinCon = new SurviveWinCon(4f, reward.Description);
+                
                 //activate the gameobject that shoots projectiles
                 //the gameobject should contain a update function that calls WinconUpdate every frame
                 break;
@@ -109,5 +110,25 @@ public class GameManager
         _instance.TotalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         _instance.UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
         _instance.SurviveManager = GameObject.FindGameObjectWithTag("Survive").GetComponent<SurviveManager>();
+        _instance.RingLeader = GameObject.FindGameObjectWithTag("RingLeader").GetComponent<RingLeaderBehaviour>();
+    }
+
+    /// <summary>
+    /// If the WinCon has an activation, activate it
+    /// </summary>
+    public void ActivateWinConAnimation()
+    {
+        Debug.Log("Current" + CurrentWinCon.Type);
+        switch(CurrentWinCon.Type)
+        {
+            case WinConType.RingLeader:
+                RingLeader.Activate();
+                break;
+            case WinConType.Survive:
+                SurviveManager.Activate();
+                break;
+            default:
+                break;
+        }
     }
 }

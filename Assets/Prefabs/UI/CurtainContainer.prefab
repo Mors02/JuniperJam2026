@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938966850301388493}
   - component: {fileID: 4919626769334091073}
+  - component: {fileID: 3850154475850974602}
   m_Layer: 5
   m_Name: CurtainContainer
   m_TagString: Curtains
@@ -135,6 +136,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3850154475850974602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356770639258983703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570f3c53e7929974badb96156ed55fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Curtains
 --- !u!1 &7196491514578591455
 GameObject:
   m_ObjectHideFlags: 0

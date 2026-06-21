@@ -6,7 +6,7 @@ public abstract class WinCon
 {   
 
     public UnityEvent<string, bool> OnWinConUpdate;
-    public WinConType WinConType;
+    public WinConType Type;
 
     /// <summary>
     /// Check if the wincon is completed
@@ -42,7 +42,7 @@ public abstract class WinCon
 
     public WinCon(WinConType type, string description)
     {
-        this.WinConType = type;
+        this.Type = type;
         this._description = description;
         OnWinConUpdate = new UnityEvent<string, bool>();
     }

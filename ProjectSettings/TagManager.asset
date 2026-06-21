@@ -9,6 +9,7 @@ TagManager:
   - Canvas
   - Survive
   - Enemy
+  - RingLeader
   layers:
   - Default
   - TransparentFX

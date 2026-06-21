@@ -141,9 +141,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: 715a82350f4e76a4195c8d20b3f45779, type: 2}
   - {fileID: 11400000, guid: efb138ae181c5bd46a96b47da950d77e, type: 2}
-  - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
-  - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
-  - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
+  - {fileID: 11400000, guid: 84bb9920fa2ff9f4a90e016607e9eae5, type: 2}
 --- !u!95 &5573714864588900165
 Animator:
   serializedVersion: 7

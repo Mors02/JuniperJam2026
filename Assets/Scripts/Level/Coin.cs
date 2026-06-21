@@ -53,7 +53,7 @@ public class Coin : MonoBehaviour
         if (collision.CompareTag("Player") && collision is BoxCollider2D)
         {
             this._active = false;
-            if (GameManager.Instance.CurrentWinCon.WinConType == WinConType.CollectCoins)
+            if (GameManager.Instance.CurrentWinCon.Type == WinConType.CollectCoins)
                 GameManager.Instance.CurrentWinCon.UpdateWinCon();
 
             GameManager.Instance.CollectedCoins++;
