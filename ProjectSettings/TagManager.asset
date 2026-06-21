@@ -7,6 +7,8 @@ TagManager:
   - Curtains
   - Coin
   - Canvas
+  - Survive
+  - Enemy
   layers:
   - Default
   - TransparentFX

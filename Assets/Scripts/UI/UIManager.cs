@@ -7,6 +7,12 @@ public class UIManager : MonoBehaviour
     PlayerController _playerController;
     [SerializeField]
     WinconUI _winconUI;
+    [SerializeField]
+    WheelSpinning _wheelSpinning;
+
+    [SerializeField]
+    Animator _curtainAnimator;
+
     DamageReceiver _playerDamage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,5 +38,12 @@ public class UIManager : MonoBehaviour
     public void UpdateWinConDescriptionUI(WinCon winCon)
     {
         _winconUI.UpdateWinConDescriptionUI(winCon);
+    }
+
+    public void OpenCurtains()
+    {
+        _curtainAnimator.SetTrigger("Open");
+        _winconUI.Enter();
+        _playerController.StartCharacter();
     }
 }

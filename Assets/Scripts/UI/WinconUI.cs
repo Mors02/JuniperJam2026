@@ -14,6 +14,11 @@ public class WinconUI : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    public void Enter()
+    {
+        _animator.SetTrigger("Enter");
+    }
+
     
     public void UpdateWinConUI(string progressText, bool completed)
     {
@@ -26,7 +31,6 @@ public class WinconUI : MonoBehaviour
     public void UpdateWinConDescriptionUI(WinCon winCon)
     {
         _winConDescriptionText.text = winCon.Description;
-        winCon.UpdateUI();
-        _animator.SetTrigger("Enter");
+        winCon.UpdateUI();        
     }
 }

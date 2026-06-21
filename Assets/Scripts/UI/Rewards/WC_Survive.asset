@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fde2ca3fc699e348aabbe86cae2eb44, type: 3}
-  m_Name: WC_CollectCoins
-  m_EditorClassIdentifier: Assembly-CSharp::WC_CollectCoins
-  Name: Collect
-  Description: Collect all the coins
+  m_Script: {fileID: 11500000, guid: 8a013c352ddc8384cae870a191dc58b1, type: 3}
+  m_Name: WC_Survive
+  m_EditorClassIdentifier: Assembly-CSharp::WC_Survive
+  Name: Survive
+  Description: Survive the gauntlet

@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886e59d2480fc0244aee0e7cd5949a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  _spriteRenderer: {fileID: 9068347947298672269}
   _dustParticles: {fileID: 2145920982505208989}
   _floorMask:
     serializedVersion: 2

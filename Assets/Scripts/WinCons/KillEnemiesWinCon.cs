@@ -1,19 +1,15 @@
-using System;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class CollectCoinWinCon : WinCon
+public class KillEnemiesWinCon : WinCon
 {
-    public CollectCoinWinCon(int coins, int alreadyCollected, string description) : base(WinConType.CollectCoins, description)
+    public KillEnemiesWinCon(int enemies, int alreadyKilled, string description) : base(WinConType.KillEnemies, description)
     {
-        this._totalNumber = coins;
-        this._numberLeft = alreadyCollected;
+        _numberLeft = alreadyKilled;
+        _totalNumber = enemies;
     }
 
     public override bool CheckWinCon()
     {
-        
         if (_numberLeft >= _totalNumber)
             return true;
         return false;

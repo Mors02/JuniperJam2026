@@ -6,6 +6,8 @@ using TMPro;
 public class WheelSpinning : MonoBehaviour
 {
 
+    [SerializeField]
+    private UIManager _uiManager;
     private Animator _animator;
     private bool _isSpinning = false;
     [SerializeField]
@@ -87,5 +89,10 @@ public class WheelSpinning : MonoBehaviour
     {
         if (!_isSpinning)
             _isSpinning = true;
+    }
+
+    public void OpenCurtains()
+    {
+        _uiManager.OpenCurtains();
     }
 }

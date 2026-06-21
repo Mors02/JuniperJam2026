@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
   _nextLevel: CharacterScene
+  _curtainAnimator: {fileID: 0}
 --- !u!212 &3919510420148216511
 SpriteRenderer:
   serializedVersion: 2
@@ -189,7 +190,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.46710443, y: 0}
+  m_Offset: {x: -0.46710443, y: -0.09771061}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -199,7 +200,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.06579113, y: 1}
+  m_Size: {x: 0.06579113, y: 0.8045788}
   m_EdgeRadius: 0
 --- !u!61 &2835479702892797450
 BoxCollider2D:
@@ -281,7 +282,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.4709103, y: 0}
+  m_Offset: {x: 0.4709103, y: -0.09196377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -291,5 +292,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.05817938, y: 1}
+  m_Size: {x: 0.05817938, y: 0.81607246}
   m_EdgeRadius: 0

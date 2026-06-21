@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
         _collider.enabled = false;
         _nextJumpIn = Random.Range(_minimumJumpTime, _maximumJumpTime);
         _active = false;
+        Spawn();
     }
     // Update is called once per frame
     void Update()
@@ -52,7 +53,11 @@ public class Coin : MonoBehaviour
         if (collision.CompareTag("Player") && collision is BoxCollider2D)
         {
             this._active = false;
-            GameManager.Instance.CurrentWinCon.UpdateWinCon();
+            if (GameManager.Instance.CurrentWinCon.WinConType == WinConType.CollectCoins)
+                GameManager.Instance.CurrentWinCon.UpdateWinCon();
+
+            GameManager.Instance.CollectedCoins++;
+            
             _animator.SetTrigger("Collect");
             _collider.enabled = false;
             _active = false;
