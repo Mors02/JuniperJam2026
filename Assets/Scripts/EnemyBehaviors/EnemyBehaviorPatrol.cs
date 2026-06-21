@@ -20,7 +20,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     [Tooltip("The speed at which the enemy moves")]
     [SerializeField]
     private float _moveSpeed = 1f;
-    private bool _facingRight = true;
+    // Direction is determined from transform.localScale.x sign (positive = right, negative = left)
     [Tooltip("The distance to check for ledges (raycast down from this distance in front of the enemy)")]
     [SerializeField]
     private float _ledgeCheckDistance = 0.5f;
@@ -63,7 +63,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     }
 
     private void HandleMovement() {
-        int direction = _facingRight ? 1 : -1;
+        int direction = transform.localScale.x >= 0f ? 1 : -1;
         // Check for ledge
         Vector2 ledgeCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * _ledgeCheckDistance;
         Debug.DrawRay(ledgeCheckOrigin, Vector2.down * _ledgeCheckRange, Color.red);
@@ -79,17 +79,18 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         }
 
         // Check for wall
-        Vector2 wallCheckOrigin = (Vector2)_transform.position + Vector2.right * 0.5f;
+        Vector2 wallCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * 0.5f;
         Debug.DrawRay(wallCheckOrigin, Vector2.right * direction * _wallCheckDistance, Color.blue);
-        RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * transform.localScale.x, _wallCheckDistance, _floorMask);
+        RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * direction, _wallCheckDistance, _floorMask);
         if (wallHit) {
             StartTurning();
             return;
         }
 
         
-        // Move in the current direction
-        _rb.linearVelocity = new Vector2(transform.localScale.x * _moveSpeed * direction, _rb.linearVelocity.y);
+        // Move in the current direction (use sign of localScale.x)
+        float moveDir = Mathf.Sign(transform.localScale.x);
+        _rb.linearVelocity = new Vector2(moveDir * _moveSpeed, _rb.linearVelocity.y);
         print("Moving " + (direction == 1 ? "right" : "left"));
     }
 
@@ -107,9 +108,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     }
 
     private void FinishTurning() {
-        _facingRight = !_facingRight;
+        // Flip facing by inverting localScale.x
+        Vector3 s = transform.localScale;
+        s.x *= -1f;
+        transform.localScale = s;
         _movementState = MovementState.Moving;
-        _spriteRenderer.flipX = !_spriteRenderer.flipX;
     }
 
     private void StartStopping() {
