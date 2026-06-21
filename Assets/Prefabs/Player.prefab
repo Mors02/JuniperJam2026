@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6631422898162231678}
   - component: {fileID: 6676589175641477251}
   - component: {fileID: 2601935508210363800}
+  - component: {fileID: 5316946353275918676}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -37,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 6057162412156148985}
   - {fileID: 4745588277058742581}
+  - {fileID: 4394528090421756502}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3383827292155690880
@@ -189,6 +191,8 @@ MonoBehaviour:
   _dashCooldown: 1
   _dashDuration: 0.2
   _canMoveDuringDash: 1
+  abilityLibrary: {fileID: 4318134865794734330}
+  testAbility: Fireball
   _isWalking: 0
   _isJumping: 0
   _hasLanded: 0
@@ -267,11 +271,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
   _animator: {fileID: 6676589175641477251}
   _lives: 3
-  _canTakeDamage: 0
+  _canTakeDamage: 1
   _invicibilityTime: 2
   OnHitReceived:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5316946353275918676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612126018321344961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f90ce10d98d764d88617fd93336939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlatformMotion2D
 --- !u!1 &2083603171620641557
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,13 +314,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083603171620641557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.17, y: -1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4745588277058742581}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!198 &2145920982505208989
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5175,6 +5191,72 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &3668760938343262797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4394528090421756502}
+  - component: {fileID: 4318134865794734330}
+  m_Layer: 6
+  m_Name: AbilityLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4394528090421756502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668760938343262797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6857651498396704654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4318134865794734330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668760938343262797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd15b4f54c169c24c80ffd316fc0d759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.ParasiteBehaviour.ParasiteBehaviourLibrary
+  abilityOwner: {fileID: 612126018321344961}
+  abilityShelfs:
+  - tag: Non Interrupt
+    parasiteBHolders:
+    - name: Fireball
+      parasiteBehaviour:
+        rid: 2533004779431133334
+    - name: Stasis
+      parasiteBehaviour:
+        rid: 2533004779431133346
+  parasiteSOHolders: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2533004779431133334
+      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
+    - rid: 2533004779431133346
+      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
 --- !u!1 &5454628764811485191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,9 +5336,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4543734044183691412, guid: bf031e7f9513e5a40ab4ad5281b7a8e2, type: 3}
+  m_Sprite: {fileID: -8954229513809968723, guid: bf031e7f9513e5a40ab4ad5281b7a8e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

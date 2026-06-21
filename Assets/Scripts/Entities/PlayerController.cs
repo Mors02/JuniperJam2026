@@ -1,3 +1,4 @@
+using AbyssWorks.ParasiteBehaviour;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -100,6 +101,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool _canMoveDuringDash;
 
+
+    [Header("Ability")]
+    public ParasiteBehaviourLibrary abilityLibrary;
+    public string testAbility;
 
     [Header("Debug")]
     [SerializeField]
@@ -388,6 +393,21 @@ public class PlayerController : MonoBehaviour
             HandleRideHeight();
         HandleMovement();
         HandleVerticalMovement();
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.fKey.wasPressedThisFrame)
+        {
+            if (abilityLibrary)
+            {
+                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
+                if (parasiteBehaviour is Ability ability)
+                {
+                    ability.TryTrigger();
+                }
+            }
+        }
     }
 
     private void OnEnable()
