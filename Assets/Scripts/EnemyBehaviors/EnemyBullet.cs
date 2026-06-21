@@ -69,7 +69,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void HandleLifetime()
     {
-        print("Bullet lifetime timer: " + _lifetimeTimer);
        float deltaTime = Time.fixedDeltaTime;
         _lifetimeTimer += deltaTime;
         if (_lifetimeTimer >= _bulletLifetime)
@@ -81,6 +80,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("Bullet collided with: " + collision.gameObject.name);
         if (!_active)
             return;
         
@@ -90,7 +90,6 @@ public class EnemyBullet : MonoBehaviour
             receiver.ReceiveDamage(); 
         }
         Deactivate();
-        
     }
 }
 
