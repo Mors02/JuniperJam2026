@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a6fc56ecef34140bf4db707984cbba, type: 3}
+  m_Name: TestMusic
+  m_EditorClassIdentifier: 
+  audioEventReference:
+    Guid:
+      Data1: 556103387
+      Data2: 1332309685
+      Data3: 1602377620
+      Data4: 1261351920
+    Path: event:/Music/Gameplay/Idle-Investigation
+  volumeScale: 1
+  pitchScale: 1
+  attenuationMin: 1
+  attenuationMax: 25.7
