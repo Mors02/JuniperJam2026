@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyBehaviorAutoFire : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Animator _animator;
     [SerializeField] private Transform _bulletPoolTransform;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _firePoint;
@@ -17,6 +16,9 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
     public bool CanFire = true;
     public bool FacingRight = true;
     [SerializeField] private float _fireInterval = 1f;
+    [Tooltip("The time it takes for the enemy to wind up before firing (after the fire interval)")]
+    [SerializeField] private float _fireWindupTime = 0.5f;
+    [SerializeField] private float _fireWinddownTime = 0.5f;
 
     [Header("Bullet Parameters")]
     [SerializeField] private float _bulletSpeed = 10f;
@@ -42,19 +44,25 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         switch (_currentState)
         {
             case AutoFireState.Idle:
                 HandleIdle();
                 break;
+            case AutoFireState.Windup:
+                HandleWindup();
+                break;
+            case AutoFireState.Firing:
+                HandleFiring();
+                break;
         }   
     } 
 
     private void HandleIdle()
     {
-        _fireTimer += Time.deltaTime;
+        _fireTimer += Time.fixedDeltaTime;
         if (_fireTimer >= _fireInterval)
         {            
             _fireTimer = 0f;
@@ -65,15 +73,20 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
     private void StartWindup()
     {
         print("Starting windup");
-        _animator.SetTrigger("Fire");
         _currentState = AutoFireState.Windup;
     }
 
-    /// <summary>
-    /// Starts the firing state, which will fire a bullet from the pool.
-    /// This is called by the animation controller when the firing animation reaches the point where the bullet should be fired
-    /// </summary>
-    public void StartFiring()
+    private void HandleWindup()
+    {
+        _fireTimer += Time.fixedDeltaTime;
+        if (_fireTimer >= _fireWindupTime)
+        {
+            _fireTimer = 0f;
+            StartFiring();
+        }
+    }
+
+    private void StartFiring()
     {
         print("Starting firing");
         _currentState = AutoFireState.Firing;
@@ -83,7 +96,6 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
             print("Firing bullet from pool");
             Vector2 fireDirection = FacingRight ? Vector2.right : Vector2.left;
             bullet.Initialize(_bulletSpeed, _bulletDamage, _bulletLifetime, _bulletPoolTransform);
-            bullet.transform.position = _firePoint.position;
             bullet.Fire(fireDirection);
         }
         else
@@ -92,19 +104,21 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Starts the idle state, which will wait for the fire interval before transitioning to the windup state and firing a bullet. 
-    /// This is called by the animation controller when the firing animation completes.
-    /// </summary>
-    public void StartIdle()
+    private void HandleFiring()
+    {
+        _fireTimer += Time.fixedDeltaTime;
+        if (_fireTimer >= _fireWinddownTime)
+        {
+            _fireTimer = 0f;
+            StartIdle();
+        }
+    }
+
+    private void StartIdle()
     {
         _currentState = AutoFireState.Idle;
     }
 
-    /// <summary>
-    /// Returns an inactive bullet from the pool if available, otherwise adds a new bullet to the pool and returns it. This ensures that we always have a bullet to fire, but also allows for dynamic pool expansion if necessary. In practice, you may want to set an upper limit on pool size to prevent excessive memory usage.
-    /// </summary>
-    /// <returns></returns>
     private EnemyBullet FindInactiveBullet()
     {
         for(int i = 0; i < _poolSize; i++)
@@ -119,10 +133,6 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
         return AddPoolBullet();
     }
 
-    /// <summary>
-    /// Adds a new bullet to the pool and returns it. This is called when all bullets in the pool are active and we need to fire another one. In practice, you may want to set an upper limit on pool size to prevent excessive memory usage.
-    /// </summary>
-    /// <returns></returns>
     private EnemyBullet AddPoolBullet()
     {
         GameObject bullet = Instantiate(_bulletPrefab, _bulletPoolTransform);
