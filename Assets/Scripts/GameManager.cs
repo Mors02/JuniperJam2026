@@ -73,7 +73,7 @@ public class GameManager
                 break;
             case WinConType.Survive:
 
-                CurrentWinCon = new SurviveWinCon(4f, reward.Description);
+                CurrentWinCon = new SurviveWinCon(60f, reward.Description);
                 
                 //activate the gameobject that shoots projectiles
                 //the gameobject should contain a update function that calls WinconUpdate every frame

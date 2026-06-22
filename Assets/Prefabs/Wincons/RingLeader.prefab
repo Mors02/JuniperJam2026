@@ -141,7 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RingLeaderBehaviour
   _transform: {fileID: 7840253299774584018}
   _damageCollider: {fileID: 8105161231368099949}
-  _movementSpeed: 4
+  _movementYSpeed: 4
+  _movementXSpeed: 8
   _attackCooldown: 3
   _X: 14
   _animator: {fileID: 2561659514518496318}

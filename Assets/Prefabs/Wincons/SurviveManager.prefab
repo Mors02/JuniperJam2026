@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 301417316621711437}
   - component: {fileID: 273525155779633335}
-  - component: {fileID: 7023160111188929434}
   m_Layer: 0
   m_Name: SurviveManager
   m_TagString: Survive
@@ -45,25 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dd2aa51586cf24ba0173091690c605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SurviveManager
---- !u!95 &7023160111188929434
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561356698576243450}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1fac544b52ff9634ead9cc58056706e9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  _attackCooldown: 3
+  _maxProjectilesOnScreen: 6
+  _projectilePrefab: {fileID: 6581438471673636739, guid: 6d6381fcdff9f964895b7a78160d5c36, type: 3}

@@ -12,7 +12,9 @@ public class RingLeaderBehaviour : MonoBehaviour
     private Transform _player;
 
     [SerializeField]
-    private float _movementSpeed;
+    private float _movementYSpeed;
+    [SerializeField]
+    private float _movementXSpeed;
 
     [SerializeField]
     private float _attackCooldown;
@@ -37,7 +39,7 @@ public class RingLeaderBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (_active)
         {
@@ -45,8 +47,9 @@ public class RingLeaderBehaviour : MonoBehaviour
            
             if (!_attacking)
             {
-                float targetY = Mathf.Lerp(transform.position.y, _player.position.y, _movementSpeed * Time.deltaTime);
-                transform.position = new Vector2(transform.parent.position.x + _X, targetY);    
+                float targetY = Mathf.Lerp(transform.position.y, _player.position.y, _movementYSpeed * Time.fixedDeltaTime);
+                float targetX = Mathf.Lerp(transform.position.x, Camera.main.transform.position.x + _X, _movementXSpeed  * Time.fixedDeltaTime);
+                transform.position = new Vector2(targetX, targetY);    
             }
             
 
