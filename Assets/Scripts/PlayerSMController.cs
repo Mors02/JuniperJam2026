@@ -1,4 +1,5 @@
 using AbyssWorks.AnimatorSignal;
+using AbyssWorks.ParasiteBehaviour;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -68,6 +69,11 @@ public class PlayerSMController : MonoBehaviour
     [SerializeField] private Vector2 _groundedSize = Vector2.one;
     [SerializeField] private LayerMask _floorMask;
 
+    [Header("Ability")]
+    public ParasiteBehaviourLibrary abilityLibrary;
+    public string dashAbName;
+    public string testAbility;
+
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
 
@@ -96,6 +102,9 @@ public class PlayerSMController : MonoBehaviour
     private InputAction _dashAction;
     #endregion
 
+    private Ability _dashAbility;
+    private Ability _ability;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -104,8 +113,12 @@ public class PlayerSMController : MonoBehaviour
 
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
+        _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
+
         _jumpAction.performed += OnJump;
         _jumpAction.canceled += OnJumpRelease;
+
+        _dashAction.performed += OnDash;
 
         _animationSubscriber.SubscribeAction("PlayerLand", () =>
         {
@@ -117,6 +130,8 @@ public class PlayerSMController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _dashAbility = abilityLibrary.GetAnyParasiteB(dashAbName) as Ability;
+
         ExecuteState(StateExecutionType.Enter);
     }
 
@@ -130,6 +145,18 @@ public class PlayerSMController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.fKey.wasPressedThisFrame)
+        {
+            if (abilityLibrary)
+            {
+                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
+                if (parasiteBehaviour is Ability ability)
+                {
+                    ability.TryTrigger();
+                }
+            }
+        }
+
         if (_moveAction != null) _move = _moveAction.ReadValue<Vector2>().x;
 
         ExecuteState(StateExecutionType.Update);
@@ -154,6 +181,15 @@ public class PlayerSMController : MonoBehaviour
 
         if (!_isGrounded && !_isInstantJump && _currentState == PlayerState.Jump) 
             _rb.AddForceY(-_downwardForce, ForceMode2D.Impulse);
+    }
+
+    private void OnDash(InputAction.CallbackContext context)
+    {
+        if (_currentState != PlayerState.Special)
+        {
+            _ability = _dashAbility;
+            SwitchState(PlayerState.Special);
+        }
     }
 
     private void HandleMovement()
@@ -427,6 +463,37 @@ public class PlayerSMController : MonoBehaviour
 
     void SpecialState(StateExecutionType stateExecutionType)
     {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    _ability.TryTrigger();
+                    break;
+                }
+            case StateExecutionType.Update:
+                {
+                    if (!_ability.IsExecuting())
+                    {
+                        if (_isGrounded) SwitchState(PlayerState.Idle);
+                        else SwitchState(PlayerState.Fall);
+                        break;
+                    }
+
+                    break;
+                }
+            case StateExecutionType.Exit:
+                {
+                    if (_ability.IsExecuting())
+                    {
+                        _ability.CancelExecution();
+                    }
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     void DamagedState(StateExecutionType stateExecutionType)
