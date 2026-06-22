@@ -87,15 +87,14 @@ public class PlayerSMController : MonoBehaviour
     private bool _isGrounded;
     private float _numberOfJumps;
     private float _mayJump;
+    private bool _isInstantJump = false;
+    private bool _hasJumpForce = false;
 
     #region Input actions
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _dashAction;
     #endregion
-
-    bool _isInstantJump = false;
-    bool _hasJumpForce = false;
 
     private void Awake()
     {
@@ -336,6 +335,13 @@ public class PlayerSMController : MonoBehaviour
                 }
             case StateExecutionType.Update:
                 {
+                    if (HeadHit())
+                    {
+                        _rb.linearVelocityY = 0;
+                        SwitchState(PlayerState.Fall);
+                        break;
+                    }
+
                     if (!_hasJumpForce)
                     {
                         _rb.linearVelocityY = 0;
@@ -432,6 +438,13 @@ public class PlayerSMController : MonoBehaviour
 
     }
 
+    private bool HeadHit()
+    {
+        if (!_headCheck) return false;
+
+        return Physics2D.OverlapCircle(_headCheck.position, _headCheckRadius, 0, headMask);
+    }
+
     private bool Grounded()
     {
         if (!_groundCheck) return false;
@@ -446,6 +459,11 @@ public class PlayerSMController : MonoBehaviour
             if (_isGrounded) Gizmos.color = Color.green;
             else Gizmos.color = Color.yellow;
             Gizmos.DrawWireCube(_groundCheck.position, _groundedSize);
+        }
+
+        if (_headCheck)
+        {
+            Gizmos.DrawWireSphere(_headCheck.position, _headCheckRadius);
         }
     }
 }

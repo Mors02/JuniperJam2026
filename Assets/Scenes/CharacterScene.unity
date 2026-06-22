@@ -395,6 +395,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &332858610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332858611}
+  m_Layer: 6
+  m_Name: HeadCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &332858611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332858610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: -0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8428970702171270560}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &649882851
 GameObject:
   m_ObjectHideFlags: 0
@@ -7332,7 +7363,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570509594528504815}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -7532,6 +7563,7 @@ Transform:
   - {fileID: 7640720571664407323}
   - {fileID: 1670410528014151800}
   - {fileID: 2040458901}
+  - {fileID: 332858611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8609475106527224493
@@ -7659,11 +7691,11 @@ MonoBehaviour:
   jumpAnim: Player_jump
   fallAnim: Player_falling
   landAnim: Player_land
-  _headCheck: {fileID: 0}
+  _headCheck: {fileID: 332858611}
   _headCheckRadius: 0.1
   headMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   _groundCheck: {fileID: 2040458901}
   _groundedSize: {x: 0.73, y: 0.25}
   _floorMask:
