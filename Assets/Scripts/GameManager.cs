@@ -38,6 +38,8 @@ public class GameManager
 
     public RingLeaderBehaviour RingLeader;
 
+    public LavaFloorBehaviour LavaFloor;
+
     /// <summary>
     /// Change current wincondition
     /// </summary>
@@ -63,7 +65,7 @@ public class GameManager
                 CurrentWinCon = new KillEnemiesWinCon(TotalEnemies, KilledEnemies, reward.Description);
                 break;
             case WinConType.FloorIsLava:
-                //activate the gameobject that contains the lava floor
+                CurrentWinCon = new LavaFloorWinCon(reward.Description);
                 break;
             case WinConType.Stealth:
                 //activate stealth mode for every enemy which visualizes the line sight cone
@@ -126,6 +128,9 @@ public class GameManager
                 break;
             case WinConType.Survive:
                 SurviveManager.Activate();
+                break;
+            case WinConType.FloorIsLava:
+                LavaFloor.Activate();
                 break;
             default:
                 break;
