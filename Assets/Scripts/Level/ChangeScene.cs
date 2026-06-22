@@ -17,10 +17,12 @@ public class ChangeScene : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        
+        if (collision.CompareTag("Player") && GameManager.Instance.Won())
         {
-            //collision.GetComponent<PlayerController>().StopCharacter();
+            collision.GetComponent<PlayerController>().Hide();
             StartCoroutine(ChangeSceneRoutine());
+            
             if (_curtainAnimator)
                 _curtainAnimator.SetTrigger("Exit");
         }
