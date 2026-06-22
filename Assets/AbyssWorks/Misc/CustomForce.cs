@@ -17,29 +17,29 @@ namespace AbyssWorks.Misc
         public float staticGravity = -2f;
         public float maxTerminalVelocity = -40f;
 
-        private Vector3 _velocity = Vector3.zero;
+        public Vector3 velocity = Vector3.zero;
         private Vector3 accumulatedForces = Vector3.zero;
 
-        public Vector3 Velocity => _velocity;
+        public Vector3 Velocity => velocity;
 
         public void SimulateForces(bool isGrounded)
         {
             // Gravity
-            if (isGrounded && _velocity.y < 0)
+            if (isGrounded && velocity.y < 0)
             {
-                _velocity.y = staticGravity * gravityScale;
+                velocity.y = staticGravity * gravityScale;
                 ApplyFriction();
             }
             else
             {
-                if (_velocity.y > maxTerminalVelocity)
-                    _velocity.y += gravity * gravityScale * Time.deltaTime;
+                if (velocity.y > maxTerminalVelocity)
+                    velocity.y += gravity * gravityScale * Time.deltaTime;
 
                 ApplyDrag();
             }
 
             // Apply accumulated forces
-            _velocity += accumulatedForces * Time.deltaTime;
+            velocity += accumulatedForces * Time.deltaTime;
 
             // Clear forces after applying
             accumulatedForces = Vector3.zero;
@@ -57,10 +57,10 @@ namespace AbyssWorks.Misc
                     accumulatedForces += force;
                     break;
                 case ForceMode.Impulse:
-                    _velocity += force / mass;
+                    velocity += force / mass;
                     break;
                 case ForceMode.VelocityChange:
-                    _velocity += force;
+                    velocity += force;
                     break;
                 default:
                     break;
@@ -100,24 +100,24 @@ namespace AbyssWorks.Misc
             AddForce(force, forceMode);
         }
 
-        public void ResetForces() { _velocity = Vector3.zero; accumulatedForces = Vector3.zero; }
+        public void ResetForces() { velocity = Vector3.zero; accumulatedForces = Vector3.zero; }
 
         private void ApplyFriction()
         {
-            _velocity.x -= _velocity.x * groundFriction * Time.deltaTime;
-            _velocity.z -= _velocity.z * groundFriction * Time.deltaTime;
+            velocity.x -= velocity.x * groundFriction * Time.deltaTime;
+            velocity.z -= velocity.z * groundFriction * Time.deltaTime;
 
-            if (Mathf.Abs(_velocity.x) < 0.01f) _velocity.x = 0;
-            if (Mathf.Abs(_velocity.z) < 0.01f) _velocity.z = 0;
+            if (Mathf.Abs(velocity.x) < 0.01f) velocity.x = 0;
+            if (Mathf.Abs(velocity.z) < 0.01f) velocity.z = 0;
         }
 
         private void ApplyDrag()
         {
-            _velocity.x -= _velocity.x * airDrag * Time.deltaTime;
-            _velocity.z -= _velocity.z * airDrag * Time.deltaTime;
+            velocity.x -= velocity.x * airDrag * Time.deltaTime;
+            velocity.z -= velocity.z * airDrag * Time.deltaTime;
 
-            if (Mathf.Abs(_velocity.x) < 0.01f) _velocity.x = 0;
-            if (Mathf.Abs(_velocity.z) < 0.01f) _velocity.z = 0;
+            if (Mathf.Abs(velocity.x) < 0.01f) velocity.x = 0;
+            if (Mathf.Abs(velocity.z) < 0.01f) velocity.z = 0;
         }
     }
 }

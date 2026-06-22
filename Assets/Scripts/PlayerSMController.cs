@@ -1,3 +1,4 @@
+using AbyssWorks.AnimatorSignal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,6 +24,7 @@ public class PlayerSMController : MonoBehaviour
         Run,
         Jump,
         Fall,
+        Land,
         Special,
         Death,
         Damaged
@@ -44,12 +46,17 @@ public class PlayerSMController : MonoBehaviour
     [Tooltip("The force of the jump")]
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _downwardForce;
+    [Tooltip("How many jumps (also considering the first jump from the ground)")]
+    [SerializeField] private float _totalJumps;
+    [Tooltip("How much time for the player to jump after leaving and hedge")]
+    [SerializeField] private float _coyoteTime;
 
     [Header("Animation")]
     [SerializeField] private string idleAnim;
     [SerializeField] private string runAnim;
     [SerializeField] private string jumpAnim;
     [SerializeField] private string fallAnim;
+    [SerializeField] private string landAnim;
 
     [Header("Head Check")]
     [SerializeField] private Transform _headCheck;
@@ -68,12 +75,18 @@ public class PlayerSMController : MonoBehaviour
     public PlayerState debugState;
 
     private PlayerState _currentState = PlayerState.Idle;
+
+    #region Private Components
     private Rigidbody2D _rb;
     private Animator _animator;
+    private AnimationSubscriber _animationSubscriber;
+    #endregion
 
     private Vector2 _currentMovement;
     private float _move;
     private bool _isGrounded;
+    private float _numberOfJumps;
+    private float _mayJump;
 
     #region Input actions
     private InputAction _moveAction;
@@ -81,15 +94,25 @@ public class PlayerSMController : MonoBehaviour
     private InputAction _dashAction;
     #endregion
 
+    bool _isInstantJump = false;
+    bool _hasJumpForce = false;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _animationSubscriber = GetComponent<AnimationSubscriber>();
         _rb = GetComponent<Rigidbody2D>();
 
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
         _jumpAction.performed += OnJump;
         _jumpAction.canceled += OnJumpRelease;
+
+        _animationSubscriber.SubscribeAction("PlayerLand", () =>
+        {
+            SwitchState(PlayerState.Idle);
+        });
+        _animationSubscriber.SubscribeAction("Jump", Jump);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -117,15 +140,21 @@ public class PlayerSMController : MonoBehaviour
 
     void OnJump(InputAction.CallbackContext context)
     {
+        bool coyoteCheck = _mayJump < _coyoteTime || _numberOfJumps != 0;
+        if (_numberOfJumps <= _totalJumps && coyoteCheck) 
+            SwitchState(PlayerState.Jump, true);
         //if (Grounded())
         //{
-        if (_isGrounded) Jump();
+        
         //}
     }
 
     private void OnJumpRelease(InputAction.CallbackContext context)
     {
-        if (!_isGrounded) _rb.AddForceY(-_downwardForce, ForceMode2D.Impulse);
+        if (!_hasJumpForce) return;
+
+        if (!_isGrounded && !_isInstantJump && _currentState == PlayerState.Jump) 
+            _rb.AddForceY(-_downwardForce, ForceMode2D.Impulse);
     }
 
     private void HandleMovement()
@@ -153,11 +182,11 @@ public class PlayerSMController : MonoBehaviour
 
     void FlipCharacter()
     {
-        if (_move <= 0)
+        if (_move < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        else
+        else if (_move > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
@@ -165,7 +194,15 @@ public class PlayerSMController : MonoBehaviour
 
     void Jump()
     {
+        _hasJumpForce = true;
+
+        _rb.linearVelocityY = 0;
+
+        _isInstantJump = !_isGrounded;
+
         _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+
+        _numberOfJumps++;
     }
 
     void ExecuteState(StateExecutionType stateExecutionType)
@@ -183,6 +220,9 @@ public class PlayerSMController : MonoBehaviour
                 break;
             case PlayerState.Fall:
                 FallState(stateExecutionType);
+                break;
+            case PlayerState.Land:
+                LandState(stateExecutionType);
                 break;
             case PlayerState.Special:
                 SpecialState(stateExecutionType);
@@ -224,7 +264,16 @@ public class PlayerSMController : MonoBehaviour
                         break;
                     }
 
-                    HandleMovement();
+                    if (!_isGrounded)
+                    {
+                        SwitchState(PlayerState.Fall);
+                        break;
+                    }
+                    break;
+                }
+            case StateExecutionType.FixedUpdate:
+                {
+                    _rb.linearVelocityX = 0;
                     break;
                 }
             default:
@@ -256,6 +305,12 @@ public class PlayerSMController : MonoBehaviour
                         break;
                     }
 
+                    if (!_isGrounded)
+                    {
+                        SwitchState(PlayerState.Fall);
+                        break;
+                    }
+
                     HandleMovement();
                     FlipCharacter();
                     break;
@@ -269,10 +324,99 @@ public class PlayerSMController : MonoBehaviour
 
     void JumpState(StateExecutionType stateExecutionType)
     {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    _hasJumpForce = false;
+                    if (_animator) _animator.Play(jumpAnim);
+
+                    //Jump();
+                    break;
+                }
+            case StateExecutionType.Update:
+                {
+                    if (!_hasJumpForce)
+                    {
+                        _rb.linearVelocityY = 0;
+                    }
+                    else if (_hasJumpForce && _rb.linearVelocityY < 0)
+                    {
+                        SwitchState(PlayerState.Fall);
+                        break;
+                    }
+
+                    HandleMovement();
+                    FlipCharacter();
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     void FallState(StateExecutionType stateExecutionType)
     {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    if (_animator) _animator.Play(fallAnim);
+                    break;
+                }
+            case StateExecutionType.Update:
+                {
+                    if (_isGrounded)
+                    {
+                        SwitchState(PlayerState.Land);
+                        break;
+                    }
+
+                    HandleMovement();
+                    FlipCharacter();
+                    break;
+                }
+            case StateExecutionType.FixedUpdate:
+                {
+                    _mayJump += Time.fixedDeltaTime;
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+    }
+
+    void LandState(StateExecutionType stateExecutionType)
+    {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    _numberOfJumps = 0;
+                    _mayJump = 0;
+
+                    if (_animator) _animator.Play(landAnim);
+                    break;
+                }
+            case StateExecutionType.Update:
+                {
+                    if (_move != 0)
+                    {
+                        SwitchState(PlayerState.Run);
+                        break;
+                    }
+
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     void SpecialState(StateExecutionType stateExecutionType)

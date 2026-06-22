@@ -2075,13 +2075,13 @@ Rigidbody2D:
   m_GameObject: {fileID: 2570509594528504815}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_GravityScale: 6
+  m_Material: {fileID: 6200000, guid: 1a0087ba2a99e9a429203f73958f6ed5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2205,9 +2205,10 @@ GameObject:
   - component: {fileID: 6694371127486046718}
   - component: {fileID: 8634938118422813520}
   - component: {fileID: 8609475106527224493}
+  - component: {fileID: 8634938118422813522}
+  - component: {fileID: 8634938118422813521}
   - component: {fileID: 1137461317260615606}
   - component: {fileID: 7069361739549797242}
-  - component: {fileID: 8634938118422813521}
   m_Layer: 6
   m_Name: PlayerSM
   m_TagString: Player
@@ -7358,7 +7359,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.17, y: -0.65}
+  m_Offset: {x: 0.12, y: -0.65}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7368,7 +7369,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.84746504, y: 0.8147789}
+  m_Size: {x: 0.9, y: 0.8147789}
   m_EdgeRadius: 0
 --- !u!1 &6848851614695693273
 GameObject:
@@ -7649,12 +7650,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _jumpForce: 10
+  _jumpForce: 20
   _downwardForce: 6
+  _totalJumps: 1
+  _coyoteTime: 0.1
   idleAnim: Player_idle
   runAnim: Player_walking
-  jumpAnim: 
-  fallAnim: 
+  jumpAnim: Player_jump
+  fallAnim: Player_falling
+  landAnim: Player_land
   _headCheck: {fileID: 0}
   _headCheckRadius: 0.1
   headMask:
@@ -7667,6 +7671,18 @@ MonoBehaviour:
     m_Bits: 55
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   debugState: 0
+--- !u!114 &8634938118422813522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570509594528504815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5b621d150f9b246a1f45613d00b8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.AnimatorSignal.AnimationSubscriber
 --- !u!4 &9213696998591557335
 Transform:
   m_ObjectHideFlags: 0
