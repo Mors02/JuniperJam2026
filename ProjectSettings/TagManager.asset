@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Curtains
+  - Coin
+  - Canvas
+  - Survive
+  - Enemy
+  - RingLeader
   layers:
   - Default
   - TransparentFX
