@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
-    
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rb;
     private Animator _animator;
     [SerializeField]
@@ -126,8 +127,10 @@ public class PlayerController : MonoBehaviour
     private bool _wasGrounded;
     private bool Grounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, _rideHeight + .05f, _floorMask);
-        if (hit)
+        RaycastHit2D[] hits = new RaycastHit2D[1]; 
+        int howManyHits = Physics2D.Raycast(this.transform.position, -this.transform.up, _contactFilter, hits, _rideHeight + .05f);
+        
+        if (howManyHits > 0)
         {   
             return true;
         }            
@@ -141,13 +144,11 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
-        _moveAction.performed += OnMove;
-        _moveAction.canceled += StopMovement;
+
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
-        _jumpAction.performed += OnJump;
-        _jumpAction.canceled += OnJumpRelease;
+        
         _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
-        _dashAction.performed += OnDash;
+        
         _numberOfJumps = 0;
         _jumpRequested = 0;
         _dashCooldownTimer = 0;
@@ -159,6 +160,8 @@ public class PlayerController : MonoBehaviour
             useLayerMask = true
         };
         _contactFilter.SetLayerMask(_floorMask);
+
+        this.StopCharacter();
     }
 
     private void HandleRideHeight()
@@ -241,18 +244,23 @@ public class PlayerController : MonoBehaviour
     {   
         bool grounded = Grounded();
         //if we reached the peak of the jump
-        if (_isJumping && _rb.linearVelocityY < 0)
+        if (_rb.linearVelocityY < 0 && !grounded)
         {
-            //start descending
-            ApplyDownForce();
-            //_isJumping = false;
+            if (_isJumping)
+            {
+                //start descending
+                ApplyDownForce();
+                //_isJumping = false;
+            }   
+            _animator.SetBool("Falling", true);
         }
 
         _hasLanded = !_wasGrounded && grounded;
-
         _wasGrounded = grounded;
+
         if (_hasLanded && !_isJumping)
         {
+            Debug.Log(_hasLanded);
             _animator.SetTrigger("Landed");
             _numberOfJumps = 0;
             _mayJump = 0;
@@ -260,6 +268,7 @@ public class PlayerController : MonoBehaviour
 
         if (grounded)
         {
+            _animator.SetBool("Falling", false);
             //if we inputted before the timer
             if (_jumpRequested < _inputBufferTime)
             {
@@ -329,6 +338,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Grounded() || (_mayJump < _coyoteTime && !_isJumping) || _numberOfJumps < _totalJumps)
         {
+            
            Jump();
         } else
         {
@@ -355,10 +365,14 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        _animator.ResetTrigger("Landed");
+        _animator.SetBool("Falling", false);
+        
+        if(_numberOfJumps > 0)
+            _rb.linearVelocityY = 0;
         _animator.SetTrigger("Jumped");
         _rb.AddForceY(_jumpForce * (_numberOfJumps > 0? _additionalJumpsMultiplier : 1), ForceMode2D.Impulse);
         _isJumping = true;
-        Debug.Log("Jumps: " + _numberOfJumps);
         _numberOfJumps++;
     }
 
@@ -412,14 +426,35 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        _moveAction.Enable();
-        _jumpAction.Enable();
+        _moveAction.performed += OnMove;
+        _moveAction.canceled += StopMovement;
+
+        _jumpAction.performed += OnJump;
+        _jumpAction.canceled += OnJumpRelease;
+
+        _dashAction.performed += OnDash;
+
+        _moveAction?.Enable();
+        _jumpAction?.Enable();
+        _dashAction?.Enable();
     }
 
     private void OnDisable()
     {
         _moveAction.Disable();
         _jumpAction.Disable();
+        _dashAction.Disable();
+    }
+
+    private void OnDestroy()
+    {
+        _moveAction.performed -= OnMove;
+        _moveAction.canceled -= StopMovement;
+
+        _jumpAction.performed -= OnJump;
+        _jumpAction.canceled -= OnJumpRelease;
+
+        _dashAction.performed -= OnDash;
     }
 
     void OnDrawGizmos()
@@ -445,5 +480,10 @@ public class PlayerController : MonoBehaviour
     {
         _rb.linearVelocity = _velocityBeforeStopping;
         _isStopped = false;
+    }
+
+    public void Hide()
+    {
+        _animator.SetTrigger("Hide");
     }
 }
