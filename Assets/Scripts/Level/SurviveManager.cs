@@ -3,11 +3,14 @@ using UnityEngine;
 public class SurviveManager : MonoBehaviour
 {
 
+
     private bool _active;
+    [SerializeField]
+    private float _attackCooldown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
