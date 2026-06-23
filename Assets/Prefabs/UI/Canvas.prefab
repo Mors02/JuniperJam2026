@@ -34,9 +34,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8916334528860007773}
+  - {fileID: 8094703117475083446}
   - {fileID: 3753312552803757589}
   - {fileID: 510766628533324628}
-  - {fileID: 8094703117475083446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1812895471919136558, guid: 2d2068b3d5eb6db4e92427635759624c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c56e5aea5fd25dc4798895666d566f2e, type: 3}
     - target: {fileID: 1909413486778878543, guid: 2d2068b3d5eb6db4e92427635759624c, type: 3}
       propertyPath: m_Name
       value: WheelContainer
@@ -250,10 +254,6 @@ PrefabInstance:
     - target: {fileID: 3042983103216068568, guid: 2d2068b3d5eb6db4e92427635759624c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4580978315505408974, guid: 2d2068b3d5eb6db4e92427635759624c, type: 3}
-      propertyPath: _spinSpeed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4580978315505408974, guid: 2d2068b3d5eb6db4e92427635759624c, type: 3}
       propertyPath: _uiManager
@@ -489,11 +489,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -130.2
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -62.2
+      value: -68.4
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
