@@ -42,7 +42,10 @@ public class LavaFloorBehaviour : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.linearVelocityY = 0;
             rb.AddForceY(_knockbackForce);
-            collision.gameObject.GetComponent<DamageReceiver>().ReceiveDamage();
+            DamageInfo info = new DamageInfo(1, DamageType.Knockback, 1, new Vector2(0, _knockbackForce), false);
+
+
+            collision.gameObject.GetComponent<ITakeDamage>().TakeDamage(info);
         }
     }
 }

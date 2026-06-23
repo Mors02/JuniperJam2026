@@ -41,6 +41,8 @@ public class Balloon : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            DamageInfo info = new DamageInfo(1, DamageType.None);
+            collision.GetComponent<ITakeDamage>().TakeDamage(info);
             Pop();
         }   
     }

@@ -15,12 +15,15 @@ public readonly struct DamageInfo
     public readonly float duration;
     public readonly Vector2 force;
 
-    public DamageInfo(int damage = 0, DamageType damageType = DamageType.None, float duration = 0, Vector2? force = null)
+    public readonly bool preserveVelocity;
+
+    public DamageInfo(int damage = 0, DamageType damageType = DamageType.None, float duration = 0, Vector2? force = null, bool preserveVelocity = true)
     {
         this.damage = damage;
         this.damageType = damageType;
         this.duration = duration;
         this.force = force ?? Vector2.zero;
+        this.preserveVelocity = preserveVelocity;
     }
 }
 

@@ -188,12 +188,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     void OnJump(InputAction.CallbackContext context)
     {
         bool coyoteCheck = _mayJump < _coyoteTime || _numberOfJumps != 0;
-        Debug.Log(_numberOfJumps);
-        Debug.Log(_mayJump + " < " + _coyoteTime);
+
         if (_numberOfJumps <= _totalJumps && coyoteCheck)
         {
             SwitchState(PlayerState.Jump, true);
-            Debug.Log("ChangedSTate");
         }
             
         //if (Grounded())

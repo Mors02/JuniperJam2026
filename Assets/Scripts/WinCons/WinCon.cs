@@ -52,7 +52,7 @@ public enum WinConType
 {
     CollectCoins,
     KillEnemies,
-    Stealth,
+    FireRings,
     Survive,
     RingLeader,
     FloorIsLava
