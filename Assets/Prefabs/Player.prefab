@@ -5218,6 +5218,9 @@ MonoBehaviour:
     - name: Stasis
       parasiteBehaviour:
         rid: 2533004779431133346
+    - name: Wind Push
+      parasiteBehaviour:
+        rid: 2533004851591774277
   parasiteSOHolders: []
   references:
     version: 2
@@ -5240,6 +5243,11 @@ MonoBehaviour:
         _dashForce: 20
         _dashCooldown: 1
         _allowFirst: 1
+    - rid: 2533004851591774277
+      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectileAudio: {fileID: 0}
+        projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}
 --- !u!1 &4554267910812025104
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class NInt_ProjectileAbility : Ability
     {
         base.Trigger();
 
-        if (FMODAudioManager.Instance)
+        if (FMODAudioManager.Instance && projectileAudio)
             FMODAudioManager.Instance.PlayOnce(projectileAudio, null, true);
 
         var projectileObject = UnityEngine.Object.Instantiate(projectilePrefab, transform.position, transform.rotation);

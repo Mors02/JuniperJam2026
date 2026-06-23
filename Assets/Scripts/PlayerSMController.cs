@@ -178,6 +178,15 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
             }
         }
 
+        if (Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
+            if (parasiteBehaviour is Ability ability)
+            {
+                ability.TryTrigger();
+            }
+        }
+
         if (_moveAction != null) _move = _moveAction.ReadValue<Vector2>().x;
 
         ExecuteState(StateExecutionType.Update);

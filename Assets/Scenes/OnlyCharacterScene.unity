@@ -890,6 +890,10 @@ PrefabInstance:
       propertyPath: _wheelSpin
       value: 
       objectReference: {fileID: 1238890870}
+    - target: {fileID: 4112682313320538656, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+      propertyPath: testAbility
+      value: Wind Push
+      objectReference: {fileID: 0}
     - target: {fileID: 6857651498396704654, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
