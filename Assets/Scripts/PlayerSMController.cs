@@ -372,7 +372,7 @@ public class PlayerSMController : MonoBehaviour
             case StateExecutionType.Enter:
                 {
                     _hasJumpForce = false;
-                    if (_animator) _animator.Play(jumpAnim);
+                    if (_animator) _animator.Play(jumpAnim, 0, 0);
 
                     //Jump();
                     break;
