@@ -15,7 +15,8 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
     
     [Header("Firing Parameters")]
     public bool CanFire = true;
-    public bool FacingRight = true;
+    // Facing is determined from transform.localScale.x sign (positive = right, negative = left)
+    public bool FacingRight => transform.localScale.x >= 0f;
     [SerializeField] private float _fireInterval = 1f;
 
     [Header("Bullet Parameters")]

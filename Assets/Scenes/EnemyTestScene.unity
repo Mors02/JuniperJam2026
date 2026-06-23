@@ -1680,6 +1680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2129f689269ce47a50dbd7271307f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  _winconUI: {fileID: 0}
+  _wheelSpinning: {fileID: 0}
+  _curtainAnimator: {fileID: 0}
 --- !u!1 &1686554734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,12 +2027,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bdc69cf3cd87e418df01dace051428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WheelSpinning
+  _uiManager: {fileID: 0}
   _spinSpeed: 6
   _spinSpeedRandomness: 0.794
   _wheelImage: {fileID: 1686554736}
   _fastSpinningFriction: 2.5
   _slowSpinningFriction: 0.5
   _fastToSlowValue: 1
+  _announcementText: {fileID: 0}
   _rewards:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
@@ -2067,6 +2072,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3702562223137352772, guid: a18f060f97b094ff2823143d0215668b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3702562223137352772, guid: a18f060f97b094ff2823143d0215668b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9886098
@@ -2110,6 +2119,10 @@ PrefabInstance:
     - target: {fileID: 5124113435793902681, guid: a18f060f97b094ff2823143d0215668b, type: 3}
       propertyPath: m_Name
       value: Enemy (AutoFire)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212892269555500482, guid: a18f060f97b094ff2823143d0215668b, type: 3}
+      propertyPath: FacingRight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
