@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e0053e0cb4584d40b5e28929711ad0b
+guid: a904a06d1c676aa4eb510d96c6f2ef80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3814578748854144466
-    second: Ticket_Booth_export_0
+      213: 587966667566557989
+    second: Ferris_Wheel_Center_Gear_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ticket_Booth_export_0
+      name: Ferris_Wheel_Center_Gear_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 56
+        x: 148
+        y: 205
+        width: 132
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dd843d592b10f430800000000000000
-      internalID: 3814578748854144466
+      spriteID: 52b2318a190e82800800000000000000
+      internalID: 587966667566557989
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ticket_Booth_export_0: 3814578748854144466
+      Ferris_Wheel_Center_Gear_0: 587966667566557989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

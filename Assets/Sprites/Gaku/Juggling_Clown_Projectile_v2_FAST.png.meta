@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2e0053e0cb4584d40b5e28929711ad0b
+guid: 8b2f59b826bf7a940a2deae1afb1c6e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3814578748854144466
-    second: Ticket_Booth_export_0
+      213: 1403573890907572338
+    second: Juggling_Clown_Projectile_v2_FAST_0
+  - first:
+      213: 4457873766647739395
+    second: Juggling_Clown_Projectile_v2_FAST_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ticket_Booth_export_0
+      name: Juggling_Clown_Projectile_v2_FAST_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 56
+        width: 15
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dd843d592b10f430800000000000000
-      internalID: 3814578748854144466
+      spriteID: 2780f8f640f7a7310800000000000000
+      internalID: 1403573890907572338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_Projectile_v2_FAST_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304329a629c8ddd30800000000000000
+      internalID: 4457873766647739395
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ticket_Booth_export_0: 3814578748854144466
+      Juggling_Clown_Projectile_v2_FAST_0: 1403573890907572338
+      Juggling_Clown_Projectile_v2_FAST_1: 4457873766647739395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

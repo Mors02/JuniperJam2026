@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2e0053e0cb4584d40b5e28929711ad0b
+guid: 4a795a71f8777cf498651f581bb5c74b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3814578748854144466
-    second: Ticket_Booth_export_0
+      213: -7450347130059139560
+    second: Tent-Tilemap_0
+  - first:
+      213: 3327277471507542341
+    second: Tent-Tilemap_1
+  - first:
+      213: -7662859208899437899
+    second: Tent-Tilemap_2
+  - first:
+      213: 4048125285186958786
+    second: Tent-Tilemap_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ticket_Booth_export_0
+      name: Tent-Tilemap_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 64
-        height: 56
+        width: 50
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dd843d592b10f430800000000000000
-      internalID: 3814578748854144466
+      spriteID: 816597342cc0b9890800000000000000
+      internalID: -7450347130059139560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tent-Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541fd5e4b3ddc2e20800000000000000
+      internalID: 3327277471507542341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tent-Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bad7b9262e08a590800000000000000
+      internalID: -7662859208899437899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tent-Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c578ddbf74dd2830800000000000000
+      internalID: 4048125285186958786
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ticket_Booth_export_0: 3814578748854144466
+      Tent-Tilemap_0: -7450347130059139560
+      Tent-Tilemap_1: 3327277471507542341
+      Tent-Tilemap_2: -7662859208899437899
+      Tent-Tilemap_3: 4048125285186958786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

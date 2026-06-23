@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e0053e0cb4584d40b5e28929711ad0b
+guid: 1d8dc05b42370cd4b9b80a4ce001e9b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3814578748854144466
-    second: Ticket_Booth_export_0
+      213: -2113032403962620096
+    second: Gondola_Glass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ticket_Booth_export_0
+      name: Gondola_Glass_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 56
+        y: 7
+        width: 48
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dd843d592b10f430800000000000000
-      internalID: 3814578748854144466
+      spriteID: 0471be259300da2e0800000000000000
+      internalID: -2113032403962620096
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ticket_Booth_export_0: 3814578748854144466
+      Gondola_Glass_0: -2113032403962620096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

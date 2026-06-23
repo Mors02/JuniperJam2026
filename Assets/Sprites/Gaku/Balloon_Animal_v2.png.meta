@@ -1,58 +1,58 @@
 fileFormatVersion: 2
-guid: d14fabb88f35a4c9c9b4eae7007e5f2e
+guid: a363c806eaf3f3542bd80a5ceb1a31db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 579254402139296159
-    second: Balloon_Animal_0
+      213: 7945606715789679204
+    second: Balloon_Animal_v2_0
   - first:
-      213: -30038410228656882
-    second: Balloon_Animal_1
+      213: -3847280610172772555
+    second: Balloon_Animal_v2_1
   - first:
-      213: -6952958832297302724
-    second: Balloon_Animal_2
+      213: -6382746773539966446
+    second: Balloon_Animal_v2_2
   - first:
-      213: -6500931752397842263
-    second: Balloon_Animal_3
+      213: -680774489033483127
+    second: Balloon_Animal_v2_3
   - first:
-      213: -15950012393141265
-    second: Balloon_Animal_4
+      213: -2212853014501280856
+    second: Balloon_Animal_v2_4
   - first:
-      213: 8899871642001197217
-    second: Balloon_Animal_5
+      213: -1328688651275751996
+    second: Balloon_Animal_v2_5
   - first:
-      213: -9205429220143220641
-    second: Balloon_Animal_6
+      213: 7124512874977083405
+    second: Balloon_Animal_v2_6
   - first:
-      213: -1976359873670882902
-    second: Balloon_Animal_7
+      213: -2083614929824545724
+    second: Balloon_Animal_v2_7
   - first:
-      213: 4457641149486691538
-    second: Balloon_Animal_8
+      213: -9182081271514508146
+    second: Balloon_Animal_v2_8
   - first:
-      213: 8799156167223074999
-    second: Balloon_Animal_9
+      213: 2892056569926697022
+    second: Balloon_Animal_v2_9
   - first:
-      213: -8970497549897249587
-    second: Balloon_Animal_10
+      213: -559842141124998092
+    second: Balloon_Animal_v2_10
   - first:
-      213: 7677321800307033740
-    second: Balloon_Animal_11
+      213: -5597016227197868607
+    second: Balloon_Animal_v2_11
   - first:
-      213: -2408346791868850584
-    second: Balloon_Animal_12
+      213: -1582799588462679876
+    second: Balloon_Animal_v2_12
   - first:
-      213: 3946077563401770681
-    second: Balloon_Animal_13
+      213: -1110419485537146570
+    second: Balloon_Animal_v2_13
   - first:
-      213: 4527552429227947637
-    second: Balloon_Animal_14
+      213: 3381621065820852794
+    second: Balloon_Animal_v2_14
   - first:
-      213: 6643288758763791481
-    second: Balloon_Animal_15
+      213: 1020799163425410199
+    second: Balloon_Animal_v2_15
   - first:
-      213: -6311233646251823712
-    second: Balloon_Animal_16
+      213: -3772804274314424489
+    second: Balloon_Animal_v2_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,7 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Balloon_Animal_0
+      name: Balloon_Animal_v2_0
       rect:
         serializedVersion: 2
         x: 2
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f91181a4fcce90800800000000000000
-      internalID: 579254402139296159
+      spriteID: 46a1a9bd537744e60800000000000000
+      internalID: 7945606715789679204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_1
+      name: Balloon_Animal_v2_1
       rect:
         serializedVersion: 2
         x: 22
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0514bc9938459ff0800000000000000
-      internalID: -30038410228656882
+      spriteID: 53f57673ba6bb9ac0800000000000000
+      internalID: -3847280610172772555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_2
+      name: Balloon_Animal_v2_2
       rect:
         serializedVersion: 2
         x: 43
@@ -207,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c352107c7c0228f90800000000000000
-      internalID: -6952958832297302724
+      spriteID: 21231ef60adeb67a0800000000000000
+      internalID: -6382746773539966446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_3
+      name: Balloon_Animal_v2_3
       rect:
         serializedVersion: 2
         x: 66
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a8d44db30d08c5a0800000000000000
-      internalID: -6500931752397842263
+      spriteID: 98cd20985376d86f0800000000000000
+      internalID: -680774489033483127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_4
+      name: Balloon_Animal_v2_4
       rect:
         serializedVersion: 2
         x: 3
@@ -251,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: febc4295c8557cff0800000000000000
-      internalID: -15950012393141265
+      spriteID: 8a3bf7258ed5a41e0800000000000000
+      internalID: -2212853014501280856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_5
+      name: Balloon_Animal_v2_5
       rect:
         serializedVersion: 2
         x: 21
@@ -273,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a8cd08da12b28b70800000000000000
-      internalID: 8899871642001197217
+      spriteID: 4cdad9b16bc8f8de0800000000000000
+      internalID: -1328688651275751996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_6
+      name: Balloon_Animal_v2_6
       rect:
         serializedVersion: 2
         x: 42
@@ -295,14 +295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f58bc5095eebf3080800000000000000
-      internalID: -9205429220143220641
+      spriteID: d00c4b666ba5fd260800000000000000
+      internalID: 7124512874977083405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_7
+      name: Balloon_Animal_v2_7
       rect:
         serializedVersion: 2
         x: 64
@@ -317,14 +317,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa9d2858a2f8294e0800000000000000
-      internalID: -1976359873670882902
+      spriteID: 4448b13c2438513e0800000000000000
+      internalID: -2083614929824545724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_8
+      name: Balloon_Animal_v2_8
       rect:
         serializedVersion: 2
         x: 68
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d471530209bcdd30800000000000000
-      internalID: 4457641149486691538
+      spriteID: e845c987bb1b29080800000000000000
+      internalID: -9182081271514508146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_9
+      name: Balloon_Animal_v2_9
       rect:
         serializedVersion: 2
         x: 76
@@ -361,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b0e4860ae1ec1a70800000000000000
-      internalID: 8799156167223074999
+      spriteID: e30c0d8a026a22820800000000000000
+      internalID: 2892056569926697022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_10
+      name: Balloon_Animal_v2_10
       rect:
         serializedVersion: 2
         x: 66
@@ -383,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dccccdf8104628380800000000000000
-      internalID: -8970497549897249587
+      spriteID: 43c43ffe98a0b38f0800000000000000
+      internalID: -559842141124998092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_11
+      name: Balloon_Animal_v2_11
       rect:
         serializedVersion: 2
         x: 77
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c86c9ad40835b8a60800000000000000
-      internalID: 7677321800307033740
+      spriteID: 1c526c745676352b0800000000000000
+      internalID: -5597016227197868607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_12
+      name: Balloon_Animal_v2_12
       rect:
         serializedVersion: 2
         x: 0
@@ -427,14 +427,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86e94be4a55d39ed0800000000000000
-      internalID: -2408346791868850584
+      spriteID: cb82c0b0924c80ae0800000000000000
+      internalID: -1582799588462679876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_13
+      name: Balloon_Animal_v2_13
       rect:
         serializedVersion: 2
         x: 2
@@ -449,14 +449,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b693bef2a843c630800000000000000
-      internalID: 3946077563401770681
+      spriteID: 639e2e47c5ff690f0800000000000000
+      internalID: -1110419485537146570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_14
+      name: Balloon_Animal_v2_14
       rect:
         serializedVersion: 2
         x: 9
@@ -471,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 576b61642f815de30800000000000000
-      internalID: 4527552429227947637
+      spriteID: a32da39517eedee20800000000000000
+      internalID: 3381621065820852794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_15
+      name: Balloon_Animal_v2_15
       rect:
         serializedVersion: 2
         x: 16
@@ -493,14 +493,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 974267eade3b13c50800000000000000
-      internalID: 6643288758763791481
+      spriteID: 79cccf24e6b9a2e00800000000000000
+      internalID: 1020799163425410199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Balloon_Animal_16
+      name: Balloon_Animal_v2_16
       rect:
         serializedVersion: 2
         x: 16
@@ -515,8 +515,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0adaaa4ef6ef968a0800000000000000
-      internalID: -6311233646251823712
+      spriteID: 75fc96e608e44abc0800000000000000
+      internalID: -3772804274314424489
       vertices: []
       indices: 
       edges: []
@@ -535,23 +535,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Balloon_Animal_0: 579254402139296159
-      Balloon_Animal_1: -30038410228656882
-      Balloon_Animal_10: -8970497549897249587
-      Balloon_Animal_11: 7677321800307033740
-      Balloon_Animal_12: -2408346791868850584
-      Balloon_Animal_13: 3946077563401770681
-      Balloon_Animal_14: 4527552429227947637
-      Balloon_Animal_15: 6643288758763791481
-      Balloon_Animal_16: -6311233646251823712
-      Balloon_Animal_2: -6952958832297302724
-      Balloon_Animal_3: -6500931752397842263
-      Balloon_Animal_4: -15950012393141265
-      Balloon_Animal_5: 8899871642001197217
-      Balloon_Animal_6: -9205429220143220641
-      Balloon_Animal_7: -1976359873670882902
-      Balloon_Animal_8: 4457641149486691538
-      Balloon_Animal_9: 8799156167223074999
+      Balloon_Animal_v2_0: 7945606715789679204
+      Balloon_Animal_v2_1: -3847280610172772555
+      Balloon_Animal_v2_10: -559842141124998092
+      Balloon_Animal_v2_11: -5597016227197868607
+      Balloon_Animal_v2_12: -1582799588462679876
+      Balloon_Animal_v2_13: -1110419485537146570
+      Balloon_Animal_v2_14: 3381621065820852794
+      Balloon_Animal_v2_15: 1020799163425410199
+      Balloon_Animal_v2_16: -3772804274314424489
+      Balloon_Animal_v2_2: -6382746773539966446
+      Balloon_Animal_v2_3: -680774489033483127
+      Balloon_Animal_v2_4: -2212853014501280856
+      Balloon_Animal_v2_5: -1328688651275751996
+      Balloon_Animal_v2_6: 7124512874977083405
+      Balloon_Animal_v2_7: -2083614929824545724
+      Balloon_Animal_v2_8: -9182081271514508146
+      Balloon_Animal_v2_9: 2892056569926697022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
