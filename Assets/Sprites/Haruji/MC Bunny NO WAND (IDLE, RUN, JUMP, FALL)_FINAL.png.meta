@@ -162,6 +162,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -169,12 +182,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 21
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +204,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 35
         y: 0
-        width: 21
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +226,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_2
       rect:
         serializedVersion: 2
-        x: 77
+        x: 70
         y: 0
-        width: 22
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +248,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_3
       rect:
         serializedVersion: 2
-        x: 112
+        x: 105
         y: 0
-        width: 23
-        height: 25
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +270,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_4
       rect:
         serializedVersion: 2
-        x: 147
+        x: 140
         y: 0
-        width: 22
-        height: 25
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +292,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_5
       rect:
         serializedVersion: 2
-        x: 182
+        x: 175
         y: 0
-        width: 22
-        height: 24
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,12 +314,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_6
       rect:
         serializedVersion: 2
-        x: 217
+        x: 210
         y: 0
-        width: 21
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -323,12 +336,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_7
       rect:
         serializedVersion: 2
-        x: 252
+        x: 245
         y: 0
-        width: 21
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -345,12 +358,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_8
       rect:
         serializedVersion: 2
-        x: 319
+        x: 315
         y: 0
-        width: 24
-        height: 27
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,12 +380,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_9
       rect:
         serializedVersion: 2
-        x: 354
-        y: 1
-        width: 25
-        height: 28
+        x: 350
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -389,12 +402,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_10
       rect:
         serializedVersion: 2
-        x: 388
-        y: 3
-        width: 30
-        height: 21
+        x: 385
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -411,12 +424,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_11
       rect:
         serializedVersion: 2
-        x: 426
+        x: 420
         y: 0
-        width: 28
-        height: 23
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -433,12 +446,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_12
       rect:
         serializedVersion: 2
-        x: 463
+        x: 455
         y: 0
-        width: 25
-        height: 24
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -455,12 +468,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_13
       rect:
         serializedVersion: 2
-        x: 495
+        x: 490
         y: 0
-        width: 26
-        height: 22
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -477,12 +490,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_14
       rect:
         serializedVersion: 2
-        x: 564
+        x: 560
         y: 0
-        width: 23
-        height: 28
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -499,12 +512,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_15
       rect:
         serializedVersion: 2
-        x: 599
-        y: 1
-        width: 26
-        height: 28
+        x: 595
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -521,12 +534,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_16
       rect:
         serializedVersion: 2
-        x: 633
-        y: 5
-        width: 31
-        height: 24
+        x: 630
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -543,12 +556,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_17
       rect:
         serializedVersion: 2
-        x: 668
-        y: 9
-        width: 31
-        height: 21
+        x: 665
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -565,12 +578,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_18
       rect:
         serializedVersion: 2
-        x: 703
-        y: 7
-        width: 31
-        height: 19
+        x: 700
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -587,12 +600,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_19
       rect:
         serializedVersion: 2
-        x: 773
-        y: 3
-        width: 30
-        height: 21
+        x: 770
+        y: 0
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -609,12 +622,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_20
       rect:
         serializedVersion: 2
-        x: 811
+        x: 805
         y: 0
-        width: 28
-        height: 23
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -631,12 +644,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_21
       rect:
         serializedVersion: 2
-        x: 848
+        x: 840
         y: 0
-        width: 25
-        height: 24
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -653,12 +666,12 @@ TextureImporter:
       name: MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_22
       rect:
         serializedVersion: 2
-        x: 880
+        x: 875
         y: 0
-        width: 26
-        height: 22
+        width: 35
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -675,7 +688,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d6e97f47b54df45e18363e710b67c62a
     internalID: 0
     vertices: []
     indices: 
@@ -683,7 +696,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":26.0,"y":1.0},"gridSpriteSize":{"x":35.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_0: -4543734044183691412
       MC Bunny NO WAND (IDLE, RUN, JUMP, FALL)_FINAL_1: -8513055563198276762
