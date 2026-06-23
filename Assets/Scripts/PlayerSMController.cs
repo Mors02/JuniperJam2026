@@ -1,6 +1,7 @@
 using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -81,6 +82,7 @@ public class PlayerSMController : MonoBehaviour
 
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
+    [SerializeField] private UIAbilityWheelSpin _wheelSpin;
 
     [Header("Debug")]
     public PlayerState debugState;
@@ -110,6 +112,8 @@ public class PlayerSMController : MonoBehaviour
     private Ability _dashAbility;
     private Ability _ability;
 
+    [NonSerialized] public string wheelAbilityName;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -130,6 +134,11 @@ public class PlayerSMController : MonoBehaviour
             SwitchState(PlayerState.Idle);
         });
         _animationSubscriber.SubscribeAction("Jump", Jump);
+
+        _wheelSpin.onSpinEnd += (string abilityName) =>
+        {
+            wheelAbilityName = abilityName;
+        };
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -152,12 +161,15 @@ public class PlayerSMController : MonoBehaviour
     {
         if (Keyboard.current.fKey.wasPressedThisFrame)
         {
-            if (abilityLibrary)
+            if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
             {
-                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
+                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(wheelAbilityName);
                 if (parasiteBehaviour is Ability ability)
                 {
                     ability.TryTrigger();
+
+                    wheelAbilityName = null;
+                    _wheelSpin.Spin();
                 }
             }
         }

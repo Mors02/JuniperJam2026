@@ -1,8 +1,10 @@
+using AbyssWorks.FMODAudioManager;
 using UnityEngine;
 
 [System.Serializable]
 public class NInt_ProjectileAbility : Ability
 {
+    public FMODAudioScriptable projectileAudio;
     public GameObject projectilePrefab;
     
     private Transform transform;
@@ -22,6 +24,9 @@ public class NInt_ProjectileAbility : Ability
     public override void Trigger()
     {
         base.Trigger();
+
+        if (FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(projectileAudio, null, true);
 
         var projectileObject = UnityEngine.Object.Instantiate(projectilePrefab, transform.position, transform.rotation);
 

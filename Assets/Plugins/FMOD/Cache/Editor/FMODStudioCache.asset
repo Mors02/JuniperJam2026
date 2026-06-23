@@ -27,6 +27,102 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 826
+--- !u!114 &-6414029219202903555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Takes Damage
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Takes Damage
+  Guid:
+    Data1: -28114234
+    Data2: 1190326636
+    Data3: 1515686844
+    Data4: 1298559779
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 866
+--- !u!114 &-5883130895943993804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MUSIC.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/StreamingAssets/MUSIC.bank
+  Name: MUSIC
+  StudioPath: bank:/MUSIC
+  lastModified: 639177696456875308
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4527463236880877817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Abilities/Stasis
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Abilities/Stasis
+  Guid:
+    Data1: -1055722056
+    Data2: 1230562545
+    Data3: -1567725154
+    Data4: 267461522
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2863524942644175993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WinConditionWheel/WheelSpinState
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: WheelSpinState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 812561855
+    data2: 1972892876
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2656261828036410179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,9 +138,91 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639175966777282532
+  lastModified: 639177696456655365
   FileSizes: []
   Exists: 1
+--- !u!114 &-1700689902065813220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Main Level Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Main Level Music
+  Guid:
+    Data1: 1767221655
+    Data2: 1331524625
+    Data3: -2099803484
+    Data4: -1704849805
+  Banks:
+  - {fileID: -5883130895943993804}
+  - {fileID: -2656261828036410179}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 35000
+--- !u!114 &-1416433831400495741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Knight Turn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Enemies/Knight Turn
+  Guid:
+    Data1: -1860191989
+    Data2: 1196341984
+    Data3: -962116175
+    Data4: -1332801769
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1147741832872145229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Balloon Pop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Enemies/Balloon Pop
+  Guid:
+    Data1: -635749016
+    Data2: 1298901787
+    Data3: -216525666
+    Data4: -190753124
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1026
 --- !u!114 &-199114328998705964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +250,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2066
+--- !u!114 &-68689166585771774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Knight Swing
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Enemies/Knight Swing
+  Guid:
+    Data1: 2134381603
+    Data2: 1209285642
+    Data3: -1426926201
+    Data4: -2086887307
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 974
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,17 +293,30 @@ MonoBehaviour:
   - {fileID: 5897732837437245337}
   - {fileID: 4380568496561836075}
   - {fileID: -2656261828036410179}
+  - {fileID: -5883130895943993804}
   EditorEvents:
   - {fileID: 5484198705607664241}
   - {fileID: -6592724425027210157}
   - {fileID: -199114328998705964}
+  - {fileID: -1700689902065813220}
+  - {fileID: -1416433831400495741}
+  - {fileID: -68689166585771774}
+  - {fileID: 6997405516873794524}
+  - {fileID: 627881350083386405}
+  - {fileID: 7977109428760541221}
+  - {fileID: -1147741832872145229}
+  - {fileID: 8376944288778733145}
+  - {fileID: 1526497315499833910}
+  - {fileID: -4527463236880877817}
+  - {fileID: -6414029219202903555}
+  - {fileID: 6765840901593377574}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4380568496561836075}
   StringsBanks:
   - {fileID: 5897732837437245337}
   cacheVersion: 131860
-  cacheTime: 639175966777282532
+  cacheTime: 639177696456875308
   SerializableEventsDict:
   - key: event:/Player/Land
     index: 0
@@ -106,6 +324,84 @@ MonoBehaviour:
     index: 1
   - key: event:/Player/Dash
     index: 2
+  - key: event:/Music/Main Level Music
+    index: 3
+  - key: event:/Enemies/Knight Turn
+    index: 4
+  - key: event:/Enemies/Knight Swing
+    index: 5
+  - key: event:/Enemies/Juggler
+    index: 6
+  - key: event:/Player/Abilities/Wind
+    index: 7
+  - key: event:/Player/Abilities/Fireball
+    index: 8
+  - key: event:/Enemies/Balloon Pop
+    index: 9
+  - key: event:/Player/Abilities/Helicopter
+    index: 10
+  - key: event:/Enemies/BalloonTensionPop
+    index: 11
+  - key: event:/Player/Abilities/Stasis
+    index: 12
+  - key: event:/Player/Takes Damage
+    index: 13
+  - key: event:/Wheels/WinConditionWheel
+    index: 14
+--- !u!114 &627881350083386405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Abilities/Wind
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Abilities/Wind
+  Guid:
+    Data1: -663342277
+    Data2: 1303132491
+    Data3: 35516038
+    Data4: 1669757896
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1526497315499833910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/BalloonTensionPop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Enemies/BalloonTensionPop
+  Guid:
+    Data1: 413823670
+    Data2: 1076806611
+    Data3: 91721918
+    Data4: 182916431
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1840
 --- !u!114 &4380568496561836075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +417,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639175966777222319
+  lastModified: 639177696456178160
   FileSizes: []
   Exists: 1
 --- !u!114 &5484198705607664241
@@ -166,8 +462,117 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639175966777252529
+  lastModified: 639177696456387113
   FileSizes:
   - Name: 
-    Value: 958
+    Value: 1642
   Exists: 1
+--- !u!114 &6765840901593377574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wheels/WinConditionWheel
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Wheels/WinConditionWheel
+  Guid:
+    Data1: -978994713
+    Data2: 1220226380
+    Data3: -1026561610
+    Data4: -1487742595
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2863524942644175993}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14571
+--- !u!114 &6997405516873794524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Juggler
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Enemies/Juggler
+  Guid:
+    Data1: -1985424582
+    Data2: 1327082556
+    Data3: -48570733
+    Data4: 1139062290
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7977109428760541221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Abilities/Fireball
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Abilities/Fireball
+  Guid:
+    Data1: -1129245628
+    Data2: 1131854345
+    Data3: 1147020947
+    Data4: 1293081463
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2972
+--- !u!114 &8376944288778733145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Abilities/Helicopter
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Abilities/Helicopter
+  Guid:
+    Data1: -1493517669
+    Data2: 1339676508
+    Data3: -2072577362
+    Data4: -2108258640
+  Banks:
+  - {fileID: -2656261828036410179}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

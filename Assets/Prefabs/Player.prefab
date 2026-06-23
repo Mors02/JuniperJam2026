@@ -205,7 +205,6 @@ MonoBehaviour:
   idleAnim: Player_idle
   runAnim: Player_walking
   jumpAnim: Player_jump
-  doubleJumpAnim: Player_doubleJump
   fallAnim: Player_falling
   landAnim: Player_land
   _headCheck: {fileID: 3794609037812703924}
@@ -224,6 +223,7 @@ MonoBehaviour:
   _jumpAudio: {fileID: 11400000, guid: e876173c59369e740a0325562fe7ee54, type: 2}
   _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _wheelSpin: {fileID: 0}
   debugState: 0
 --- !u!114 &2601935508210363800
 MonoBehaviour:
@@ -5225,10 +5225,12 @@ MonoBehaviour:
     - rid: 2533004779431133334
       type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
     - rid: 2533004779431133346
       type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
     - rid: 2533004827022590099
       type: {class: Int_Dash, ns: , asm: Assembly-CSharp}
