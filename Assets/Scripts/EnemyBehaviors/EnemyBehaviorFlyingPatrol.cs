@@ -12,6 +12,8 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
+    [SerializeField]
+    private Animator _animator;
     [SerializeField] private Transform _patrolMarkerA;
     [SerializeField] private Transform _patrolMarkerB;
     private Vector3 _patrolMarkerAPosition;
