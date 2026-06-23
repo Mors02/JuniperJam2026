@@ -59,7 +59,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void Deactivate()
     {
-        print("Deactivating bullet");
         _active = false;
         gameObject.SetActive(false);
         _rb.linearVelocity = Vector2.zero;
@@ -81,7 +80,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (!_active)
             return;
-
+        
         if (collision.gameObject.TryGetComponent<DamageReceiver>(out DamageReceiver receiver))
         {
             receiver.ReceiveDamage(); 

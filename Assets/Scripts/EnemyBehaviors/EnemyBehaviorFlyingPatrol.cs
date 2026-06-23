@@ -2,7 +2,11 @@ using System;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class EnemyBehaviorPatrol : MonoBehaviour
+
+/// <summary>
+/// This class defines a flying enemy that patrols between two points in the air.
+/// </summary>
+public class EnemyBehaviorFlyingPatrol : MonoBehaviour
 {
     [Header("References")]
     private Rigidbody2D _rb;
@@ -10,29 +14,20 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
     private Animator _animator;
-    
-
+    [SerializeField] private Transform _patrolMarkerA;
+    [SerializeField] private Transform _patrolMarkerB;
+    private Vector3 _patrolMarkerAPosition;
+    private Vector3 _patrolMarkerBPosition;
 
     [Tooltip("What is considered ground for grounded checks")]
     [SerializeField]
     private LayerMask _floorMask;
     private ContactFilter2D _contactFilter;
-    private Transform _transform;
 
     [Header("Movement")]
     [Tooltip("The speed at which the enemy moves")]
     [SerializeField]
     private float _moveSpeed = 1f;
-    private bool _facingRight = false;
-    [Tooltip("The distance to check for ledges (raycast down from this distance in front of the enemy)")]
-    [SerializeField]
-    private float _ledgeCheckDistance = 0.5f;
-    [SerializeField]
-    private float _ledgeCheckRange = 1f;
-
-    [SerializeField]
-    private float _wallCheckDistance = 0.5f;
-
     [SerializeField]
     private float _turnDelay = 0.5f;
     private float _turnTimer = 0f;
@@ -42,21 +37,27 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         Turning,
         Stopped
     };
+    private bool _headingToA = true;
 
     void Awake() {
         _rb = GetComponent<Rigidbody2D>();
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
-        _transform = transform;
+        _patrolMarkerAPosition = _patrolMarkerA.position;
+        _patrolMarkerBPosition = _patrolMarkerB.position;
+        _patrolMarkerA.gameObject.SetActive(false);
+        _patrolMarkerB.gameObject.SetActive(false);
+        this.transform.position = new Vector2((_patrolMarkerAPosition.x + _patrolMarkerBPosition.x) / 2f, ( _patrolMarkerAPosition.y + _patrolMarkerBPosition.y) / 2f); // Start at marker A
     }
 
     private void FixedUpdate() {
+        print("Current state: " + _movementState);
         switch (_movementState) {
             case MovementState.Moving:
                 HandleMovement();
                 break;
             case MovementState.Turning:
-                //HandleTurning();
+                HandleTurning();
                 break;
             case MovementState.Stopped:
                 HandleStopping();
@@ -64,36 +65,23 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         }
     }
 
-    private void HandleMovement() {
-        int direction = _facingRight ? 1 : -1;
-        // Check for ledge
-        Vector2 ledgeCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * _ledgeCheckDistance;
-        Debug.DrawRay(ledgeCheckOrigin, Vector2.down * _ledgeCheckRange, Color.red);
-        RaycastHit2D ledgeHit = Physics2D.Raycast(ledgeCheckOrigin, Vector2.down, _ledgeCheckRange, _floorMask);
-        if (!ledgeHit) {
+    private void HandleMovement() 
+    {
+        Vector2 targetPosition = _headingToA ? _patrolMarkerAPosition : _patrolMarkerBPosition;
+        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+        if (Vector2.Distance(transform.position, targetPosition) < 0.1f) {
             StartTurning();
-            return;
         }
-
-        // Check for wall
-        Vector2 wallCheckOrigin = (Vector2)_transform.position + Vector2.right * 0.5f * direction;
-        Debug.DrawRay(wallCheckOrigin, Vector2.right * direction * _wallCheckDistance, Color.blue);
-        RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * transform.localScale.x, _wallCheckDistance, _floorMask);
-        if (wallHit) {
-            StartTurning();
-            return;
-        }
-
-        
-        // Move in the current direction
-        _rb.linearVelocity = new Vector2(transform.localScale.x * _moveSpeed * direction, _rb.linearVelocity.y);
+        else {
+            _rb.linearVelocity = direction * _moveSpeed;
+        }        
     }
 
     private void StartTurning() {
-        _animator.SetTrigger("Turn");
         _movementState = MovementState.Turning;
         _turnTimer = 0f;
         _rb.linearVelocity = Vector2.zero;
+        _headingToA = !_headingToA; // Switch the target marker
     }
     
     private void HandleTurning() {
@@ -103,8 +91,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         }
     }
 
-    public void FinishTurning() {
-        _facingRight = !_facingRight;
+    private void FinishTurning() {
+        // Flip facing by inverting localScale.x
+        Vector3 s = transform.localScale;
+        s.x *= -1f;
+        transform.localScale = s;
         _movementState = MovementState.Moving;
     }
 
