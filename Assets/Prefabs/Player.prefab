@@ -205,6 +205,7 @@ MonoBehaviour:
   idleAnim: Player_idle
   runAnim: Player_walking
   jumpAnim: Player_jump
+  doubleJumpAnim: Player_doubleJump
   fallAnim: Player_falling
   landAnim: Player_land
   _headCheck: {fileID: 3794609037812703924}
