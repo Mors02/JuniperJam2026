@@ -361,7 +361,7 @@ public class PlayerSMController : MonoBehaviour
                     if (_animator) _animator.Play(runAnim);
                     break;
                 }
-            case StateExecutionType.Update:
+            case StateExecutionType.FixedUpdate:
                 {
                     if (_move == 0)
                     {
@@ -398,7 +398,7 @@ public class PlayerSMController : MonoBehaviour
                     //Jump();
                     break;
                 }
-            case StateExecutionType.Update:
+            case StateExecutionType.FixedUpdate:
                 {
                     if (HeadHit())
                     {
@@ -437,8 +437,10 @@ public class PlayerSMController : MonoBehaviour
                     if (_animator) _animator.Play(fallAnim);
                     break;
                 }
-            case StateExecutionType.Update:
+            case StateExecutionType.FixedUpdate:
                 {
+                    _mayJump += Time.fixedDeltaTime;
+
                     if (_isGrounded)
                     {
                         SwitchState(PlayerState.Land);
@@ -447,11 +449,6 @@ public class PlayerSMController : MonoBehaviour
 
                     HandleMovement();
                     FlipCharacter();
-                    break;
-                }
-            case StateExecutionType.FixedUpdate:
-                {
-                    _mayJump += Time.fixedDeltaTime;
                     break;
                 }
             default:
@@ -476,7 +473,7 @@ public class PlayerSMController : MonoBehaviour
                     if (_animator) _animator.Play(landAnim);
                     break;
                 }
-            case StateExecutionType.Update:
+            case StateExecutionType.FixedUpdate:
                 {
                     if (_move != 0)
                     {
@@ -502,7 +499,7 @@ public class PlayerSMController : MonoBehaviour
                     _ability.TryTrigger();
                     break;
                 }
-            case StateExecutionType.Update:
+            case StateExecutionType.FixedUpdate:
                 {
                     if (!_ability.IsExecuting())
                     {
