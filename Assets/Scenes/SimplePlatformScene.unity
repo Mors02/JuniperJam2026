@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
   nextLocation: {fileID: 916269479}
-  idleDuration: 4
+  idleDuration: 2
   moveSpeed: 5
   distanceToNext: 0.1
   lerpMovement: 0

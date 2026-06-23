@@ -21,6 +21,7 @@ public class DamageReceiver : MonoBehaviour
     private float _invicibilityTime;
 
     public UnityEvent<int> OnHitReceived;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +30,7 @@ public class DamageReceiver : MonoBehaviour
             OnHitReceived = new UnityEvent<int>();
     }
 
-    public void ReceiveDamage()
+    public void ReceiveDamage(DamageInfo damageInfo = new DamageInfo())
     {
         if (!_canTakeDamage)
             return;

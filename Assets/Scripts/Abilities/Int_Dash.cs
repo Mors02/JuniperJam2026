@@ -94,7 +94,7 @@ public class Int_Dash : Ability
 
         if (_animator)
         {
-            _animator.Play(_dashAnim);
+            _animator.Play(_dashAnim, 0, 0);
 
             _rb.linearVelocityX = 0;
 

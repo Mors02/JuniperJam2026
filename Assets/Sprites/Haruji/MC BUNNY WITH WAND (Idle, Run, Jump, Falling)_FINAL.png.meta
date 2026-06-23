@@ -162,6 +162,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -169,12 +182,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 33
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +204,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 48
         y: 0
-        width: 33
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +226,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_2
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 0
-        width: 33
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +248,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_3
       rect:
         serializedVersion: 2
-        x: 152
+        x: 144
         y: 0
-        width: 33
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +270,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_4
       rect:
         serializedVersion: 2
-        x: 200
+        x: 192
         y: 0
-        width: 33
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +292,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_5
       rect:
         serializedVersion: 2
-        x: 248
+        x: 240
         y: 0
-        width: 33
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,12 +314,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_6
       rect:
         serializedVersion: 2
-        x: 296
+        x: 288
         y: 0
-        width: 33
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -323,12 +336,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_7
       rect:
         serializedVersion: 2
-        x: 344
+        x: 336
         y: 0
-        width: 33
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -345,12 +358,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_8
       rect:
         serializedVersion: 2
-        x: 435
+        x: 432
         y: 0
-        width: 40
-        height: 27
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,12 +380,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_9
       rect:
         serializedVersion: 2
-        x: 485
-        y: 1
-        width: 40
-        height: 28
+        x: 480
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -389,12 +402,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_10
       rect:
         serializedVersion: 2
-        x: 530
-        y: 2
-        width: 46
-        height: 22
+        x: 528
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -411,12 +424,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_11
       rect:
         serializedVersion: 2
-        x: 581
+        x: 576
         y: 0
-        width: 43
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -433,12 +446,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_12
       rect:
         serializedVersion: 2
-        x: 631
+        x: 624
         y: 0
-        width: 41
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -455,12 +468,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_13
       rect:
         serializedVersion: 2
-        x: 676
+        x: 672
         y: 0
-        width: 41
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -477,12 +490,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_14
       rect:
         serializedVersion: 2
-        x: 772
+        x: 768
         y: 0
-        width: 39
-        height: 28
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -499,12 +512,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_15
       rect:
         serializedVersion: 2
-        x: 821
-        y: 1
-        width: 40
-        height: 28
+        x: 816
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -521,12 +534,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_16
       rect:
         serializedVersion: 2
-        x: 866
-        y: 5
-        width: 46
-        height: 24
+        x: 864
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -543,12 +556,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_17
       rect:
         serializedVersion: 2
-        x: 914
-        y: 9
-        width: 46
-        height: 21
+        x: 912
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -565,12 +578,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_18
       rect:
         serializedVersion: 2
-        x: 962
-        y: 5
-        width: 46
-        height: 21
+        x: 960
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -587,12 +600,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_19
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 2
-        width: 46
-        height: 22
+        x: 1056
+        y: 0
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -609,12 +622,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_20
       rect:
         serializedVersion: 2
-        x: 1109
+        x: 1104
         y: 0
-        width: 43
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -631,12 +644,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_21
       rect:
         serializedVersion: 2
-        x: 1159
+        x: 1152
         y: 0
-        width: 41
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -653,12 +666,12 @@ TextureImporter:
       name: MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_22
       rect:
         serializedVersion: 2
-        x: 1204
+        x: 1200
         y: 0
-        width: 41
-        height: 25
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -675,7 +688,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 21ac53c0f5f4b409a97a608e67111648
     internalID: 0
     vertices: []
     indices: 
@@ -683,7 +696,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":26.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_0: 4420211392207304954
       MC BUNNY WITH WAND (Idle, Run, Jump, Falling)_FINAL_1: -6463545608116494387

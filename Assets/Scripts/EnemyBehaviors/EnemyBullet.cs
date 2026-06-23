@@ -44,13 +44,14 @@ public class EnemyBullet : MonoBehaviour
         _poolParentTransform = poolParent;
     }
 
-    public void Fire(Vector2 direction)
+    public void Fire(Vector2 direction, bool facingRight)
     {
-        print("Firing bullet in direction: " + direction);
         gameObject.SetActive(true);
         _collider.enabled = true; // Enable collider when fired
         _active = true;
         _rb.linearVelocity = direction.normalized * _bulletSpeed;
+        _lifetimeTimer = 0f; // Reset lifetime timer when fired
+        _spriteRenderer.flipX = facingRight; // Flip sprite based on facing direction
     }
 
     public bool IsActive()
@@ -60,7 +61,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void Deactivate()
     {
-        print("Deactivating bullet");
         _active = false;
         gameObject.SetActive(false);
         _rb.linearVelocity = Vector2.zero;
@@ -80,10 +80,8 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Bullet collided with: " + collision.gameObject.name);
         if (!_active)
             return;
-        
         print("Bullet collided with: " + collision.gameObject.name);
         if (collision.gameObject.TryGetComponent<DamageReceiver>(out DamageReceiver receiver))
         {
