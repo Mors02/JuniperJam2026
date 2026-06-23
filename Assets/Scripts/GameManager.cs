@@ -113,7 +113,7 @@ public class GameManager
         _instance.UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
         _instance.SurviveManager = GameObject.FindGameObjectWithTag("Survive").GetComponent<SurviveManager>();
         _instance.RingLeader = GameObject.FindGameObjectWithTag("RingLeader").GetComponent<RingLeaderBehaviour>();
-        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor").GetComponent<LavaFloorBehaviour>();
+        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor").GetComponentInChildren<LavaFloorBehaviour>();
     }
 
     /// <summary>
