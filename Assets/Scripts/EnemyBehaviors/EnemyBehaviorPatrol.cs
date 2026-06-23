@@ -51,7 +51,6 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        print("Current state: " + _movementState);
         switch (_movementState) {
             case MovementState.Moving:
                 HandleMovement();
@@ -71,11 +70,6 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         Vector2 ledgeCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * _ledgeCheckDistance;
         Debug.DrawRay(ledgeCheckOrigin, Vector2.down * _ledgeCheckRange, Color.red);
         RaycastHit2D ledgeHit = Physics2D.Raycast(ledgeCheckOrigin, Vector2.down, _ledgeCheckRange, _floorMask);
-        print("Ledge check: " + (ledgeHit ? "Ground detected" : "No ground detected"));
-        if (ledgeHit)
-        {
-            Debug.Log("Ledge check hit: " + ledgeHit.collider.name);
-        }
         if (!ledgeHit) {
             StartTurning();
             return;
@@ -93,7 +87,6 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         
         // Move in the current direction
         _rb.linearVelocity = new Vector2(transform.localScale.x * _moveSpeed * direction, _rb.linearVelocity.y);
-        print("Moving " + (direction == 1 ? "right" : "left"));
     }
 
     private void StartTurning() {

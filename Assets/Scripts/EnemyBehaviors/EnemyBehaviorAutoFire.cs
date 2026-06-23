@@ -65,7 +65,6 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
 
     private void StartWindup()
     {
-        print("Starting windup");
         _animator.SetTrigger("Fire");
         _currentState = AutoFireState.Windup;
     }
@@ -76,12 +75,10 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
     /// </summary>
     public void StartFiring()
     {
-        print("Starting firing");
         _currentState = AutoFireState.Firing;
         EnemyBullet bullet = FindInactiveBullet();
         if (bullet != null)
         {
-            print("Firing bullet from pool");
             Vector2 fireDirection = FacingRight ? Vector2.right : Vector2.left;
             bullet.Initialize(_bulletSpeed, _bulletDamage, _bulletLifetime, _bulletPoolTransform);
             bullet.transform.position = _firePoint.position;
