@@ -2,10 +2,11 @@ using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerSMController : MonoBehaviour
+public class PlayerSMController : MonoBehaviour, ITakeDamage
 {
     public enum StateExecutionType
     {
@@ -220,25 +221,37 @@ public class PlayerSMController : MonoBehaviour
 
     private void HandleMovement()
     {
-        //calculate the new goal velocity
-        Vector3 unitVel = _currentMovement.normalized;
-        //calculate dot velocity based on current movement
-        float velDot = Vector3.Dot(new Vector2(_move, 0), unitVel);
-        //and evaluate current acceleration
-        //check what is the ideal movement and rotate to match the camera
         Vector2 movement = new Vector2(_move, 0f) * _speed;
 
-        float accel = _acceleration * _accelerationFactorFromDot.Evaluate(velDot);
-        //checks the ideal direciton and speed and moves it towards it
-        _currentMovement = Vector3.MoveTowards(_currentMovement, movement, _acceleration * Time.fixedDeltaTime);
+        if (!_isGrounded)
+        {
+            _currentMovement = movement;
+            _rb.linearVelocityX = 0;
+            _rb.position += movement * Time.fixedDeltaTime;
+        }
+        else
+        {
+            //calculate the new goal velocity
+            Vector3 unitVel = _currentMovement.normalized;
+            //calculate dot velocity based on current movement
+            float velDot = Vector3.Dot(new Vector2(_move, 0), unitVel);
+            //and evaluate current acceleration
+            //check what is the ideal movement and rotate to match the camera
+            
 
-        //retrieve the acceleration needed to reach the desidered movement
-        Vector2 neededAccel = (_currentMovement - _rb.linearVelocity) / Time.fixedDeltaTime;
+            float accel = _acceleration * _accelerationFactorFromDot.Evaluate(velDot);
+            //checks the ideal direciton and speed and moves it towards it
+            _currentMovement = Vector3.MoveTowards(_currentMovement, movement, _acceleration * Time.fixedDeltaTime);
 
-        float maxAccel = _maxAcceleration; // * _maxAccelerationForceFactorFromDot.Evaluate(velDot);
+            //retrieve the acceleration needed to reach the desidered movement
+            Vector2 neededAccel = (_currentMovement - _rb.linearVelocity) / Time.fixedDeltaTime;
 
-        neededAccel = Vector3.ClampMagnitude(neededAccel, maxAccel);
-        _rb.AddForce(Vector3.Scale(neededAccel * _rb.mass, new Vector2(1f, 0)));
+            float maxAccel = _maxAcceleration; // * _maxAccelerationForceFactorFromDot.Evaluate(velDot);
+
+            neededAccel = Vector3.ClampMagnitude(neededAccel, maxAccel);
+            _rb.AddForce(Vector3.Scale(neededAccel * _rb.mass, new Vector2(1f, 0)));
+        }
+        
     }
 
     void FlipCharacter()
@@ -561,5 +574,10 @@ public class PlayerSMController : MonoBehaviour
         {
             Gizmos.DrawWireSphere(_headCheck.position, _headCheckRadius);
         }
+    }
+
+    public void TakeDamage(DamageInfo damageInfo)
+    {
+        
     }
 }

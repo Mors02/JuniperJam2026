@@ -7,6 +7,7 @@ public class FireProjectile : Projectile
     [Min(0)] public float force = 10;
     public int bounce = 1;
     [Min(0)] public float damp = 0.95f;
+    [Min(0)] public int damage = 1;
 
     private int _bounceCount;
 
@@ -28,6 +29,11 @@ public class FireProjectile : Projectile
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == _owner) return;
+
+        if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
+        {
+            iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Normal));
+        }
 
         if (_bounceCount >= bounce) Destroy(gameObject);
 

@@ -992,9 +992,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.0013888889
+    width: 0.678125
+    height: 0.8333334
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2184,10 +2184,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3702562223137352772, guid: a18f060f97b094ff2823143d0215668b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3702562223137352772, guid: a18f060f97b094ff2823143d0215668b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9886098
       objectReference: {fileID: 0}
@@ -2230,10 +2226,6 @@ PrefabInstance:
     - target: {fileID: 5124113435793902681, guid: a18f060f97b094ff2823143d0215668b, type: 3}
       propertyPath: m_Name
       value: Enemy (AutoFire)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5212892269555500482, guid: a18f060f97b094ff2823143d0215668b, type: 3}
-      propertyPath: FacingRight
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
