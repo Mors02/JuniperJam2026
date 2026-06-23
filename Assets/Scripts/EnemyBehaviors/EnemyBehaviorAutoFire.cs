@@ -6,17 +6,19 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Animator _animator;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Transform _bulletPoolTransform;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _firePoint;
     [SerializeField] private int _poolSize = 10;
+    private Vector2 _firePointLocalPosition;
 
     private List<EnemyBullet> _bulletPool = new List<EnemyBullet>();
     
     [Header("Firing Parameters")]
     public bool CanFire = true;
     // Facing is determined from transform.localScale.x sign (positive = right, negative = left)
-    public bool FacingRight => transform.localScale.x >= 0f;
+    public bool FacingRight = true;
     [SerializeField] private float _fireInterval = 1f;
 
     [Header("Bullet Parameters")]
@@ -41,10 +43,13 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
             bullet.SetActive(false);
             _bulletPool.Add(bullet.GetComponent<EnemyBullet>());
         }
+        _firePointLocalPosition = _firePoint.localPosition;
     }
 
     void Update()
     {
+        _spriteRenderer.flipX = FacingRight;
+
         switch (_currentState)
         {
             case AutoFireState.Idle:
@@ -81,8 +86,10 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
         {
             Vector2 fireDirection = FacingRight ? Vector2.right : Vector2.left;
             bullet.Initialize(_bulletSpeed, _bulletDamage, _bulletLifetime, _bulletPoolTransform);
+            float directionMultiplier = FacingRight ? -1f : 1f;
+            _firePoint.localPosition = new Vector2( _firePointLocalPosition.x * directionMultiplier, _firePointLocalPosition.y);
             bullet.transform.position = _firePoint.position;
-            bullet.Fire(fireDirection);
+            bullet.Fire(fireDirection, FacingRight);
         }
         else
         {

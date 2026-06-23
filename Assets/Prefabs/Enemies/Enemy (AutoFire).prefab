@@ -135,7 +135,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.42}
+  m_Offset: {x: 0, y: 0.90931505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -145,7 +145,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.11, y: 1.71}
+  m_Size: {x: 1.11, y: 1.8159446}
   m_EdgeRadius: 0
 --- !u!50 &1623363609367086530
 Rigidbody2D:
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviorAutoFire
   _animator: {fileID: 4932420690720059853}
+  _spriteRenderer: {fileID: 1726668520950254932}
   _bulletPoolTransform: {fileID: 7686152169094688448}
   _bulletPrefab: {fileID: 8002546991427994941, guid: 0c6f9276d03cd4a8792c1b112f681abd, type: 3}
   _firePoint: {fileID: 5390802807309752224}
@@ -264,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 5175625219629858714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
