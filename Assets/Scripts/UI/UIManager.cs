@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    PlayerController _playerController;
+    //PlayerSMController _playerController;
     [SerializeField]
     WinconUI _winconUI;
     [SerializeField]
@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        _playerController = player.GetComponent<PlayerController>();
+        //_playerController = player.GetComponent<PlayerSMController>();
         _playerDamage = player.GetComponent<DamageReceiver>();
         
         _playerDamage.OnHitReceived.AddListener(UpdateLifeUI);
@@ -44,6 +44,6 @@ public class UIManager : MonoBehaviour
     {
         _curtainAnimator.SetTrigger("Open");
         _winconUI.Enter();
-        _playerController.StartCharacter();
+        //_playerController.StartCharacter();
     }
 }

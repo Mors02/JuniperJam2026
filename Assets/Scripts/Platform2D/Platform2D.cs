@@ -37,7 +37,7 @@ public class Platform2D : MonoBehaviour
             }
         }
     }
-
+    /* //Trigger
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         var other = collision;
@@ -57,7 +57,7 @@ public class Platform2D : MonoBehaviour
             objectsOnPlatformDict.Remove(other.gameObject);
         }
     }
-
+    */
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
