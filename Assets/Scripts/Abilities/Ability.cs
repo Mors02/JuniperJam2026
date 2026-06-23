@@ -23,5 +23,8 @@ public class Ability : ParasiteBehaviour
 
         Trigger();
     }
+
+    public virtual bool IsExecuting() => false;
+
     public virtual void CancelExecution(bool forceCancel = false) { }
 }

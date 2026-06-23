@@ -20,7 +20,7 @@ public class ChangeScene : MonoBehaviour
         
         if (collision.CompareTag("Player") && GameManager.Instance.Won())
         {
-            collision.GetComponent<PlayerController>().Hide();
+            //collision.GetComponent<PlayerController>().Hide();
             StartCoroutine(ChangeSceneRoutine());
             
             if (_curtainAnimator)
