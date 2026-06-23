@@ -10,6 +10,7 @@ TagManager:
   - Survive
   - Enemy
   - RingLeader
+  - LavaFloor
   layers:
   - Default
   - TransparentFX

@@ -53,7 +53,7 @@ namespace AbyssWorks.Misc
         {
             customForce.SimulateForces(IsGrounded);
 
-            characterController.Move(customForce.Velocity * Time.fixedDeltaTime);
+            characterController.Move(customForce.velocity * Time.fixedDeltaTime);
         }
 
         public bool IsGrounded => Physics.CheckSphere(groundCheck.position, groundedRadius, groundMask);

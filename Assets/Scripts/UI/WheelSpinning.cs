@@ -50,19 +50,19 @@ public class WheelSpinning : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (_isSpinning)
         {
             if (_spinSpeed > _fastToSlowValue)
             {
-                _spinSpeed -= _fastSpinningFriction * Time.fixedDeltaTime;
+                _spinSpeed -= _fastSpinningFriction * Time.unscaledDeltaTime;
             } else
             {
-                _spinSpeed -= _slowSpinningFriction * Time.fixedDeltaTime;
+                _spinSpeed -= _slowSpinningFriction * Time.unscaledDeltaTime;
             }
 
-            _rotation += 100 * Time.fixedDeltaTime * _spinSpeed;
+            _rotation += 100 * Time.unscaledDeltaTime * _spinSpeed;
             _wheelImage.transform.localRotation = Quaternion.Euler(0, 0, -_rotation);
 
             if (_spinSpeed <= 0)

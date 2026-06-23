@@ -146,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555416683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8382d52f3fa9f9547aeebcbf557d632d, type: 3}
   m_Name: 
@@ -496,7 +496,7 @@ MonoBehaviour:
   attenuate2D: 0
   loopOneShot: 0
   allowReverse: 1
-  playMode: 1
+  playMode: 0
   stopMode: 0
   fadeDuration: 10
   rms: 0

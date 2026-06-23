@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WheelSpinning
   _uiManager: {fileID: 0}
-  _spinSpeed: 5
+  _spinSpeed: 30
   _spinSpeedRandomness: 0.794
   _wheelImage: {fileID: 1812895471919136558}
   _fastSpinningFriction: 4
@@ -154,7 +154,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1da1e6b75467f3140af15048fb375669, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
