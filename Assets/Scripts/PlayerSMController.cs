@@ -317,7 +317,7 @@ public class PlayerSMController : MonoBehaviour
         {
             case StateExecutionType.Enter:
                 {
-                    if (_animator) _animator.Play(idleAnim);
+                    if (_animator) _animator.Play(idleAnim, 0, 0);
                     break;
                 }
             case StateExecutionType.Update:
@@ -358,7 +358,7 @@ public class PlayerSMController : MonoBehaviour
                     if (Grounded())
                         _dustParticles.Play();
 
-                    if (_animator) _animator.Play(runAnim);
+                    if (_animator) _animator.Play(runAnim, 0, 0);
                     break;
                 }
             case StateExecutionType.FixedUpdate:
@@ -434,7 +434,7 @@ public class PlayerSMController : MonoBehaviour
         {
             case StateExecutionType.Enter:
                 {
-                    if (_animator) _animator.Play(fallAnim);
+                    if (_animator) _animator.Play(fallAnim, 0, 0);
                     break;
                 }
             case StateExecutionType.FixedUpdate:
@@ -470,7 +470,7 @@ public class PlayerSMController : MonoBehaviour
                     _numberOfJumps = 0;
                     _mayJump = 0;
 
-                    if (_animator) _animator.Play(landAnim);
+                    if (_animator) _animator.Play(landAnim, 0, 0);
                     break;
                 }
             case StateExecutionType.FixedUpdate:
