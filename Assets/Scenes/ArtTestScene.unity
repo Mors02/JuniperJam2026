@@ -395,6 +395,114 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &128114015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729449180364191090, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_Name
+      value: PlayerCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+--- !u!114 &128114016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6851541297447751515, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+  m_PrefabInstance: {fileID: 128114015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d086316577aaf4baf90fffe3b3fcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIAbilityWheelSpin
 --- !u!1 &649882851
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,10 +1107,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.22881356
+    y: 0.22891566
+    width: 0.5423729
+    height: 0.5421687
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1674,6 +1782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2129f689269ce47a50dbd7271307f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  _winconUI: {fileID: 0}
+  _wheelSpinning: {fileID: 0}
+  _curtainAnimator: {fileID: 0}
 --- !u!1 &1686554734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,12 +2129,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bdc69cf3cd87e418df01dace051428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WheelSpinning
+  _uiManager: {fileID: 0}
   _spinSpeed: 6
   _spinSpeedRandomness: 0.794
   _wheelImage: {fileID: 1686554736}
   _fastSpinningFriction: 2.5
   _slowSpinningFriction: 0.5
   _fastToSlowValue: 1
+  _announcementText: {fileID: 0}
   _rewards:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
@@ -2117,6 +2230,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4112682313320538656, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
+      propertyPath: _wheelSpin
+      value: 
+      objectReference: {fileID: 128114016}
     - target: {fileID: 5454628764811485191, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2301,3 +2418,4 @@ SceneRoots:
   - {fileID: 1580990841}
   - {fileID: 1769106207}
   - {fileID: 7475956464111143120}
+  - {fileID: 128114015}
