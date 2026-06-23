@@ -1,10 +1,12 @@
 using AbyssWorks.AnimatorSignal;
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
 public class Int_Dash : Ability
 {
+    [SerializeField] private FMODAudioScriptable _dashAudio;
     [SerializeField] private string _dashAnim;
     [SerializeField] private float _dashForce = 10f;
     [SerializeField] private float _dashCooldown = 2f;
@@ -64,6 +66,9 @@ public class Int_Dash : Ability
     public override void Trigger()
     {
         base.Trigger();
+
+        if (FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_dashAudio, null, true);
 
         _allowFirst = false;
 

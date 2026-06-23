@@ -1,4 +1,5 @@
 using AbyssWorks.AnimatorSignal;
+using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -73,6 +74,10 @@ public class PlayerSMController : MonoBehaviour
     public ParasiteBehaviourLibrary abilityLibrary;
     public string dashAbName;
     public string testAbility;
+
+    [Header("Audio")]
+    [SerializeField] private FMODAudioScriptable _jumpAudio;
+    [SerializeField] private FMODAudioScriptable _landAudio;
 
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
@@ -229,6 +234,9 @@ public class PlayerSMController : MonoBehaviour
 
     void Jump()
     {
+        if (FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_jumpAudio, null, true);
+
         _hasJumpForce = true;
 
         _rb.linearVelocityY = 0;
@@ -438,6 +446,9 @@ public class PlayerSMController : MonoBehaviour
         {
             case StateExecutionType.Enter:
                 {
+                    if (FMODAudioManager.Instance)
+                        FMODAudioManager.Instance.PlayOnce(_landAudio, null, true);
+
                     _numberOfJumps = 0;
                     _mayJump = 0;
 

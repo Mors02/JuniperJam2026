@@ -220,6 +220,8 @@ MonoBehaviour:
   abilityLibrary: {fileID: 4318134865794734330}
   dashAbName: Dash
   testAbility: Fireball
+  _jumpAudio: {fileID: 11400000, guid: e876173c59369e740a0325562fe7ee54, type: 2}
+  _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   debugState: 0
 --- !u!114 &2601935508210363800
@@ -5230,6 +5232,7 @@ MonoBehaviour:
     - rid: 2533004827022590099
       type: {class: Int_Dash, ns: , asm: Assembly-CSharp}
       data:
+        _dashAudio: {fileID: 11400000, guid: ef58d5f417963ed458baf3f674fdf000, type: 2}
         _dashAnim: Player_dash
         _dashForce: 20
         _dashCooldown: 1
