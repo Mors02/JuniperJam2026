@@ -5,6 +5,7 @@ public class StasisProjectile : Projectile
     [Min(0)] public float destroyTime = 10f;
     [Min(0)] public float force = 10;
     [Min(0)] public float stasisDuration = 1f;
+    [Min(0)] public int damage = 1;
 
     private Rigidbody2D rb;
 
@@ -28,6 +29,11 @@ public class StasisProjectile : Projectile
         //to do
         //Stop enemies by stasis amount
         //effects
+
+        if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
+        {
+            iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Stasis, stasisDuration));
+        }
 
         Destroy(gameObject);
     }

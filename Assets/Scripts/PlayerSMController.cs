@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerSMController : MonoBehaviour
+public class PlayerSMController : MonoBehaviour, ITakeDamage
 {
     public enum StateExecutionType
     {
@@ -574,5 +574,10 @@ public class PlayerSMController : MonoBehaviour
         {
             Gizmos.DrawWireSphere(_headCheck.position, _headCheckRadius);
         }
+    }
+
+    public void TakeDamage(DamageInfo damageInfo)
+    {
+        
     }
 }
