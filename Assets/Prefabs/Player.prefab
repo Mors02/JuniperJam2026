@@ -203,9 +203,11 @@ MonoBehaviour:
   _downwardForce: 6
   _totalJumps: 1
   _coyoteTime: 0.1
+  _glideGravityScale: 1
   idleAnim: Player_idle
   runAnim: Player_walking
   jumpAnim: Player_jump
+  glideAnim: Player_glide
   fallAnim: Player_falling
   landAnim: Player_land
   _headCheck: {fileID: 3794609037812703924}
