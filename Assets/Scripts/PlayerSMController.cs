@@ -92,7 +92,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
     [SerializeField] private UIAbilityWheelSpin _wheelSpin;
-
+    
     [Header("Debug")]
     public PlayerState debugState;
 
@@ -131,6 +131,12 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     private void Awake()
     {
+        if (!_wheelSpin)
+        {
+            var playerCanvas = GameObject.FindWithTag("PlayerCanvas").GetComponent<UIPlayerCanvas>();
+            _wheelSpin = playerCanvas.abilityWheelSpin;
+        }
+        
         _animator = GetComponent<Animator>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _animationSubscriber = GetComponent<AnimationSubscriber>();
@@ -142,10 +148,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
         _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
 
-        _jumpAction.performed += OnJump;
-        _jumpAction.canceled += OnJumpRelease;
-
-        _dashAction.performed += OnDash;
+        
 
         _animationSubscriber.SubscribeAction("PlayerLand", () =>
         {
@@ -173,6 +176,20 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         };
         _damageReceiver.OnInvincibilityStart += StartInvincibilityAnimation;
         _damageReceiver.OnInvincibilityEnd += StopInvincibilityAnimation;
+    }
+
+    private void OnEnable()
+    {
+        _jumpAction.performed += OnJump;
+        _jumpAction.canceled += OnJumpRelease;
+        _dashAction.performed += OnDash;
+    }
+
+    private void OnDisable()
+    {
+        _jumpAction.performed -= OnJump;
+        _jumpAction.canceled -= OnJumpRelease;
+        _dashAction.performed -= OnDash;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

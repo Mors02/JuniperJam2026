@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2463436258019302955}
   - component: {fileID: 304334349665320741}
   - component: {fileID: 6423043114774317351}
+  - component: {fileID: 8348101075569302902}
   m_Layer: 5
   m_Name: PlayerCanvas
-  m_TagString: Untagged
+  m_TagString: PlayerCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8348101075569302902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6729449180364191090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87953701f712ae6428a9ae19ab95d61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPlayerCanvas
+  abilityWheelSpin: {fileID: 6851541297447751515}
 --- !u!1001 &7579845226563309058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +128,10 @@ PrefabInstance:
     - target: {fileID: 383426698682571811, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_Name
       value: AbilityWheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 383426698682571811, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_Pivot.x
@@ -205,3 +223,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
   m_PrefabInstance: {fileID: 7579845226563309058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6851541297447751515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3901407625802531161, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
+  m_PrefabInstance: {fileID: 7579845226563309058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d086316577aaf4baf90fffe3b3fcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIAbilityWheelSpin
