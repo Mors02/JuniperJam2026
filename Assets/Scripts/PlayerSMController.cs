@@ -2,6 +2,7 @@ using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -67,6 +68,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [SerializeField] private string glideAnim;
     [SerializeField] private string fallAnim;
     [SerializeField] private string landAnim;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [Header("Head Check")]
     [SerializeField] private Transform _headCheck;
@@ -100,6 +102,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     private Rigidbody2D _rb;
     private Animator _animator;
     private AnimationSubscriber _animationSubscriber;
+    private DamageReceiver _damageReceiver;
     #endregion
 
     private Vector2 _currentMovement;
@@ -129,6 +132,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _damageReceiver = GetComponent<DamageReceiver>();
         _animationSubscriber = GetComponent<AnimationSubscriber>();
         _rb = GetComponent<Rigidbody2D>();
         _baseConstraints = _rb.constraints;
@@ -161,6 +165,14 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
         _numberOfJumps = 0;
         _mayJump = 0;
+
+        _damageReceiver.Initialize(this, 100);
+        _damageReceiver.OnDeath += () =>
+        {
+            SwitchState(PlayerState.Death);
+        };
+        _damageReceiver.OnInvincibilityStart += StartInvincibilityAnimation;
+        _damageReceiver.OnInvincibilityEnd += StopInvincibilityAnimation;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -676,6 +688,17 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(DamageInfo damageInfo)
     {
-        
+        GameManager.Instance.CurrentLives = _damageReceiver.CurrentHealth;
+        // Knockback on the player would go here.
+    }
+
+    private void StartInvincibilityAnimation()
+    {
+        _animator.SetBool("Invincible", true); 
+    }
+
+    private void StopInvincibilityAnimation()
+    {
+        _animator.SetBool("Invincible", false); 
     }
 }

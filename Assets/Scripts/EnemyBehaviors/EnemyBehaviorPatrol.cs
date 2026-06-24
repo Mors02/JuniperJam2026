@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class EnemyBehaviorPatrol : MonoBehaviour
+public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     private Rigidbody2D _rb;
@@ -10,7 +12,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
     private Animator _animator;
-    
+    private DamageReceiver _damageReceiver;
 
 
     [Tooltip("What is considered ground for grounded checks")]
@@ -37,21 +39,71 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     private float _turnDelay = 0.5f;
     private float _turnTimer = 0f;
     private MovementState _movementState = MovementState.Moving;
+
+    [Header("HurtAnimation")]
+    [SerializeField] private Color _defaultColor;
+    [SerializeField] private Color _flashColor;
+    [SerializeField] private float _flashInterval;
+    [SerializeField] private float _flashDuration;
+
+    [Header("Stasis Parameters")]
+    [SerializeField] private Color _stasisColor;
     private enum MovementState {
         Moving,
         Turning,
         Stopped
     };
 
-    void Awake() {
+    bool _isStasis = false;
+    bool _isKnockedBack = false;
+    float _knockbackTimer = 0f;
+    float _knockbackStillDuration = 0.5f;
+
+    void Awake() 
+    {
+        _damageReceiver = GetComponent<DamageReceiver>();
+        _damageReceiver.Initialize(this);
         _rb = GetComponent<Rigidbody2D>();
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
         _transform = transform;
     }
 
-    private void FixedUpdate() {
-        switch (_movementState) {
+    private void Update()
+    {
+        if (Keyboard.current.bKey.wasPressedThisFrame)
+        {
+            TakeDamage(new DamageInfo(10, DamageType.Stasis, 5f, new Vector2(10, 10)));
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (_isKnockedBack)
+        {
+            // Possible damping of the knockback force
+            if (_rb.linearVelocity.magnitude <= 0.01f)
+            {
+                _knockbackTimer += Time.deltaTime;
+                if (_knockbackTimer >= _knockbackStillDuration)
+                {
+                    _isKnockedBack = false;
+                    _knockbackTimer = 0f;
+                }
+            }
+            else
+            {
+                _knockbackTimer = 0f;
+            }
+            return;
+        }
+
+        if (_isStasis)
+        {
+            return;
+        }
+
+        switch (_movementState)
+        {
             case MovementState.Moving:
                 HandleMovement();
                 break;
@@ -78,7 +130,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour
         // Check for wall
         Vector2 wallCheckOrigin = (Vector2)_transform.position + Vector2.right * 0.5f * direction;
         Debug.DrawRay(wallCheckOrigin, Vector2.right * direction * _wallCheckDistance, Color.blue);
-        RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * transform.localScale.x, _wallCheckDistance, _floorMask);
+        RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * direction, _wallCheckDistance, _floorMask);
         if (wallHit) {
             StartTurning();
             return;
@@ -122,5 +174,73 @@ public class EnemyBehaviorPatrol : MonoBehaviour
     /// </summary>
     private void StopStopping() {
         _movementState = MovementState.Moving;
+    }
+
+
+    Coroutine damageFlashRoutine;
+    public void TakeDamage(DamageInfo damageInfo)
+    {
+        Debug.Log("TakeDamage");
+
+        if (damageInfo.damageType == DamageType.Stasis)
+        {
+            StartCoroutine(StasisCoroutine(damageInfo.duration));
+        }
+        else if (damageInfo.damageType == DamageType.Knockback)
+        {
+            if (damageInfo.damage > 0)
+            {
+                if (damageFlashRoutine != null)
+                    StopCoroutine(damageFlashRoutine);
+                damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
+            }
+
+            _isKnockedBack = true;
+            _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            _rb.linearVelocity = Vector2.zero;
+            _rb.AddForce(damageInfo.force, ForceMode2D.Impulse);
+        }
+        else
+        {
+            if (damageFlashRoutine != null)
+                StopCoroutine(damageFlashRoutine);
+            damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
+        }
+    }
+
+    private IEnumerator StasisCoroutine(float duration)
+    {
+        _isStasis = true;
+        _spriteRenderer.color = _stasisColor;
+        _animator.speed = 0;
+        yield return new WaitForSeconds(duration);
+        _isStasis = false;
+        _spriteRenderer.color = _defaultColor;
+        _animator.speed = 1;
+    }
+
+    private IEnumerator DamageFlashCoroutine()
+    {
+        float intervalTimer = 0;
+        float durationTimer = 0;
+        bool glowIn = true;
+        while (durationTimer < _flashDuration)
+        {
+            intervalTimer += Time.deltaTime;
+            durationTimer += Time.deltaTime;
+            Color a = glowIn ? _defaultColor : _flashColor;
+            Color b = glowIn ? _flashColor : _defaultColor;
+            float t = Mathf.Clamp(intervalTimer / _flashInterval, 0, 1);
+            _spriteRenderer.color = Color.Lerp(a, b, t);
+
+            if (intervalTimer >= _flashInterval)
+            {
+                intervalTimer = 0;
+                glowIn = !glowIn;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+        _spriteRenderer.color = _defaultColor;
     }
 }
