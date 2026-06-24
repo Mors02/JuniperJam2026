@@ -112,10 +112,10 @@ public class GameManager
         _instance.KilledEnemies = 0;
         _instance.TotalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
         _instance.TotalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        _instance.UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
-        _instance.SurviveManager = GameObject.FindGameObjectWithTag("Survive").GetComponent<SurviveManager>();
-        _instance.RingLeader = GameObject.FindGameObjectWithTag("RingLeader").GetComponent<RingLeaderBehaviour>();
-        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor").GetComponentInChildren<LavaFloorBehaviour>();
+        _instance.UIManager = GameObject.FindGameObjectWithTag("Canvas")?.GetComponent<UIManager>();
+        _instance.SurviveManager = GameObject.FindGameObjectWithTag("Survive")?.GetComponent<SurviveManager>();
+        _instance.RingLeader = GameObject.FindGameObjectWithTag("RingLeader")?.GetComponent<RingLeaderBehaviour>();
+        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor")?.GetComponentInChildren<LavaFloorBehaviour>();
     }
 
     /// <summary>
@@ -123,7 +123,10 @@ public class GameManager
     /// </summary>
     public void ActivateWinConAnimation()
     {
-        Debug.Log("Current" + CurrentWinCon.Type);
+        
+        if (CurrentWinCon == null)
+            return;
+
         switch(CurrentWinCon.Type)
         {
             case WinConType.RingLeader:

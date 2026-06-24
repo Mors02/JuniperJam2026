@@ -131,11 +131,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WheelSpinning
   _uiManager: {fileID: 0}
   _spinSpeed: 20
-  _spinSpeedRandomness: 0.794
+  _spinSpeedRandomness: 0.6
   _wheelImage: {fileID: 1812895471919136558}
-  _fastSpinningFriction: 4
-  _slowSpinningFriction: 1
-  _fastToSlowValue: 1
+  _fastSpinningFriction: 6
+  _slowSpinningFriction: 0.8
+  _fastToSlowValue: 2
   _announcementText: {fileID: 220228189171425464}
   _rewards:
   - {fileID: 11400000, guid: 17eaad57e28961f4aab97a41db8a3b93, type: 2}
