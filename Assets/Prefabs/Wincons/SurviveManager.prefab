@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dd2aa51586cf24ba0173091690c605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SurviveManager
-  _attackCooldown: 3
+  _surviveTime: 0
+  _attackCooldown: 1
   _maxProjectilesOnScreen: 6
   _projectilePrefab: {fileID: 6581438471673636739, guid: 6d6381fcdff9f964895b7a78160d5c36, type: 3}

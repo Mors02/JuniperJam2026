@@ -80,7 +80,7 @@ public class GameManager
                 CurrentWinCon = new RingLeaderWinCon(reward.Description);
                 break;
             case WinConType.Survive:
-                CurrentWinCon = new SurviveWinCon(10f, reward.Description);
+                CurrentWinCon = new SurviveWinCon(SurviveManager?.SurviveTime != 0? SurviveManager.SurviveTime : 50f, reward.Description);
                 break;
             
         }
