@@ -207,6 +207,7 @@ MonoBehaviour:
   jumpAnim: Player_jump
   fallAnim: Player_falling
   landAnim: Player_land
+  _spriteRenderer: {fileID: 9068347947298672269}
   _headCheck: {fileID: 3794609037812703924}
   _headCheckRadius: 0.1
   headMask:
@@ -224,6 +225,9 @@ MonoBehaviour:
   _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _wheelSpin: {fileID: 0}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  glowColor: {r: 1, g: 0.9843137, b: 0.8627451, a: 1}
+  glowInterval: 0.1
   debugState: 0
 --- !u!114 &2601935508210363800
 MonoBehaviour:
@@ -237,11 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
-  _animator: {fileID: 6676589175641477251}
-  _lives: 3
+  _maxHealth: 5
   _canTakeDamage: 1
   _invicibilityTime: 2
-  OnHitReceived:
+  OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5316946353275918676

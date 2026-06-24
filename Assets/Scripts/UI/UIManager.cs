@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
         //_playerController = player.GetComponent<PlayerSMController>();
         _playerDamage = player.GetComponent<DamageReceiver>();
         
-        _playerDamage.OnHitReceived.AddListener(UpdateLifeUI);
+        _playerDamage.OnHealthChanged.AddListener(UpdateLifeUI);
     }
 
     public void UpdateLifeUI(int _currentLives)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2981918100834507389}
   - component: {fileID: 5766024196374545361}
   - component: {fileID: 4620859462698439953}
+  - component: {fileID: 339174011099192185}
   m_Layer: 7
   m_Name: Enemy (Patrol)
   m_TagString: Untagged
@@ -52,7 +53,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -70,7 +71,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.8203931}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -80,7 +81,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.06, y: 2.6407862}
   m_EdgeRadius: 0
 --- !u!50 &2981918100834507389
 Rigidbody2D:
@@ -125,12 +126,17 @@ MonoBehaviour:
   _animator: {fileID: 4620859462698439953}
   _floorMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   _moveSpeed: 1
   _ledgeCheckDistance: 0.5
   _ledgeCheckRange: 1
-  _wallCheckDistance: 0.5
+  _wallCheckDistance: 2
   _turnDelay: 0.5
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashColor: {r: 1, g: 0.40392157, b: 0.40392157, a: 1}
+  _flashInterval: 0.2
+  _flashDuration: 1
+  _stasisColor: {r: 0.5529412, g: 0.9490196, b: 1, a: 1}
 --- !u!95 &4620859462698439953
 Animator:
   serializedVersion: 7
@@ -153,6 +159,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &339174011099192185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375293954207211877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
+  _maxHealth: 3
+  _canTakeDamage: 0
+  _invicibilityTime: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5891939591916927008
 GameObject:
   m_ObjectHideFlags: 0
