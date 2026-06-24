@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BalloonRed
+  m_Controller: {fileID: 9100000, guid: 1ae759f29976849d99bb3c7bbb2272d4, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2554c96254be01d45ba9c03b30899ccf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e11f4ecb0ce76994eb4d7d4a865b7515, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e0de2b5eebe19484d8fb50e102a64aa2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c5dc5f545c02f3643afd021e821bb04f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c538c5f979f956b4486b3f4ba10c209c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c4903733ce043bc43bfdbf26bfb147fa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ea8a7ebab4ca54f00ad85b64217e4509, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8a40da33f351701438aeb75e157409df, type: 2}

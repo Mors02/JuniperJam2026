@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Balloon : MonoBehaviour
@@ -11,6 +12,9 @@ public class Balloon : MonoBehaviour
     private Vector2 _target;
 
     [SerializeField]
+    private RuntimeAnimatorController[] _controllers;
+
+    [SerializeField]
     private Animator _animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +24,11 @@ public class Balloon : MonoBehaviour
         //this.transform.position = Camera.main.ViewportToWorldPoint(new Vector2(1.5f, 1.5f));
         _rb.AddForce(direction.normalized * _initialForce, ForceMode2D.Impulse);
         _animator = GetComponent<Animator>();
+        int index = Random.Range(0, _controllers.Length);
+        Debug.Log(_controllers[index]);
+        //this._animator.enabled = false;
+        this._animator.runtimeAnimatorController = _controllers[index];
+        //this._animator.enabled = true;
     }
 
     public void FixedUpdate()

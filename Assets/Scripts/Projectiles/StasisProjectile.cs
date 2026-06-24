@@ -1,3 +1,5 @@
+using AbyssWorks.AnimatorSignal;
+using System.Collections;
 using UnityEngine;
 
 public class StasisProjectile : Projectile
@@ -7,19 +9,35 @@ public class StasisProjectile : Projectile
     [Min(0)] public float stasisDuration = 1f;
     [Min(0)] public int damage = 1;
 
-    private Rigidbody2D rb;
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
+    [SerializeField] private AnimationSubscriber _animationSubscriber;
+    [SerializeField] private string _startAnim;
+    [SerializeField] private string _endAnim;
+
+    private Rigidbody2D _rb;
+    private Collider2D _collider2D;
+
+    private Coroutine _destroyRoutine;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<Collider2D>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.AddForce(transform.right * force, ForceMode2D.Impulse);
+        _animator.Play(_startAnim, 0, 0);
+        _animationSubscriber.SubscribeAction("StasisEnd", () =>
+        {
+            Destroy(gameObject);
+        });
 
-        Destroy(gameObject, destroyTime);
+        _rb.AddForce(transform.right * force, ForceMode2D.Impulse);
+
+        _destroyRoutine = StartCoroutine(DestroyEnumerator(destroyTime));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +52,31 @@ public class StasisProjectile : Projectile
         {
             iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Stasis, stasisDuration));
         }
+
+        _collider2D.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        _animator.Play(_endAnim);
+
+        if (_destroyRoutine != null) StopCoroutine(_destroyRoutine);
+    }
+
+    IEnumerator DestroyEnumerator(float duration)
+    {
+        float elapsed = 0;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        _collider2D.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        _animator.Play(_endAnim);
+
+        _destroyRoutine = null;
 
         Destroy(gameObject);
     }

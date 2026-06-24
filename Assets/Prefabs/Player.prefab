@@ -41,6 +41,7 @@ Transform:
   - {fileID: 4394528090421756502}
   - {fileID: 3261247875907154304}
   - {fileID: 3794609037812703924}
+  - {fileID: 1693788543128924821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3383827292155690880
@@ -104,7 +105,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.12, y: -1}
+  m_Offset: {x: 0.12, y: 0}
   m_Radius: 0.48
 --- !u!95 &6676589175641477251
 Animator:
@@ -202,11 +203,14 @@ MonoBehaviour:
   _downwardForce: 6
   _totalJumps: 1
   _coyoteTime: 0.1
+  _glideGravityScale: 1
   idleAnim: Player_idle
   runAnim: Player_walking
   jumpAnim: Player_jump
+  glideAnim: Player_glide
   fallAnim: Player_falling
   landAnim: Player_land
+  _spriteRenderer: {fileID: 9068347947298672269}
   _headCheck: {fileID: 3794609037812703924}
   _headCheckRadius: 0.1
   headMask:
@@ -224,6 +228,9 @@ MonoBehaviour:
   _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _wheelSpin: {fileID: 0}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  glowColor: {r: 1, g: 0.9843137, b: 0.8627451, a: 1}
+  glowInterval: 0.1
   debugState: 0
 --- !u!114 &2601935508210363800
 MonoBehaviour:
@@ -237,11 +244,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
-  _animator: {fileID: 6676589175641477251}
-  _lives: 3
+  _maxHealth: 5
   _canTakeDamage: 1
   _invicibilityTime: 2
-  OnHitReceived:
+  OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5316946353275918676
@@ -283,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 2083603171620641557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.17, y: -1.05, z: 0}
+  m_LocalPosition: {x: -0.17, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5209,34 +5215,48 @@ MonoBehaviour:
     parasiteBHolders:
     - name: Dash
       parasiteBehaviour:
-        rid: 2533004827022590099
+        rid: 2533004854806184016
   - tag: Non Interrupt
     parasiteBHolders:
     - name: Fireball
       parasiteBehaviour:
-        rid: 2533004779431133334
+        rid: 2533004851591774278
     - name: Stasis
       parasiteBehaviour:
-        rid: 2533004779431133346
+        rid: 2533004851591774279
+    - name: Wind Push
+      parasiteBehaviour:
+        rid: 2533004851591774280
   parasiteSOHolders: []
   references:
     version: 2
     RefIds:
-    - rid: 2533004779431133334
-      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+    - rid: 2533004851591774278
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_fireball
         projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
-    - rid: 2533004779431133346
-      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+    - rid: 2533004851591774279
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_stasis
         projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
-    - rid: 2533004827022590099
-      type: {class: Int_Dash, ns: , asm: Assembly-CSharp}
+    - rid: 2533004851591774280
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_fireball
+        projectileAudio: {fileID: 0}
+        projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}
+    - rid: 2533004854806184016
+      type: {class: DashAbility, ns: , asm: Assembly-CSharp}
       data:
         _dashAudio: {fileID: 11400000, guid: ef58d5f417963ed458baf3f674fdf000, type: 2}
-        _dashAnim: Player_dash
+        _dashAnim: Player_spin
         _dashForce: 20
         _dashCooldown: 1
         _allowFirst: 1
@@ -5265,7 +5285,7 @@ Transform:
   m_GameObject: {fileID: 4554267910812025104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.52, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5296,7 +5316,7 @@ Transform:
   m_GameObject: {fileID: 4669678041466093010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5419,7 +5439,7 @@ Transform:
   m_GameObject: {fileID: 7198166655302397589}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5484,6 +5504,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &7576599128650621306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693788543128924821}
+  m_Layer: 6
+  m_Name: launchSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693788543128924821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576599128650621306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 0.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6857651498396704654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8421449570558913015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,7 +5561,7 @@ Transform:
   m_GameObject: {fileID: 8421449570558913015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

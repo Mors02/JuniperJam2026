@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestTravelScene.unity
     guid: 0b9958b6940f08f429b05d46013cf383
+  - enabled: 1
+    path: Assets/Scenes/Levels/MainMenu.unity
+    guid: d2ce163205d985a498f6e85b1c4a63f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

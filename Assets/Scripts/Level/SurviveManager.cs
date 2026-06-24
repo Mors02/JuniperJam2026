@@ -4,7 +4,10 @@ using UnityEngine;
 public class SurviveManager : MonoBehaviour
 {
 
+    [SerializeField]
+    private float _surviveTime;
 
+    public float SurviveTime => _surviveTime;
     private bool _active;
     [SerializeField]
     private float _attackCooldown;

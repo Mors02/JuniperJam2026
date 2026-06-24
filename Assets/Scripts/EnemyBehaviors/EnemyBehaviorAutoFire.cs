@@ -1,11 +1,15 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class EnemyBehaviorAutoFire : MonoBehaviour
+public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody2D _rb;
+    private DamageReceiver _damageReceiver;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Transform _bulletPoolTransform;
     [SerializeField] private GameObject _bulletPrefab;
@@ -27,15 +31,32 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
     [SerializeField] private float _bulletLifetime = 5f;
     private AutoFireState _currentState = AutoFireState.Idle;
     private float _fireTimer = 0f;
+
+    [Header("HurtAnimation")]
+    [SerializeField] private Color _defaultColor;
+    [SerializeField] private Color _flashColor;
+    [SerializeField] private float _flashInterval;
+    [SerializeField] private float _flashDuration;
+
+    [Header("Stasis Parameters")]
+    [SerializeField] private Color _stasisColor;
     private enum AutoFireState
     {
         Idle,
         Windup,
-        Firing
+        Firing,
     }
+
+    bool _isStasis = false;
+    bool _isKnockedBack = false;
+    float _knockbackTimer = 0f;
+    float _knockbackStillDuration = 0.5f;
 
     void Awake()
     {
+
+        _damageReceiver = GetComponent<DamageReceiver>();
+        _damageReceiver.Initialize(this);
         // Initialize the bullet pool
         for (int i = 0; i < _poolSize; i++)
         {
@@ -48,6 +69,31 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
 
     void Update()
     {
+        if (_isKnockedBack)
+        {
+            // Possible damping of the knockback force
+            if (_rb.linearVelocity.magnitude <= 0.01f)
+            {
+                _knockbackTimer += Time.deltaTime;
+                if (_knockbackTimer >= _knockbackStillDuration)
+                {
+                    _isKnockedBack = false;
+                    _rb.constraints |= RigidbodyConstraints2D.FreezePositionX;
+                    _knockbackTimer = 0f;
+                }
+            }
+            else
+            {
+                _knockbackTimer = 0f;
+            }
+            return;
+        }
+
+        if (_isStasis)
+        {
+            return;
+        }
+        
         _spriteRenderer.flipX = FacingRight;
 
         switch (_currentState)
@@ -136,5 +182,71 @@ public class EnemyBehaviorAutoFire : MonoBehaviour
         _bulletPool.Add(bulletComponent);
         bulletComponent.Initialize(_bulletSpeed, _bulletDamage, _bulletLifetime, _bulletPoolTransform);
         return bulletComponent;
+    }
+
+
+    Coroutine damageFlashRoutine;
+    public void TakeDamage(DamageInfo damageInfo)
+    {
+
+        if (damageInfo.damageType == DamageType.Stasis)
+        {
+            StartCoroutine(StasisCoroutine(damageInfo.duration));
+        }
+        else if (damageInfo.damageType == DamageType.Knockback)
+        {
+            if (damageInfo.damage > 0)
+            {
+                if (damageFlashRoutine != null)
+                    StopCoroutine(damageFlashRoutine);
+                damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
+            }
+
+            _isKnockedBack = true;
+            _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            _rb.AddForce(damageInfo.force, ForceMode2D.Impulse);
+        }
+        else
+        {
+            if (damageFlashRoutine != null)
+                StopCoroutine(damageFlashRoutine);
+            damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
+        }
+    }
+
+    private IEnumerator StasisCoroutine(float duration)
+    {
+        _isStasis = true;
+        _spriteRenderer.color = _stasisColor;
+        _animator.speed = 0;
+        yield return new WaitForSeconds(duration);
+        _isStasis = false;
+        _spriteRenderer.color = _defaultColor;
+        _animator.speed = 1;
+    }
+
+    private IEnumerator DamageFlashCoroutine()
+    {
+        float intervalTimer = 0;
+        float durationTimer = 0;
+        bool glowIn = true;
+        while (durationTimer < _flashDuration)
+        {
+            intervalTimer += Time.deltaTime;
+            durationTimer += Time.deltaTime;
+            Color a = glowIn ? _defaultColor : _flashColor;
+            Color b = glowIn ? _flashColor : _defaultColor;
+            float t = Mathf.Clamp(intervalTimer / _flashInterval, 0, 1);
+            _spriteRenderer.color = Color.Lerp(a, b, t);
+
+            if (intervalTimer >= _flashInterval)
+            {
+                intervalTimer = 0;
+                glowIn = !glowIn;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+        _spriteRenderer.color = _defaultColor;
     }
 }
