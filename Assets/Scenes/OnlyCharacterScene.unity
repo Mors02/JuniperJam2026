@@ -894,10 +894,6 @@ PrefabInstance:
       propertyPath: testAbility
       value: Wind Push
       objectReference: {fileID: 0}
-    - target: {fileID: 6057162412156148985, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6857651498396704654, guid: d1867b09e35bd8449a43945cce00f88f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.38
