@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WheelSpinning
   _uiManager: {fileID: 0}
-  _spinSpeed: 30
+  _spinSpeed: 20
   _spinSpeedRandomness: 0.794
   _wheelImage: {fileID: 1812895471919136558}
   _fastSpinningFriction: 4
@@ -138,10 +138,12 @@ MonoBehaviour:
   _fastToSlowValue: 1
   _announcementText: {fileID: 220228189171425464}
   _rewards:
-  - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
-  - {fileID: 11400000, guid: 715a82350f4e76a4195c8d20b3f45779, type: 2}
-  - {fileID: 11400000, guid: efb138ae181c5bd46a96b47da950d77e, type: 2}
+  - {fileID: 11400000, guid: 17eaad57e28961f4aab97a41db8a3b93, type: 2}
   - {fileID: 11400000, guid: 84bb9920fa2ff9f4a90e016607e9eae5, type: 2}
+  - {fileID: 11400000, guid: efb138ae181c5bd46a96b47da950d77e, type: 2}
+  - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
+  - {fileID: 11400000, guid: 9263fa7157ff1d54f8b2d403dd684863, type: 2}
+  - {fileID: 11400000, guid: 715a82350f4e76a4195c8d20b3f45779, type: 2}
 --- !u!95 &5573714864588900165
 Animator:
   serializedVersion: 7

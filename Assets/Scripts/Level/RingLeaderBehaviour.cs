@@ -86,9 +86,10 @@ public class RingLeaderBehaviour : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out DamageReceiver receiver))
+        if (collision.TryGetComponent<ITakeDamage>(out ITakeDamage damageReceiver))
         {
-            receiver.ReceiveDamage();
+            DamageInfo info = new DamageInfo(1, DamageType.None);
+            damageReceiver.TakeDamage(info);
         }
     }
 

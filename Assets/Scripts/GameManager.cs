@@ -67,18 +67,20 @@ public class GameManager
             case WinConType.FloorIsLava:
                 CurrentWinCon = new LavaFloorWinCon(reward.Description);
                 break;
-            case WinConType.Stealth:
-                //activate stealth mode for every enemy which visualizes the line sight cone
+            case WinConType.FireRings:
+                GameObject[] rings = GameObject.FindGameObjectsWithTag("FireRing");
+                foreach(GameObject ring in rings)
+                {
+                    FireRing ringComponent = ring.GetComponentInChildren<FireRing>();
+                    ringComponent.Activate();
+                }
+                CurrentWinCon = new FireRingsWinCon(rings.Length, reward.Description);
                 break;
             case WinConType.RingLeader:
                 CurrentWinCon = new RingLeaderWinCon(reward.Description);
                 break;
             case WinConType.Survive:
-
-                CurrentWinCon = new SurviveWinCon(60f, reward.Description);
-                
-                //activate the gameobject that shoots projectiles
-                //the gameobject should contain a update function that calls WinconUpdate every frame
+                CurrentWinCon = new SurviveWinCon(10f, reward.Description);
                 break;
             
         }
@@ -113,7 +115,7 @@ public class GameManager
         _instance.UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
         _instance.SurviveManager = GameObject.FindGameObjectWithTag("Survive").GetComponent<SurviveManager>();
         _instance.RingLeader = GameObject.FindGameObjectWithTag("RingLeader").GetComponent<RingLeaderBehaviour>();
-        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor").GetComponent<LavaFloorBehaviour>();
+        _instance.LavaFloor = GameObject.FindGameObjectWithTag("LavaFloor").GetComponentInChildren<LavaFloorBehaviour>();
     }
 
     /// <summary>

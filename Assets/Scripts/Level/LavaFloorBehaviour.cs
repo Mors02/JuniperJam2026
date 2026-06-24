@@ -5,13 +5,18 @@ public class LavaFloorBehaviour : MonoBehaviour
 
     [SerializeField]
     private float _speed;
+    [SerializeField]
+    private Transform _transform;
     private bool _active;
 
+    [SerializeField]
+    private float _knockbackForce;
+    [SerializeField]
     private Animator _animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -20,7 +25,7 @@ public class LavaFloorBehaviour : MonoBehaviour
         if (_active)
         {
             float verticalMovement = _speed * Time.fixedDeltaTime;
-            this.transform.position = new Vector2(transform.position.x, transform.position.y + verticalMovement);
+            this._transform.position = new Vector2(_transform.position.x, _transform.position.y + verticalMovement);
         }
     }
 
@@ -28,5 +33,19 @@ public class LavaFloorBehaviour : MonoBehaviour
     {
         _active = true;
         _animator.SetTrigger("Enter");
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            rb.linearVelocityY = 0;
+            rb.AddForceY(_knockbackForce);
+            DamageInfo info = new DamageInfo(1, DamageType.Knockback, 1, new Vector2(0, _knockbackForce), false);
+
+
+            collision.gameObject.GetComponent<ITakeDamage>().TakeDamage(info);
+        }
     }
 }

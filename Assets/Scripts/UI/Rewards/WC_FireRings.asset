@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01f7254f541a02419a96aa7d8ca6370, type: 3}
-  m_Name: WC_LavaFloor
-  m_EditorClassIdentifier: Assembly-CSharp::WC_LavaFloor
-  Name: Lava
-  Description: Survive the lava floor
+  m_Script: {fileID: 11500000, guid: cbde4afd1dbc2104a868d5eff75fe60e, type: 3}
+  m_Name: WC_FireRings
+  m_EditorClassIdentifier: Assembly-CSharp::WC_FireRings
+  Name: Fire Hoops
+  Description: Jump throught the hoops

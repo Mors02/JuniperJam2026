@@ -50,7 +50,7 @@ public class Coin : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && collision is BoxCollider2D)
+        if (collision.CompareTag("Player") && collision is CircleCollider2D)
         {
             this._active = false;
             if (GameManager.Instance.CurrentWinCon.Type == WinConType.CollectCoins)

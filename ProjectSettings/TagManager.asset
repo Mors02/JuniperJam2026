@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - RingLeader
   - LavaFloor
+  - FireRing
   layers:
   - Default
   - TransparentFX
