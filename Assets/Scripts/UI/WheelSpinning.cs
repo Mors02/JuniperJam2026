@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
+
 public class WheelSpinning : MonoBehaviour
 {
 
@@ -46,6 +47,7 @@ public class WheelSpinning : MonoBehaviour
         //add some randomness
         _spinSpeed = Random.Range(_spinSpeed-_spinSpeedRandomness, _spinSpeed+_spinSpeedRandomness);
         _rotation = Random.Range(0f, 360f);
+        Debug.Log(_rotation);
         _wheelImage.transform.localRotation = Quaternion.Euler(0, 0, -_rotation);
     }
 
@@ -60,7 +62,9 @@ public class WheelSpinning : MonoBehaviour
             } else
             {
                 _spinSpeed -= _slowSpinningFriction * Time.unscaledDeltaTime;
-            }
+            }  
+
+            _spinSpeed = Mathf.Max(0, _spinSpeed);
 
             _rotation += 100 * Time.unscaledDeltaTime * _spinSpeed;
             _wheelImage.transform.localRotation = Quaternion.Euler(0, 0, -_rotation);
@@ -69,15 +73,19 @@ public class WheelSpinning : MonoBehaviour
             {
                 _spinSpeed = 0;
                 _isSpinning = false;
+                Debug.Log(_rotation);
                 //get the current rotation and divide it by the reward angle (360 divided by the number of rewards)
-                _rewardNumber = (int)_rotation % 360 /  (360 / _rewards.Count);
+                _rewardNumber = (int)_rotation % 360 / (360 / _rewards.Count);
+                Debug.Log(_rewards.Count);
                 Debug.Log(_rewardNumber);
+                Debug.Log(_isSpinning);
                 
             }
         } 
-        else if (_rewardNumber != -1)
+        
+        if (_rewardNumber > 0)
         {
-
+            Debug.Log(_rewardNumber);
             _animator.SetTrigger("Exit");
             _announcementText.text = _rewards[_rewardNumber].Name;
             _rewards[_rewardNumber].Execute();
