@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public class Int_Dash : Ability
+public class DashAbility : Ability
 {
     [SerializeField] private FMODAudioScriptable _dashAudio;
     [SerializeField] private string _dashAnim;
@@ -16,12 +16,13 @@ public class Int_Dash : Ability
     private Animator _animator;
     private AnimationSubscriber _animationSubscriber;
     private Rigidbody2D _rb;
-    
+    private PlayerSMController _playerSMController;
+
     private Coroutine _dashCoroutine;
 
     private float _curDashTime = 0;
 
-    private bool _hasDashEnded = false;
+    private bool _hasAnimEnded = false;
     public override void Initialize(GameObject go = null)
     {
         base.Initialize(go);
@@ -30,11 +31,20 @@ public class Int_Dash : Ability
         _animator = gameObject.GetComponent<Animator>();
         _animationSubscriber = gameObject.GetComponent<AnimationSubscriber>();
         _rb = gameObject.GetComponent<Rigidbody2D>();
+        _playerSMController = gameObject.GetComponent<PlayerSMController>();
 
         if (_animationSubscriber)
         {
-            _animationSubscriber.SubscribeAction("DashEnd", () => {
-                _hasDashEnded = true;
+            _animationSubscriber.SubscribeEndAction(() => {
+                if (!IsExecuting()) return;
+
+                _hasAnimEnded = true;
+            });
+            _animationSubscriber.SubscribeAction("Dash", () =>
+            {
+                if (!IsExecuting()) return;
+
+                _rb.AddForce(_dashForce * gameObject.transform.right, ForceMode2D.Impulse);
             });
         }
     }
@@ -46,6 +56,9 @@ public class Int_Dash : Ability
         _monoBehaviour = null;
         _animator = null;
         _animationSubscriber = null;
+        _rb = null;
+        _playerSMController = null;
+        _dashAudio = null;
     }
 
     bool CanDash()
@@ -60,7 +73,8 @@ public class Int_Dash : Ability
 
     public override bool CanTrigger()
     {
-        return base.CanTrigger() && CanDash() && _monoBehaviour && _animator && _animationSubscriber;
+        return base.CanTrigger() && _dashCoroutine == null 
+            && CanDash() && _monoBehaviour && _animator && _animationSubscriber;
     }
 
     public override void Trigger()
@@ -82,32 +96,33 @@ public class Int_Dash : Ability
         if (_dashCoroutine != null)
         {
             _monoBehaviour.StopCoroutine(_dashCoroutine);
-            _dashCoroutine = null;
+
+            _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
+
+            _curDashTime = Time.time;
 
             onExecutionCancel?.Invoke();
+
+            _dashCoroutine = null;
         }
     }
 
     IEnumerator DashEnumerator()
     {
-        _hasDashEnded = false;
+        if (!_animator) yield break;
 
-        if (_animator)
-        {
-            _animator.Play(_dashAnim, 0, 0);
+        _animator.Play(_dashAnim, 0, 0);
+        _hasAnimEnded = false;
 
-            _rb.linearVelocityX = 0;
+        _rb.linearVelocityX = 0;
+        _playerSMController.FreezeConstraints(RigidbodyConstraints2D.FreezePositionY);
+        while (!_hasAnimEnded) yield return null;
 
-            _rb.AddForce(_dashForce * gameObject.transform.right, ForceMode2D.Impulse);
-            while (!_hasDashEnded)
-            {
-                _rb.linearVelocityY = 0;
-                yield return null;
-            }
-        }
+        _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
 
         _curDashTime = Time.time;
 
+        onExecutionComplete?.Invoke();
         _dashCoroutine = null;
     }
 }

@@ -41,6 +41,7 @@ Transform:
   - {fileID: 4394528090421756502}
   - {fileID: 3261247875907154304}
   - {fileID: 3794609037812703924}
+  - {fileID: 1693788543128924821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3383827292155690880
@@ -104,7 +105,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.12, y: -1}
+  m_Offset: {x: 0.12, y: 0}
   m_Radius: 0.48
 --- !u!95 &6676589175641477251
 Animator:
@@ -283,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 2083603171620641557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.17, y: -1.05, z: 0}
+  m_LocalPosition: {x: -0.17, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5209,7 +5210,7 @@ MonoBehaviour:
     parasiteBHolders:
     - name: Dash
       parasiteBehaviour:
-        rid: 2533004827022590099
+        rid: 2533004854806184016
   - tag: Non Interrupt
     parasiteBHolders:
     - name: Fireball
@@ -5225,29 +5226,35 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2533004827022590099
-      type: {class: Int_Dash, ns: , asm: Assembly-CSharp}
-      data:
-        _dashAudio: {fileID: 11400000, guid: ef58d5f417963ed458baf3f674fdf000, type: 2}
-        _dashAnim: Player_dash
-        _dashForce: 20
-        _dashCooldown: 1
-        _allowFirst: 1
     - rid: 2533004851591774278
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_fireball
         projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
     - rid: 2533004851591774279
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_stasis
         projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
         projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
     - rid: 2533004851591774280
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        launchSpot: {fileID: 1693788543128924821}
+        launchAnim: Player_fireball
         projectileAudio: {fileID: 0}
         projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}
+    - rid: 2533004854806184016
+      type: {class: DashAbility, ns: , asm: Assembly-CSharp}
+      data:
+        _dashAudio: {fileID: 11400000, guid: ef58d5f417963ed458baf3f674fdf000, type: 2}
+        _dashAnim: Player_spin
+        _dashForce: 20
+        _dashCooldown: 1
+        _allowFirst: 1
 --- !u!1 &4554267910812025104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,7 +5280,7 @@ Transform:
   m_GameObject: {fileID: 4554267910812025104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.52, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5304,7 +5311,7 @@ Transform:
   m_GameObject: {fileID: 4669678041466093010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5427,7 +5434,7 @@ Transform:
   m_GameObject: {fileID: 7198166655302397589}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5492,6 +5499,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &7576599128650621306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693788543128924821}
+  m_Layer: 6
+  m_Name: launchSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693788543128924821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576599128650621306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 0.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6857651498396704654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8421449570558913015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,7 +5556,7 @@ Transform:
   m_GameObject: {fileID: 8421449570558913015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

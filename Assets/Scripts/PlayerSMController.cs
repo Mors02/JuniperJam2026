@@ -115,11 +115,15 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     [NonSerialized] public string wheelAbilityName;
 
+    private RigidbodyConstraints2D _baseConstraints;
+    public RigidbodyConstraints2D BaseConstraints => _baseConstraints;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _animationSubscriber = GetComponent<AnimationSubscriber>();
         _rb = GetComponent<Rigidbody2D>();
+        _baseConstraints = _rb.constraints;
 
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
@@ -163,29 +167,31 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.fKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame
+            && _currentState != PlayerState.Special)
         {
             if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
             {
                 var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(wheelAbilityName);
                 if (parasiteBehaviour is Ability ability)
                 {
-                    ability.TryTrigger();
-
                     wheelAbilityName = null;
                     _wheelSpin.Spin();
+
+                    _ability = ability;
+                    SwitchState(PlayerState.Special);
                 }
             }
         }
 
-        if (Keyboard.current.tKey.wasPressedThisFrame)
+        /*if (Keyboard.current.tKey.wasPressedThisFrame)
         {
             var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
             if (parasiteBehaviour is Ability ability)
             {
                 ability.TryTrigger();
             }
-        }
+        }*/
 
         if (_moveAction != null) _move = _moveAction.ReadValue<Vector2>().x;
 
@@ -196,9 +202,11 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     void OnJump(InputAction.CallbackContext context)
     {
+        if (_currentState == PlayerState.Special) return;
+
         bool coyoteCheck = _mayJump < _coyoteTime || _numberOfJumps != 0;
-        Debug.Log(_numberOfJumps);
-        Debug.Log(_mayJump + " < " + _coyoteTime);
+        //Debug.Log(_numberOfJumps);
+        //Debug.Log(_mayJump + " < " + _coyoteTime);
         if (_numberOfJumps <= _totalJumps && coyoteCheck)
         {
             SwitchState(PlayerState.Jump, true);
@@ -291,6 +299,11 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _numberOfJumps++;
     }
 
+    public void FreezeConstraints(RigidbodyConstraints2D freezeConstraints)
+    {
+        _rb.constraints = freezeConstraints;
+    }
+
     void ExecuteState(StateExecutionType stateExecutionType)
     {
         switch (_currentState)
@@ -339,6 +352,9 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    _numberOfJumps = 0;
+                    _mayJump = 0;
+
                     if (_animator) _animator.Play(idleAnim, 0, 0);
                     break;
                 }
@@ -375,6 +391,9 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    _numberOfJumps = 0;
+                    _mayJump = 0;
+
                     FlipCharacter();
 
                     if (Grounded())
@@ -518,6 +537,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    //_rb.linearVelocity = Vector2.zero;
                     _ability.TryTrigger();
                     break;
                 }
@@ -563,7 +583,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         return Physics2D.OverlapCircle(_headCheck.position, _headCheckRadius, 0, headMask);
     }
 
-    private bool Grounded()
+    public bool Grounded()
     {
         if (!_groundCheck) return false;
 
