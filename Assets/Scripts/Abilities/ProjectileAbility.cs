@@ -76,9 +76,6 @@ public class ProjectileAbility : Ability
     {
         if (!IsExecuting()) return;
 
-        if (FMODAudioManager.Instance && projectileAudio)
-            FMODAudioManager.Instance.PlayOnce(projectileAudio, null, true);
-
         //Debug.Log(projectilePrefab);
 
         var projectileObject = UnityEngine.Object.Instantiate(projectilePrefab, launchSpot.position, launchSpot.rotation);
@@ -115,6 +112,9 @@ public class ProjectileAbility : Ability
     IEnumerator WaitEnumerator()
     {
         if (!_animator) yield break;
+
+        if (FMODAudioManager.Instance && projectileAudio)
+            FMODAudioManager.Instance.PlayOnce(projectileAudio, null, true);
 
         _animator.Play(launchAnim, 0, 0);
         _hasAnimEnded = false;

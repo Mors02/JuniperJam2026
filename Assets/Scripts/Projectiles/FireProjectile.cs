@@ -46,7 +46,7 @@ public class FireProjectile : Projectile
 
     private void Update()
     {
-        transform.right = _rb.linearVelocity.normalized;
+         if(_collider2D.enabled) transform.right = _rb.linearVelocity.normalized;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
