@@ -2,6 +2,7 @@ using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,6 +28,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         Idle,
         Run,
         Jump,
+        Glide,
         Fall,
         Land,
         Special,
@@ -55,12 +57,18 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [Tooltip("How much time for the player to jump after leaving and hedge")]
     [SerializeField] private float _coyoteTime;
 
+    [Header("Glide")]
+    [Tooltip("How slowly the player falls during glide")]
+    [SerializeField, Min(0)] private float _glideGravityScale = 1f;
+
     [Header("Animation")]
     [SerializeField] private string idleAnim;
     [SerializeField] private string runAnim;
     [SerializeField] private string jumpAnim;
+    [SerializeField] private string glideAnim;
     [SerializeField] private string fallAnim;
     [SerializeField] private string landAnim;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [Header("Head Check")]
     [SerializeField] private Transform _headCheck;
@@ -94,6 +102,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     private Rigidbody2D _rb;
     private Animator _animator;
     private AnimationSubscriber _animationSubscriber;
+    private DamageReceiver _damageReceiver;
     #endregion
 
     private Vector2 _currentMovement;
@@ -103,6 +112,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     private float _mayJump;
     private bool _isInstantJump = false;
     private bool _hasJumpForce = false;
+    private bool _canGlide = false;
+    private float _baseGravityScale;
 
     #region Input actions
     private InputAction _moveAction;
@@ -115,11 +126,17 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     [NonSerialized] public string wheelAbilityName;
 
+    private RigidbodyConstraints2D _baseConstraints;
+    public RigidbodyConstraints2D BaseConstraints => _baseConstraints;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _damageReceiver = GetComponent<DamageReceiver>();
         _animationSubscriber = GetComponent<AnimationSubscriber>();
         _rb = GetComponent<Rigidbody2D>();
+        _baseConstraints = _rb.constraints;
+        _baseGravityScale = _rb.gravityScale;
 
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
@@ -134,7 +151,12 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             SwitchState(PlayerState.Idle);
         });
+        _animationSubscriber.SubscribeAction("GlideEnd", () =>
+        {
+            SwitchState(PlayerState.Fall);
+        });
         _animationSubscriber.SubscribeAction("Jump", Jump);
+
 
         _wheelSpin.onSpinEnd += (string abilityName) =>
         {
@@ -143,6 +165,14 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
         _numberOfJumps = 0;
         _mayJump = 0;
+
+        _damageReceiver.Initialize(this, 100);
+        _damageReceiver.OnDeath += () =>
+        {
+            SwitchState(PlayerState.Death);
+        };
+        _damageReceiver.OnInvincibilityStart += StartInvincibilityAnimation;
+        _damageReceiver.OnInvincibilityEnd += StopInvincibilityAnimation;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -163,20 +193,31 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.fKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame
+            && _currentState != PlayerState.Special)
         {
             if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
             {
                 var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(wheelAbilityName);
                 if (parasiteBehaviour is Ability ability)
                 {
-                    ability.TryTrigger();
-
                     wheelAbilityName = null;
                     _wheelSpin.Spin();
+
+                    _ability = ability;
+                    SwitchState(PlayerState.Special);
                 }
             }
         }
+
+        /*if (Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(testAbility);
+            if (parasiteBehaviour is Ability ability)
+            {
+                ability.TryTrigger();
+            }
+        }*/
 
         if (_moveAction != null) _move = _moveAction.ReadValue<Vector2>().x;
 
@@ -187,11 +228,17 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     void OnJump(InputAction.CallbackContext context)
     {
+        if (_currentState == PlayerState.Special) return;
+
         bool coyoteCheck = _mayJump < _coyoteTime || _numberOfJumps != 0;
 
         if (_numberOfJumps <= _totalJumps && coyoteCheck)
         {
             SwitchState(PlayerState.Jump, true);
+        }
+        else if (_canGlide)
+        {
+            SwitchState(PlayerState.Glide);
         }
             
         //if (Grounded())
@@ -280,6 +327,11 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _numberOfJumps++;
     }
 
+    public void FreezeConstraints(RigidbodyConstraints2D freezeConstraints)
+    {
+        _rb.constraints = freezeConstraints;
+    }
+
     void ExecuteState(StateExecutionType stateExecutionType)
     {
         switch (_currentState)
@@ -292,6 +344,9 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                 break;
             case PlayerState.Jump:
                 JumpState(stateExecutionType);
+                break;
+            case PlayerState.Glide:
+                GlideState(stateExecutionType);
                 break;
             case PlayerState.Fall:
                 FallState(stateExecutionType);
@@ -328,6 +383,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    _numberOfJumps = 0;
+                    _mayJump = 0;
+                    _canGlide = true;
+
                     if (_animator) _animator.Play(idleAnim, 0, 0);
                     break;
                 }
@@ -364,6 +423,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    _numberOfJumps = 0;
+                    _mayJump = 0;
+                    _canGlide = true;
+
                     FlipCharacter();
 
                     if (Grounded())
@@ -439,6 +502,45 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         }
     }
 
+    void GlideState(StateExecutionType stateExecutionType)
+    {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    _canGlide = false;
+
+                    _rb.linearVelocity = Vector2.zero;
+                    _rb.gravityScale = _glideGravityScale;
+
+                    if (_animator) _animator.Play(glideAnim, 0, 0);
+                    break;
+                }
+            case StateExecutionType.FixedUpdate:
+                {
+                    if (_isGrounded)
+                    {
+                        if (_move != 0) SwitchState(PlayerState.Run);
+                        else SwitchState(PlayerState.Idle);
+                        break;
+                    }
+
+                    HandleMovement();
+                    FlipCharacter();
+                    break;
+                }
+            case StateExecutionType.Exit:
+                {
+                    _rb.gravityScale = _baseGravityScale;
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+    }
+
     void FallState(StateExecutionType stateExecutionType)
     {
         switch (stateExecutionType)
@@ -475,11 +577,18 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    if (_move != 0)
+                    {
+                        SwitchState(PlayerState.Run);
+                        break;
+                    }
+
                     if (FMODAudioManager.Instance)
                         FMODAudioManager.Instance.PlayOnce(_landAudio, null, true);
 
                     _numberOfJumps = 0;
                     _mayJump = 0;
+                    _canGlide = true;
 
                     if (_animator) _animator.Play(landAnim, 0, 0);
                     break;
@@ -507,6 +616,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             case StateExecutionType.Enter:
                 {
+                    //_rb.linearVelocity = Vector2.zero;
                     _ability.TryTrigger();
                     break;
                 }
@@ -552,7 +662,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         return Physics2D.OverlapCircle(_headCheck.position, _headCheckRadius, 0, headMask);
     }
 
-    private bool Grounded()
+    public bool Grounded()
     {
         if (!_groundCheck) return false;
 
@@ -576,6 +686,17 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(DamageInfo damageInfo)
     {
-        
+        GameManager.Instance.CurrentLives = _damageReceiver.CurrentHealth;
+        // Knockback on the player would go here.
+    }
+
+    private void StartInvincibilityAnimation()
+    {
+        _animator.SetBool("Invincible", true); 
+    }
+
+    private void StopInvincibilityAnimation()
+    {
+        _animator.SetBool("Invincible", false); 
     }
 }

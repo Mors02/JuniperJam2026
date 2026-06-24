@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1057335572868842976}
   - component: {fileID: 2981918100834507389}
   - component: {fileID: 5766024196374545361}
+  - component: {fileID: 4620859462698439953}
+  - component: {fileID: 339174011099192185}
   m_Layer: 7
   m_Name: Enemy (Patrol)
   m_TagString: Untagged
@@ -51,7 +53,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -69,7 +71,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.8203931}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -79,7 +81,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.06, y: 2.6407862}
   m_EdgeRadius: 0
 --- !u!50 &2981918100834507389
 Rigidbody2D:
@@ -121,14 +123,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviorPatrol
   _spriteRenderer: {fileID: 4674298480828630064}
+  _animator: {fileID: 4620859462698439953}
   _floorMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   _moveSpeed: 1
   _ledgeCheckDistance: 0.5
   _ledgeCheckRange: 1
-  _wallCheckDistance: 0.5
+  _wallCheckDistance: 2
   _turnDelay: 0.5
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashColor: {r: 1, g: 0.40392157, b: 0.40392157, a: 1}
+  _flashInterval: 0.2
+  _flashDuration: 1
+  _stasisColor: {r: 0.5529412, g: 0.9490196, b: 1, a: 1}
+--- !u!95 &4620859462698439953
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375293954207211877}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0e81da5a43c7486386d429b01c32b08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &339174011099192185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375293954207211877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
+  _maxHealth: 3
+  _canTakeDamage: 0
+  _invicibilityTime: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5891939591916927008
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,8 +203,8 @@ Transform:
   m_GameObject: {fileID: 5891939591916927008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.76, y: 6.76, z: 6.76}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3556905014544623799}
@@ -210,7 +258,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4165294027940856739, guid: b77ff5e19e0ead041ae0177d6a973e47, type: 3}
+  m_Sprite: {fileID: 3976178806821576110, guid: 04ecb42813a2640e1b0104443c65e2fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

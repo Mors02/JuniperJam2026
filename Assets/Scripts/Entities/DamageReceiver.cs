@@ -1,18 +1,16 @@
 using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class DamageReceiver : MonoBehaviour
 {
+    private ITakeDamage _damageable;
+    private int _currentHealth;
+    public int CurrentHealth => _currentHealth;
     [SerializeField]
-    private Animator _animator;
-    
-    [SerializeField]
-    private int _lives;
-    public int Lives => _lives;
-    private int _currentLives;
-
+    private int _maxHealth;
     [SerializeField]
     private bool _canTakeDamage;
 
@@ -20,14 +18,23 @@ public class DamageReceiver : MonoBehaviour
     [SerializeField]
     private float _invicibilityTime;
 
-    public UnityEvent<int> OnHitReceived;
+    public UnityEvent<int> OnHealthChanged;
+    public Action OnInvincibilityStart;
+    public Action OnInvincibilityEnd;
+    public Action OnDeath;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _currentLives = GameManager.Instance.CurrentLives;
-        if (OnHitReceived == null)
-            OnHitReceived = new UnityEvent<int>();
+        if (OnHealthChanged == null)
+            OnHealthChanged = new UnityEvent<int>();
+    }
+
+    public void Initialize(ITakeDamage damageable, int currentHealth = -1)
+    {
+        _damageable = damageable;
+        _currentHealth = currentHealth == -1 ? _maxHealth : currentHealth;  
+        _canTakeDamage = true;
     }
 
     public void ReceiveDamage(DamageInfo damageInfo = new DamageInfo())
@@ -35,41 +42,31 @@ public class DamageReceiver : MonoBehaviour
         if (!_canTakeDamage)
             return;
 
-        _animator.SetTrigger("Hit");
-        this._currentLives--;
-        UpdateGameManager();
-       
-        OnHitReceived.Invoke(_currentLives);
+        this._currentHealth -= damageInfo.damage;
+        OnHealthChanged.Invoke(_currentHealth);
+        if (_currentHealth <= 0)
+        {
+            OnDeath?.Invoke();
+            return;
+        }
+        _damageable.TakeDamage(damageInfo);
         _canTakeDamage = false;
-        _animator.SetBool("Invincible", true);
-        StartCoroutine("BecomeInvincible");
-        
-        if (_currentLives <= 0)
-            Debug.Log("Death");
+        OnInvincibilityStart?.Invoke();
+        StartCoroutine(BecomeInvincible());
     }
 
-    public void Heal()
+    public void Heal(int amount)
     {
-        this._currentLives++;
-        UpdateGameManager();
+        _currentHealth += amount;
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 
-        OnHitReceived.Invoke(_currentLives);
-
-        if (_currentLives >= _lives)
-            _currentLives = _lives;
+        OnHealthChanged.Invoke(_currentHealth);
     }
 
     private IEnumerator BecomeInvincible()
     {
         yield return new WaitForSeconds(_invicibilityTime);
         _canTakeDamage = true;
-        _animator.SetBool("Invincible", false);
+        OnInvincibilityEnd?.Invoke();
     }
-
-
-    private void UpdateGameManager()
-    {
-        GameManager.Instance.CurrentLives = _currentLives;
-    }
-
 }
