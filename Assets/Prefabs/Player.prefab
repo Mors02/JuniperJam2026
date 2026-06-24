@@ -228,9 +228,6 @@ MonoBehaviour:
   _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _wheelSpin: {fileID: 0}
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  glowColor: {r: 1, g: 0.9843137, b: 0.8627451, a: 1}
-  glowInterval: 0.1
   debugState: 0
 --- !u!114 &2601935508210363800
 MonoBehaviour:
@@ -5349,8 +5346,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6857651498396704654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
