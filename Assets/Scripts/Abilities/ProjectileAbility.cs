@@ -2,7 +2,7 @@ using AbyssWorks.FMODAudioManager;
 using UnityEngine;
 
 [System.Serializable]
-public class NInt_ProjectileAbility : Ability
+public class ProjectileAbility : Ability
 {
     public FMODAudioScriptable projectileAudio;
     public GameObject projectilePrefab;

@@ -5214,27 +5214,17 @@ MonoBehaviour:
     parasiteBHolders:
     - name: Fireball
       parasiteBehaviour:
-        rid: 2533004779431133334
+        rid: 2533004851591774278
     - name: Stasis
       parasiteBehaviour:
-        rid: 2533004779431133346
+        rid: 2533004851591774279
     - name: Wind Push
       parasiteBehaviour:
-        rid: 2533004851591774277
+        rid: 2533004851591774280
   parasiteSOHolders: []
   references:
     version: 2
     RefIds:
-    - rid: 2533004779431133334
-      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
-      data:
-        projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
-        projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
-    - rid: 2533004779431133346
-      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
-      data:
-        projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
-        projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
     - rid: 2533004827022590099
       type: {class: Int_Dash, ns: , asm: Assembly-CSharp}
       data:
@@ -5243,8 +5233,18 @@ MonoBehaviour:
         _dashForce: 20
         _dashCooldown: 1
         _allowFirst: 1
-    - rid: 2533004851591774277
-      type: {class: NInt_ProjectileAbility, ns: , asm: Assembly-CSharp}
+    - rid: 2533004851591774278
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
+        projectilePrefab: {fileID: 85864045586036413, guid: ca8d5c1aad939db4aa63f32b2773c7fd, type: 3}
+    - rid: 2533004851591774279
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
+        projectilePrefab: {fileID: 85864045586036413, guid: b7bfe08b896a5984a86cf9f7ccf90e88, type: 3}
+    - rid: 2533004851591774280
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
         projectileAudio: {fileID: 0}
         projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}

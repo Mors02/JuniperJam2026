@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: d1c0ce5bc5ca10c479466f30c73656f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6755707615389490125
+    second: bunny with wand_abilities_Helicopter Final_0
+  - first:
+      213: -7924961700191771512
+    second: bunny with wand_abilities_Helicopter Final_1
+  - first:
+      213: -5223768602342727623
+    second: bunny with wand_abilities_Helicopter Final_2
+  - first:
+      213: 1130854363272042782
+    second: bunny with wand_abilities_Helicopter Final_3
+  - first:
+      213: 2483471368493273898
+    second: bunny with wand_abilities_Helicopter Final_4
+  - first:
+      213: -7770774275744771240
+    second: bunny with wand_abilities_Helicopter Final_5
+  - first:
+      213: 7216704463445127930
+    second: bunny with wand_abilities_Helicopter Final_6
+  - first:
+      213: -1111350648353594902
+    second: bunny with wand_abilities_Helicopter Final_7
+  - first:
+      213: -3237364665006398181
+    second: bunny with wand_abilities_Helicopter Final_8
+  - first:
+      213: -7452901859164389383
+    second: bunny with wand_abilities_Helicopter Final_9
+  - first:
+      213: 7191680323765017771
+    second: bunny with wand_abilities_Helicopter Final_10
+  - first:
+      213: 3226274756807185687
+    second: bunny with wand_abilities_Helicopter Final_11
+  - first:
+      213: -9145614584816089397
+    second: bunny with wand_abilities_Helicopter Final_12
+  - first:
+      213: 2613876243982457749
+    second: bunny with wand_abilities_Helicopter Final_13
+  - first:
+      213: 3682972754925090432
+    second: bunny with wand_abilities_Helicopter Final_14
+  - first:
+      213: -7927346205923968768
+    second: bunny with wand_abilities_Helicopter Final_15
+  - first:
+      213: 6602087114024854281
+    second: bunny with wand_abilities_Helicopter Final_16
+  - first:
+      213: -410233808909415475
+    second: bunny with wand_abilities_Helicopter Final_17
+  - first:
+      213: -6515446754465754563
+    second: bunny with wand_abilities_Helicopter Final_18
+  - first:
+      213: -675430816371212687
+    second: bunny with wand_abilities_Helicopter Final_19
+  - first:
+      213: 3388232009137468871
+    second: bunny with wand_abilities_Helicopter Final_20
+  - first:
+      213: 2288584430829998108
+    second: bunny with wand_abilities_Helicopter Final_21
+  - first:
+      213: 7091458114092631527
+    second: bunny with wand_abilities_Helicopter Final_22
+  - first:
+      213: 9078286518644444774
+    second: bunny with wand_abilities_Helicopter Final_23
+  - first:
+      213: -7948529384770898648
+    second: bunny with wand_abilities_Helicopter Final_24
+  - first:
+      213: 9033242235905859839
+    second: bunny with wand_abilities_Helicopter Final_25
+  - first:
+      213: -4499338400051349126
+    second: bunny with wand_abilities_Helicopter Final_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334ee4297b7ee32a0800000000000000
+      internalID: -6755707615389490125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8846e796251e40290800000000000000
+      internalID: -7924961700191771512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930e58402227187b0800000000000000
+      internalID: -5223768602342727623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19d7874d0a91bf00800000000000000
+      internalID: 1130854363272042782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2315e83d00177220800000000000000
+      internalID: 2483471368493273898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8535d70b7f9a82490800000000000000
+      internalID: -7770774275744771240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af27f984972e62460800000000000000
+      internalID: 7216704463445127930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1ebf73970b390f0800000000000000
+      internalID: -1111350648353594902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1564ed4df19213d0800000000000000
+      internalID: -3237364665006398181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff78aa0f39f19890800000000000000
+      internalID: -7452901859164389383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac1e2cb62bfdc360800000000000000
+      internalID: 7191680323765017771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_11
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7155d4b3cc706cc20800000000000000
+      internalID: 3226274756807185687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6c76b9dff341180800000000000000
+      internalID: -9145614584816089397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_13
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b1861589a564420800000000000000
+      internalID: 2613876243982457749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_14
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08670c6153c8c1330800000000000000
+      internalID: 3682972754925090432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0097c5860a86cf190800000000000000
+      internalID: -7927346205923968768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_16
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903a2a730435f9b50800000000000000
+      internalID: 6602087114024854281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb4919368e8e4af0800000000000000
+      internalID: -410233808909415475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_18
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32d81772bb7495a0800000000000000
+      internalID: -6515446754465754563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_19
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e77d7404360a6f0800000000000000
+      internalID: -675430816371212687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c53f398f0b650f20800000000000000
+      internalID: 3388232009137468871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_21
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c109c161a6fa2cf10800000000000000
+      internalID: 2288584430829998108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_22
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e58d06259be96260800000000000000
+      internalID: 7091458114092631527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_23
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e05096d7d8cfd70800000000000000
+      internalID: 9078286518644444774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_24
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825f9fd33a621b190800000000000000
+      internalID: -7948529384770898648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_25
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0693114f58c5d70800000000000000
+      internalID: 9033242235905859839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Helicopter Final_26
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a793aac40932f81c0800000000000000
+      internalID: -4499338400051349126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 909ab71a2f648d84f859ee7dc63e4523
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":50.0,"y":50.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      bunny with wand_abilities_Helicopter Final_0: -6755707615389490125
+      bunny with wand_abilities_Helicopter Final_1: -7924961700191771512
+      bunny with wand_abilities_Helicopter Final_10: 7191680323765017771
+      bunny with wand_abilities_Helicopter Final_11: 3226274756807185687
+      bunny with wand_abilities_Helicopter Final_12: -9145614584816089397
+      bunny with wand_abilities_Helicopter Final_13: 2613876243982457749
+      bunny with wand_abilities_Helicopter Final_14: 3682972754925090432
+      bunny with wand_abilities_Helicopter Final_15: -7927346205923968768
+      bunny with wand_abilities_Helicopter Final_16: 6602087114024854281
+      bunny with wand_abilities_Helicopter Final_17: -410233808909415475
+      bunny with wand_abilities_Helicopter Final_18: -6515446754465754563
+      bunny with wand_abilities_Helicopter Final_19: -675430816371212687
+      bunny with wand_abilities_Helicopter Final_2: -5223768602342727623
+      bunny with wand_abilities_Helicopter Final_20: 3388232009137468871
+      bunny with wand_abilities_Helicopter Final_21: 2288584430829998108
+      bunny with wand_abilities_Helicopter Final_22: 7091458114092631527
+      bunny with wand_abilities_Helicopter Final_23: 9078286518644444774
+      bunny with wand_abilities_Helicopter Final_24: -7948529384770898648
+      bunny with wand_abilities_Helicopter Final_25: 9033242235905859839
+      bunny with wand_abilities_Helicopter Final_26: -4499338400051349126
+      bunny with wand_abilities_Helicopter Final_3: 1130854363272042782
+      bunny with wand_abilities_Helicopter Final_4: 2483471368493273898
+      bunny with wand_abilities_Helicopter Final_5: -7770774275744771240
+      bunny with wand_abilities_Helicopter Final_6: 7216704463445127930
+      bunny with wand_abilities_Helicopter Final_7: -1111350648353594902
+      bunny with wand_abilities_Helicopter Final_8: -3237364665006398181
+      bunny with wand_abilities_Helicopter Final_9: -7452901859164389383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
