@@ -12,6 +12,7 @@ TagManager:
   - RingLeader
   - LavaFloor
   - FireRing
+  - PlayerCanvas
   layers:
   - Default
   - TransparentFX
