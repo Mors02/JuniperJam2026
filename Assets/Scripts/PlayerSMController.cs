@@ -131,6 +131,12 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     private void Awake()
     {
+        if (!_wheelSpin)
+        {
+            var playerCanvas = GameObject.FindWithTag("PlayerCanvas").GetComponent<UIPlayerCanvas>();
+            _wheelSpin = playerCanvas.abilityWheelSpin;
+        }
+
         _animator = GetComponent<Animator>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _animationSubscriber = GetComponent<AnimationSubscriber>();
@@ -433,6 +439,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                         _dustParticles.Play();
 
                     if (_animator) _animator.Play(runAnim, 0, 0);
+
+                    HandleMovement();
+                    FlipCharacter();
+
                     break;
                 }
             case StateExecutionType.FixedUpdate:

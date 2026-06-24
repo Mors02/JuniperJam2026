@@ -105,7 +105,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.12, y: 0}
+  m_Offset: {x: -0.15, y: 0}
   m_Radius: 0.48
 --- !u!95 &6676589175641477251
 Animator:
@@ -217,7 +217,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   _groundCheck: {fileID: 3261247875907154304}
-  _groundedSize: {x: 0.73, y: 0.25}
+  _groundedSize: {x: 0.5, y: 0.25}
   _floorMask:
     serializedVersion: 2
     m_Bits: 55
@@ -5282,7 +5282,7 @@ Transform:
   m_GameObject: {fileID: 4554267910812025104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.48, z: 0}
+  m_LocalPosition: {x: -0.11, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5313,7 +5313,7 @@ Transform:
   m_GameObject: {fileID: 4669678041466093010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.21, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
