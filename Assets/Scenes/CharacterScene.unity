@@ -1549,6 +1549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 443257988272801413, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 61948703, guid: e3506c21d4b80024fb227288e2e82ff4, type: 3}
     - target: {fileID: 1980639262705177014, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1629,14 +1633,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2335151238891280705, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
-      propertyPath: _rewards.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335151238891280705, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
-      propertyPath: '_rewards.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: efb138ae181c5bd46a96b47da950d77e, type: 2}
     - target: {fileID: 3842875575673410834, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: m_IsActive
       value: 0
