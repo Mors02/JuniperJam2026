@@ -65,7 +65,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &6499409638050219568
 MonoBehaviour:
@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943152079075790429, guid: 95417a3aa01fb45469241ad7a803a50c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 61948703, guid: e3506c21d4b80024fb227288e2e82ff4, type: 3}
     - target: {fileID: 3356770639258983703, guid: 95417a3aa01fb45469241ad7a803a50c, type: 3}
       propertyPath: m_Name
       value: CurtainContainer
