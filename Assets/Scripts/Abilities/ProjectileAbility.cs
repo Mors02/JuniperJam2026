@@ -79,7 +79,7 @@ public class ProjectileAbility : Ability
         if (FMODAudioManager.Instance && projectileAudio)
             FMODAudioManager.Instance.PlayOnce(projectileAudio, null, true);
 
-        Debug.Log(projectilePrefab);
+        //Debug.Log(projectilePrefab);
 
         var projectileObject = UnityEngine.Object.Instantiate(projectilePrefab, launchSpot.position, launchSpot.rotation);
 
