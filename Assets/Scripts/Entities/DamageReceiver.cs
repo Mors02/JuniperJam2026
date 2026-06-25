@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class DamageReceiver : MonoBehaviour
 {
-    private ITakeDamage _damageable;
     private int _currentHealth;
     public int CurrentHealth => _currentHealth;
     [SerializeField]
@@ -23,6 +22,8 @@ public class DamageReceiver : MonoBehaviour
     public Action OnInvincibilityEnd;
     public Action OnDeath;
 
+    public bool CanTakeDamage => _canTakeDamage;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,29 +31,22 @@ public class DamageReceiver : MonoBehaviour
             OnHealthChanged = new UnityEvent<int>();
     }
 
-    public void Initialize(ITakeDamage damageable, int currentHealth = -1)
+    public void Initialize(int currentHealth = -1)
     {
-        _damageable = damageable;
         _currentHealth = currentHealth == -1 ? _maxHealth : currentHealth;  
         _canTakeDamage = true;
     }
 
-    public void ReceiveDamage(DamageInfo damageInfo = new DamageInfo())
+    public void ReceiveDamage(int amount)
     {
-        if (!_canTakeDamage)
-            return;
+        _currentHealth = Mathf.Max(0, _currentHealth - amount);
 
-        this._currentHealth -= damageInfo.damage;
         OnHealthChanged.Invoke(_currentHealth);
         if (_currentHealth <= 0)
         {
             OnDeath?.Invoke();
             return;
         }
-        _damageable.TakeDamage(damageInfo);
-        _canTakeDamage = false;
-        OnInvincibilityStart?.Invoke();
-        StartCoroutine(BecomeInvincible());
     }
 
     public void Heal(int amount)
@@ -61,6 +55,16 @@ public class DamageReceiver : MonoBehaviour
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 
         OnHealthChanged.Invoke(_currentHealth);
+    }
+
+    public void BecomeInvisible()
+    {
+        if (!_canTakeDamage)
+            return;
+
+        _canTakeDamage = false;
+        OnInvincibilityStart?.Invoke();
+        StartCoroutine(BecomeInvincible());
     }
 
     private IEnumerator BecomeInvincible()

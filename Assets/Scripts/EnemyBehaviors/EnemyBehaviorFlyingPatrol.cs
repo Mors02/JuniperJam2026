@@ -62,7 +62,7 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
     void Awake()
     {
         _damageReceiver = GetComponent<DamageReceiver>();
-        _damageReceiver.Initialize(this);
+        _damageReceiver.Initialize();
         _rb = GetComponent<Rigidbody2D>();
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
@@ -215,6 +215,8 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
                 StopCoroutine(damageFlashRoutine);
             damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
         }
+
+        _damageReceiver.ReceiveDamage(damageInfo.damage);
     }
 
     private IEnumerator StasisCoroutine(float duration)

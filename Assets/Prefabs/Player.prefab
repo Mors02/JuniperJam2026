@@ -211,6 +211,8 @@ MonoBehaviour:
   glideAnim: Player_glide
   fallAnim: Player_falling
   landAnim: Player_land
+  damagedAnim: Player_damaged
+  deathAnim: Player_death
   _spriteRenderer: {fileID: 9068347947298672269}
   _headCheck: {fileID: 3794609037812703924}
   _headCheckRadius: 0.1
@@ -242,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
-  _maxHealth: 5
+  _maxHealth: 100
   _canTakeDamage: 1
   _invicibilityTime: 2
   OnHealthChanged:

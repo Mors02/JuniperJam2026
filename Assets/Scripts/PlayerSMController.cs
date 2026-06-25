@@ -68,6 +68,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [SerializeField] private string glideAnim;
     [SerializeField] private string fallAnim;
     [SerializeField] private string landAnim;
+    [SerializeField] private string damagedAnim;
+    [SerializeField] private string deathAnim;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [Header("Head Check")]
@@ -161,6 +163,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             SwitchState(PlayerState.Fall);
         });
+        _animationSubscriber.SubscribeAction("DamagedEnd", () =>
+        {
+            SwitchState(PlayerState.Idle);
+        });
         _animationSubscriber.SubscribeAction("Jump", Jump);
 
 
@@ -172,11 +178,11 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _numberOfJumps = 0;
         _mayJump = 0;
 
-        _damageReceiver.Initialize(this, 100);
-        _damageReceiver.OnDeath += () =>
+        _damageReceiver.Initialize();
+        /*_damageReceiver.OnDeath += () =>
         {
             SwitchState(PlayerState.Death);
-        };
+        };*/
         _damageReceiver.OnInvincibilityStart += StartInvincibilityAnimation;
         _damageReceiver.OnInvincibilityEnd += StopInvincibilityAnimation;
     }
@@ -200,7 +206,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     void Update()
     {
         if (Keyboard.current.fKey.wasPressedThisFrame
-            && _currentState != PlayerState.Special)
+            && !KeyBlockedByState())
         {
             if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
             {
@@ -232,9 +238,13 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         debugState = _currentState;
     }
 
+    bool KeyBlockedByState() => _currentState == PlayerState.Special
+            || _currentState == PlayerState.Damaged
+            || _currentState == PlayerState.Death;
+
     void OnJump(InputAction.CallbackContext context)
     {
-        if (_currentState == PlayerState.Special) return;
+        if (KeyBlockedByState()) return;
 
         bool coyoteCheck = _mayJump < _coyoteTime || _numberOfJumps != 0;
 
@@ -263,11 +273,10 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     private void OnDash(InputAction.CallbackContext context)
     {
-        if (_currentState != PlayerState.Special)
-        {
-            _ability = _dashAbility;
-            SwitchState(PlayerState.Special);
-        }
+        if (KeyBlockedByState()) return;
+
+        _ability = _dashAbility;
+        SwitchState(PlayerState.Special);
     }
 
     private void HandleMovement()
@@ -305,13 +314,13 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         
     }
 
-    void FlipCharacter()
+    void FlipCharacter(float direction)
     {
-        if (_move < 0)
+        if (direction < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        else if (_move > 0)
+        else if (direction > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
@@ -433,7 +442,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     _mayJump = 0;
                     _canGlide = true;
 
-                    FlipCharacter();
+                    FlipCharacter(_move);
 
                     if (Grounded())
                         _dustParticles.Play();
@@ -441,7 +450,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     if (_animator) _animator.Play(runAnim, 0, 0);
 
                     HandleMovement();
-                    FlipCharacter();
+                    FlipCharacter(_move);
 
                     break;
                 }
@@ -460,7 +469,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     }
 
                     HandleMovement();
-                    FlipCharacter();
+                    FlipCharacter(_move);
                     break;
                 }
             default:
@@ -502,7 +511,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     }
 
                     HandleMovement();
-                    FlipCharacter();
+                    FlipCharacter(_move);
                     break;
                 }
             default:
@@ -536,7 +545,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     }
 
                     HandleMovement();
-                    FlipCharacter();
+                    FlipCharacter(_move);
                     break;
                 }
             case StateExecutionType.Exit:
@@ -571,7 +580,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     }
 
                     HandleMovement();
-                    FlipCharacter();
+                    FlipCharacter(_move);
                     break;
                 }
             default:
@@ -658,11 +667,41 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     void DamagedState(StateExecutionType stateExecutionType)
     {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    if (_animator) _animator.Play(damagedAnim, 0, 0);
+                    break;
+                }
+            case StateExecutionType.Exit:
+                {
+                    _damageReceiver.BecomeInvisible();
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     void DeathState(StateExecutionType stateExecutionType)
     {
+        switch (stateExecutionType)
+        {
+            case StateExecutionType.Enter:
+                {
+                    FreezeConstraints(RigidbodyConstraints2D.FreezePositionX);
 
+                    if (_animator) _animator.Play(deathAnim, 0, 0);
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     private bool HeadHit()
@@ -696,9 +735,27 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(DamageInfo damageInfo)
     {
-        if (_dashAbility.IsExecuting()) return;
+        bool checkState = _currentState == PlayerState.Damaged || 
+            _currentState == PlayerState.Death;
+
+        if (_dashAbility.IsExecuting() || !_damageReceiver.CanTakeDamage
+            || checkState) return;
+
+        _damageReceiver.ReceiveDamage(damageInfo.damage);
 
         GameManager.Instance.CurrentLives = _damageReceiver.CurrentHealth;
+
+        if (_damageReceiver.CurrentHealth > 0)
+        {
+            if (damageInfo.damageType == DamageType.Knockback)
+            {
+                _rb.AddForce(damageInfo.force, ForceMode2D.Impulse);
+                FlipCharacter(-damageInfo.force.x);
+            }
+            
+            SwitchState(PlayerState.Damaged);
+        }
+        else SwitchState(PlayerState.Death);
         // Knockback on the player would go here.
     }
 

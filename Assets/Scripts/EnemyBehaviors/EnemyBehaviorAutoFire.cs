@@ -56,7 +56,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     {
 
         _damageReceiver = GetComponent<DamageReceiver>();
-        _damageReceiver.Initialize(this);
+        _damageReceiver.Initialize();
         // Initialize the bullet pool
         for (int i = 0; i < _poolSize; i++)
         {
@@ -212,6 +212,8 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
                 StopCoroutine(damageFlashRoutine);
             damageFlashRoutine = StartCoroutine(DamageFlashCoroutine());
         }
+
+        _damageReceiver.ReceiveDamage(damageInfo.damage);
     }
 
     private IEnumerator StasisCoroutine(float duration)

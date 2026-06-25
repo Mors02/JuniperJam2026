@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [Header("Damage settings and effects")]
+    [SerializeField, Min(0)] private float _knockbackScale = 2f;
+    [SerializeField, Min(0)] private int _damage = 1;
+
     [Header("References")]
     private Rigidbody2D _rb;
     private Collider2D _collider;
@@ -83,9 +87,11 @@ public class EnemyBullet : MonoBehaviour
         if (!_active)
             return;
         print("Bullet collided with: " + collision.gameObject.name);
-        if (collision.gameObject.TryGetComponent<DamageReceiver>(out DamageReceiver receiver))
+        if (collision.gameObject.TryGetComponent(out ITakeDamage itakeDamage))
         {
-            receiver.ReceiveDamage(); 
+            Vector2 knockback = (collision.transform.position - transform.position).normalized;
+
+            itakeDamage.TakeDamage(new DamageInfo(_damage, DamageType.Knockback, 0, _knockbackScale * knockback)); 
         }
         Deactivate();
     }
