@@ -20,7 +20,13 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     private Vector2 _firePointLocalPosition;
 
     private List<EnemyBullet> _bulletPool = new List<EnemyBullet>();
-    
+
+    [Header("Damage")]
+    [SerializeField] private List<Hitbox> _hitboxes;
+    [SerializeField] private int _contactDamage;
+    [SerializeField] private Vector2 _knockback;
+    private DamageInfo _contactDamageInfo;
+
     [Header("Firing Parameters")]
     public bool CanFire = true;
     // Facing is determined from transform.localScale.x sign (positive = right, negative = left)
@@ -48,7 +54,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
         Windup,
         Firing,
     }
-
+    bool _dead = true;
     bool _isStasis = false;
     bool _isKnockedBack = false;
     float _knockbackTimer = 0f;
@@ -61,6 +67,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 
         _damageReceiver = GetComponent<DamageReceiver>();
         _damageReceiver.Initialize();
+        _damageReceiver.OnDeath += OnDeathStart;
         // Initialize the bullet pool
         for (int i = 0; i < _poolSize; i++)
         {
@@ -71,10 +78,50 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
         _firePointLocalPosition = _firePoint.localPosition;
 
         if (_throwAudioScr) _audioSFX = Instantiate(_throwAudioScr);
+        InitHitBoxes();
+    }
+
+
+    private void InitHitBoxes()
+    {
+        _contactDamageInfo = new DamageInfo(_contactDamage, DamageType.Knockback, 0, _knockback);
+        foreach (Hitbox hitbox in _hitboxes)
+        {
+            hitbox.onEnter2D += DealDamageToPlayer;
+            hitbox.onStay2D += DealDamageToPlayer;
+        }
+    }
+
+    private void DealDamageToPlayer(Collider2D collider2D)
+    {
+        if (collider2D.CompareTag("Player"))
+        {
+            DamageInfo newDamageInfo = new DamageInfo
+            (
+                _contactDamageInfo.damage,
+                _contactDamageInfo.damageType,
+                _contactDamageInfo.duration,
+                new Vector2 (
+                    collider2D.transform.position.x > this.transform.position.x ? Mathf.Abs(_contactDamageInfo.force.x) : Mathf.Abs(_contactDamageInfo.force.x) * -1,
+                    collider2D.transform.position.y > this.transform.position.y ? Mathf.Abs(_contactDamageInfo.force.y) : Mathf.Abs(_contactDamageInfo.force.y) * -1
+                )
+            );
+
+            collider2D.GetComponent<ITakeDamage>().TakeDamage(newDamageInfo);
+        }
     }
 
     void Update()
     {
+
+        if (Keyboard.current.bKey.wasPressedThisFrame)
+        {
+            //OnDeathStart();
+        }
+
+        if (_dead)
+            return;
+
         if (_isKnockedBack)
         {
             // Possible damping of the knockback force
@@ -99,7 +146,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
         {
             return;
         }
-        
+
         _spriteRenderer.flipX = FacingRight;
 
         switch (_currentState)
@@ -107,14 +154,14 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
             case AutoFireState.Idle:
                 HandleIdle();
                 break;
-        }   
-    } 
+        }
+    }
 
     private void HandleIdle()
     {
         _fireTimer += Time.deltaTime;
         if (_fireTimer >= _fireInterval)
-        {            
+        {
             _fireTimer = 0f;
             StartWindup();
         }
@@ -142,7 +189,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
             Vector2 fireDirection = FacingRight ? Vector2.right : Vector2.left;
             bullet.Initialize(_bulletSpeed, _bulletDamage, _bulletLifetime, _bulletPoolTransform);
             float directionMultiplier = FacingRight ? -1f : 1f;
-            _firePoint.localPosition = new Vector2( _firePointLocalPosition.x * directionMultiplier, _firePointLocalPosition.y);
+            _firePoint.localPosition = new Vector2(_firePointLocalPosition.x * directionMultiplier, _firePointLocalPosition.y);
             bullet.transform.position = _firePoint.position;
             bullet.Fire(fireDirection, FacingRight);
         }
@@ -167,7 +214,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     /// <returns></returns>
     private EnemyBullet FindInactiveBullet()
     {
-        for(int i = 0; i < _poolSize; i++)
+        for (int i = 0; i < _poolSize; i++)
         {
             if (!_bulletPool[i].gameObject.activeInHierarchy && !_bulletPool[i].IsActive())
             {
@@ -264,5 +311,17 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     private void OnDestroy()
     {
         if (_audioSFX) Destroy(_audioSFX);
+    }
+
+    private void OnDeathStart()
+    {
+        _dead = true;
+        _animator.SetTrigger("Death");
+    }
+
+    public void OnDeathEnd()
+    {
+        print("PPPP");
+        this.gameObject.SetActive(false);
     }
 }
