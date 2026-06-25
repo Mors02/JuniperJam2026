@@ -144,7 +144,7 @@ MonoBehaviour:
   _movementYSpeed: 4
   _movementXSpeed: 8
   _attackCooldown: 3
-  _X: 8
+  _X: 12
   _animator: {fileID: 2561659514518496318}
 --- !u!95 &2561659514518496318
 Animator:
