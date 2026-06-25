@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityReward
   Name: Wind Push
   Description: 
+  sprite: {fileID: -5053782209859855188, guid: 94bcec50329ad4847b083938b336b2c5, type: 3}

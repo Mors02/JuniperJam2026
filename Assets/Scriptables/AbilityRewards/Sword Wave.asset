@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityReward
   Name: Sword Wave
   Description: 
+  sprite: {fileID: 464896034549409491, guid: 14fa35e4d37bfae49bff8e93c1c335d5, type: 3}
