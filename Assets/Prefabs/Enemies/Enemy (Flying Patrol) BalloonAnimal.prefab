@@ -5354,7 +5354,7 @@ MonoBehaviour:
   _patrolMarkerB: {fileID: 2287797039995621178}
   _hitboxes:
   - {fileID: 771534122416062280}
-  _contactDamage: 1
+  _contactDamage: 3
   _knockback: {x: 3, y: 3}
   _floorMask:
     serializedVersion: 2

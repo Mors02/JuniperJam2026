@@ -580,11 +580,20 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _patrolMarkerA: {fileID: 2214056862872785442}
   _patrolMarkerB: {fileID: 1188495311158316750}
+  _hitboxes: []
+  _contactDamage: 2
+  _knockback: {x: 0, y: 0}
   _floorMask:
     serializedVersion: 2
     m_Bits: 64
+  _flipStartingFacing: 0
   _moveSpeed: 1
   _turnDelay: 0.5
+  _defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  _flashColor: {r: 0, g: 0, b: 0, a: 0}
+  _flashInterval: 0
+  _flashDuration: 0
+  _stasisColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!95 &8772779705286309990
 Animator:
   serializedVersion: 7

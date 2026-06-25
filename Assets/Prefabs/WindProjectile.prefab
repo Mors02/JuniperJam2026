@@ -174,7 +174,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   maxSpeed: 30
   knockbackForceScale: 10
-  damage: 1
+  damage: 2
 --- !u!1 &7421499936142353526
 GameObject:
   m_ObjectHideFlags: 0

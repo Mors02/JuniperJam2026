@@ -114,7 +114,7 @@ MonoBehaviour:
   force: 20
   bounce: 1
   damp: 0.95
-  damage: 1
+  damage: 5
   _animator: {fileID: 5067934456123248307}
   _animationSubscriber: {fileID: 717830826296053501}
   _startAnim: Fireball_grow
