@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LavaFloorBehaviour
   _speed: 0.5
   _transform: {fileID: 5260974073618884584}
-  _knockbackForce: 1000
+  _knockbackForce: 15
   _animator: {fileID: 1301009002014865691}
 --- !u!1 &8530618572600013928
 GameObject:

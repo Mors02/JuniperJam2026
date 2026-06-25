@@ -90,6 +90,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [Header("Audio")]
     [SerializeField] private FMODAudioScriptable _jumpAudio;
     [SerializeField] private FMODAudioScriptable _landAudio;
+    [SerializeField] private FMODAudioScriptable _damagedAudio;
 
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
@@ -672,6 +673,9 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
             case StateExecutionType.Enter:
                 {
                     if (_animator) _animator.Play(damagedAnim, 0, 0);
+                    if (_damagedAudio && FMODAudioManager.Instance)
+                        FMODAudioManager.Instance.PlayOnce(_damagedAudio, null, true);
+
                     break;
                 }
             case StateExecutionType.Exit:

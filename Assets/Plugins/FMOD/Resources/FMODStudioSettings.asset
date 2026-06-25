@@ -489,7 +489,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - MUSIC
+  - MX
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

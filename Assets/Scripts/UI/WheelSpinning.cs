@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using AbyssWorks.FMODAudioManager;
 
 
 public class WheelSpinning : MonoBehaviour
@@ -35,6 +36,10 @@ public class WheelSpinning : MonoBehaviour
     [SerializeField]
     private List<WheelReward> _rewards;
     private int _rewardNumber = -1;
+
+    [SerializeField]
+    private FMODAudioScriptable _wheelAudio;
+    private const string WHEELSPINPARAMETER = "WheelSpinState";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,9 +63,15 @@ public class WheelSpinning : MonoBehaviour
         {
             if (_spinSpeed > _fastToSlowValue)
             {
+                if (FMODAudioManager.Instance && _wheelAudio)
+                    FMODAudioManager.Instance.SetParameterByName(_wheelAudio, WHEELSPINPARAMETER, 0);
+
                 _spinSpeed -= _fastSpinningFriction * Time.unscaledDeltaTime;
             } else
             {
+                if (FMODAudioManager.Instance && _wheelAudio)
+                    FMODAudioManager.Instance.SetParameterByName(_wheelAudio, WHEELSPINPARAMETER, 1);
+
                 _spinSpeed -= _slowSpinningFriction * Time.unscaledDeltaTime;
             }  
 
@@ -96,7 +107,12 @@ public class WheelSpinning : MonoBehaviour
     public void Spin()
     {
         if (!_isSpinning)
+        {
             _isSpinning = true;
+
+            if (FMODAudioManager.Instance && _wheelAudio)
+                FMODAudioManager.Instance.PlayAudio(_wheelAudio);
+        }
     }
 
     public void OpenCurtains()

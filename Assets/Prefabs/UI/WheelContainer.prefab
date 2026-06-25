@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: 9263fa7157ff1d54f8b2d403dd684863, type: 2}
   - {fileID: 11400000, guid: 715a82350f4e76a4195c8d20b3f45779, type: 2}
+  _wheelAudio: {fileID: 11400000, guid: 1157140333571f840848d7a3c03dc4e6, type: 2}
 --- !u!95 &5573714864588900165
 Animator:
   serializedVersion: 7
