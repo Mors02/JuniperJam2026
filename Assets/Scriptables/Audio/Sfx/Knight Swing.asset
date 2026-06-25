@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a6fc56ecef34140bf4db707984cbba, type: 3}
+  m_Name: Knight Swing
+  m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
+  audioEventReference:
+    Guid:
+      Data1: 2134381603
+      Data2: 1209285642
+      Data3: -1426926201
+      Data4: -2086887307
+    Path: event:/Enemies/Knight Swing
+  volumeScale: 1
+  pitchScale: 1
+  attenuationMin: 1
+  attenuationMax: 20

@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class Balloon : MonoBehaviour
 
     [SerializeField]
     private Animator _animator;
+
+    [SerializeField]
+    private FMODAudioScriptable _popAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,6 +46,10 @@ public class Balloon : MonoBehaviour
     public void Pop()
     {
         _animator.SetTrigger("Pop");
+
+        if (_popAudio && FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_popAudio, transform.position);
+
         Destroy(this.gameObject, .5f);
 
     }

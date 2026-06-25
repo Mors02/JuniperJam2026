@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3246e70a1cbf94afd816ba0464979051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviorAutoFire
+  _throwAudioScr: {fileID: 11400000, guid: e9138d600ecd8be4386a3c7a6b9917e3, type: 2}
   _animator: {fileID: 4932420690720059853}
   _rb: {fileID: 1623363609367086530}
   _spriteRenderer: {fileID: 1726668520950254932}

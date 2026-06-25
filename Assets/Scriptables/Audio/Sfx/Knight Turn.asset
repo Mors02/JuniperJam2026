@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8a6fc56ecef34140bf4db707984cbba, type: 3}
-  m_Name: Stasis
+  m_Name: Knight Turn
   m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
   audioEventReference:
     Guid:
-      Data1: -1055722056
-      Data2: 1230562545
-      Data3: -1567725154
-      Data4: 267461522
-    Path: event:/Player/Abilities/Stasis
+      Data1: -331846382
+      Data2: 1258369401
+      Data3: -2084297330
+      Data4: 886023179
+    Path: event:/Enemies/Knight Turn
   volumeScale: 1
   pitchScale: 1
   attenuationMin: 1

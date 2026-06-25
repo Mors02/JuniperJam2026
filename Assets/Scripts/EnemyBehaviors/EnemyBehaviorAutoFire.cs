@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,7 @@ using UnityEngine.InputSystem;
 public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
+    [SerializeField] private FMODAudioScriptable _throwAudioScr;
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody2D _rb;
     private DamageReceiver _damageReceiver;
@@ -52,6 +54,8 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     float _knockbackTimer = 0f;
     float _knockbackStillDuration = 0.5f;
 
+    FMODAudioScriptable _audioSFX;
+
     void Awake()
     {
 
@@ -65,6 +69,8 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
             _bulletPool.Add(bullet.GetComponent<EnemyBullet>());
         }
         _firePointLocalPosition = _firePoint.localPosition;
+
+        if (_throwAudioScr) _audioSFX = Instantiate(_throwAudioScr);
     }
 
     void Update()
@@ -116,6 +122,9 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 
     private void StartWindup()
     {
+        if (FMODAudioManager.Instance && _audioSFX)
+            FMODAudioManager.Instance.PlayOnce(_audioSFX, transform.position);
+
         _animator.SetTrigger("Fire");
         _currentState = AutoFireState.Windup;
     }
@@ -250,5 +259,10 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
             yield return new WaitForEndOfFrame();
         }
         _spriteRenderer.color = _defaultColor;
+    }
+
+    private void OnDestroy()
+    {
+        if (_audioSFX) Destroy(_audioSFX);
     }
 }

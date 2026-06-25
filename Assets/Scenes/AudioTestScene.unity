@@ -489,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalParameterName: 
   globalParameterInfluence: 0
-  audioScriptable: {fileID: 0}
+  audioScriptable: {fileID: 11400000, guid: 1157140333571f840848d7a3c03dc4e6, type: 2}
   parameterName: 
   parameterInfluence: 0
   audio2DAttenuation: {fileID: 963194230}

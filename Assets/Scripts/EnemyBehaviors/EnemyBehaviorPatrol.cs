@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System;
 using System.Collections;
 using UnityEditor.Experimental.GraphView;
@@ -48,6 +49,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 
     [Header("Stasis Parameters")]
     [SerializeField] private Color _stasisColor;
+
+    [Header("Audio")]
+    [SerializeField] private FMODAudioScriptable _walkAudioScr;
+    [SerializeField] private FMODAudioScriptable _turnAudioScr;
+    [SerializeField] private FMODAudioScriptable _swingAudioScr;
+
     private enum MovementState {
         Moving,
         Turning,
@@ -59,6 +66,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     float _knockbackTimer = 0f;
     float _knockbackStillDuration = 0.5f;
 
+    FMODAudioScriptable _walkAudio;
+    FMODAudioScriptable _turnAudio;
+    FMODAudioScriptable _swingAudio;
+
+    FMODAudioManager _audioManager;
+
     void Awake() 
     {
         _damageReceiver = GetComponent<DamageReceiver>();
@@ -67,6 +80,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
         _transform = transform;
+
+        if (_walkAudioScr) _walkAudio = Instantiate(_walkAudioScr);
+        if (_turnAudioScr) _turnAudio = Instantiate(_turnAudioScr);
+        if (_swingAudioScr) _swingAudio = Instantiate(_swingAudioScr);
+        _audioManager = FMODAudioManager.Instance;
     }
 
     private void Update()
@@ -117,6 +135,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     }
 
     private void HandleMovement() {
+        if (_audioManager && _walkAudio)
+        {
+            if(!_audioManager.IsPlaying(_walkAudio)) _audioManager.PlayAudio(_walkAudio);
+            _audioManager.SetPosition(_walkAudio, transform.position);
+        }
+
         int direction = _facingRight ? 1 : -1;
         // Check for ledge
         Vector2 ledgeCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * _ledgeCheckDistance;
@@ -142,6 +166,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     }
 
     private void StartTurning() {
+        if (_audioManager)
+        {
+            if (_turnAudio) _audioManager.PlayOnce(_turnAudio, transform.position);
+            if (_walkAudio) _audioManager.StopAudio(_walkAudio);
+        }
+
         _animator.SetTrigger("Turn");
         _movementState = MovementState.Turning;
         _turnTimer = 0f;
@@ -176,6 +206,10 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         _movementState = MovementState.Moving;
     }
 
+    public void PlaySwingAudio()
+    {
+        if (_audioManager && _swingAudio) _audioManager.PlayOnce(_swingAudio, transform.position);
+    }
 
     Coroutine damageFlashRoutine;
     public void TakeDamage(DamageInfo damageInfo)
@@ -244,5 +278,20 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
             yield return new WaitForEndOfFrame();
         }
         _spriteRenderer.color = _defaultColor;
+    }
+
+    private void OnDestroy()
+    {
+        if (_audioManager)
+        {
+            if (_walkAudio)
+            {
+                _audioManager.StopAudio(_walkAudio);
+                Destroy(_walkAudio);
+            }
+            if (_swingAudio) Destroy(_swingAudio);
+            if (_turnAudio) Destroy(_turnAudio);
+        }
+        
     }
 }

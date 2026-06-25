@@ -137,6 +137,9 @@ MonoBehaviour:
   _flashInterval: 0.2
   _flashDuration: 1
   _stasisColor: {r: 0.5529412, g: 0.9490196, b: 1, a: 1}
+  _walkAudioScr: {fileID: 11400000, guid: 72b8fe826cea08a4280a032897d09b28, type: 2}
+  _turnAudioScr: {fileID: 11400000, guid: 5cddbe18043ef594d87e0fd8f46738dc, type: 2}
+  _swingAudioScr: {fileID: 11400000, guid: c0b5ea83a98fcf743934dad42ba10c9d, type: 2}
 --- !u!95 &4620859462698439953
 Animator:
   serializedVersion: 7

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8a6fc56ecef34140bf4db707984cbba, type: 3}
-  m_Name: Fireball
+  m_Name: Juggler
   m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
   audioEventReference:
     Guid:
-      Data1: -1129245628
-      Data2: 1131854345
-      Data3: 1147020947
-      Data4: 1293081463
-    Path: event:/Player/Abilities/Fireball
+      Data1: -1985424582
+      Data2: 1327082556
+      Data3: -48570733
+      Data4: 1139062290
+    Path: event:/Enemies/Juggler
   volumeScale: 1
   pitchScale: 1
   attenuationMin: 1
