@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec4b2dc71d96541adb3b60784b26e773
+guid: 9e84db6f1b47f484793ad9182f8d99af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3334738622998220081
-    second: Sign_0
+      213: 7627273388829826076
+    second: Wincon_Wheel_Indicator_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sign_0
+      name: Wincon_Wheel_Indicator_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 88
-        height: 108
+        width: 16
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13d85920c1f574e20800000000000000
-      internalID: 3334738622998220081
+      spriteID: c1cddf17cb489d960800000000000000
+      internalID: 7627273388829826076
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sign_0: 3334738622998220081
+      Wincon_Wheel_Indicator_0: 7627273388829826076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

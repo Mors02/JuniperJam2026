@@ -232,7 +232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spin to win!
+  m_text: Wheel of fortune!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e94dce1da03770546b9d6cb3015a2311, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: e94dce1da03770546b9d6cb3015a2311, type: 2}
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -338,8 +338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 40}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 75.5, y: 41}
+  m_SizeDelta: {x: 16, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1687047449941557062
 CanvasRenderer:
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4165294027940856739, guid: b77ff5e19e0ead041ae0177d6a973e47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e84db6f1b47f484793ad9182f8d99af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02a2c84461080bf459e0d494f90327f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c56e5aea5fd25dc4798895666d566f2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
