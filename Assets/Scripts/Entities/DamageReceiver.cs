@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class DamageReceiver : MonoBehaviour
 {
-    [SerializeField] private int _currentHealth;
+    private int _currentHealth;
     public int CurrentHealth => _currentHealth;
     [SerializeField]
     private int _maxHealth;

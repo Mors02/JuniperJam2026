@@ -18,8 +18,6 @@ public class Balloon : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
-    [SerializeField] private DeathExplosionEffect _deathEffect; 
-
     [SerializeField]
     private FMODAudioScriptable _popAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,7 +45,6 @@ public class Balloon : MonoBehaviour
     /// </summary>
     public void Pop()
     {
-        _deathEffect.PlayEffect();
         _animator.SetTrigger("Pop");
 
         if (_popAudio && FMODAudioManager.Instance)
