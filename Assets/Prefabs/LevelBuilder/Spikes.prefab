@@ -199,4 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spikes
   _knockbackScale: 2
-  _damage: 1
+  _damage: 5
