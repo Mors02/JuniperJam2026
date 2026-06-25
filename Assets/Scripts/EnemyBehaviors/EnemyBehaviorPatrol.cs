@@ -93,6 +93,13 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         if (_turnAudioScr) _turnAudio = Instantiate(_turnAudioScr);
         if (_swingAudioScr) _swingAudio = Instantiate(_swingAudioScr);
         _audioManager = FMODAudioManager.Instance;
+
+        if (_audioManager)
+        {
+            _audioManager.RegisterAudio(_walkAudio);
+            _audioManager.RegisterAudio(_turnAudio);
+            _audioManager.RegisterAudio(_swingAudio);
+        }
         InitHitBoxes();
     }
 
@@ -351,6 +358,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     {
         _dead = true;
         _animator.SetTrigger("Death");
+        if (_walkAudio) _audioManager.StopAudio(_walkAudio);
     }
 
     public void OnDeathEnd()
