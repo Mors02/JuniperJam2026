@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 990818eb05552d24697ac6609268b840
+guid: 51e91271cb7d7614a8d792bf479b822d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8534041925199173470
-    second: Juggling_Clown_Projectile_FAST_0
-  - first:
-      213: -2803461296687402269
-    second: Juggling_Clown_Projectile_FAST_1
+      213: -856572728518959367
+    second: Magicians_Hat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juggling_Clown_Projectile_FAST_0
+      name: Magicians_Hat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 8
+        width: 48
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a86636951ef09980800000000000000
-      internalID: -8534041925199173470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Juggling_Clown_Projectile_FAST_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e23465ddca1819d0800000000000000
-      internalID: -2803461296687402269
+      spriteID: 9fe175844a7dc14f0800000000000000
+      internalID: -856572728518959367
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Juggling_Clown_Projectile_FAST_0: -8534041925199173470
-      Juggling_Clown_Projectile_FAST_1: -2803461296687402269
+      Magicians_Hat_0: -856572728518959367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
