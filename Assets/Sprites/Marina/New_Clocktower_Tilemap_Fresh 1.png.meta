@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7540b9f47df724e408ab6faab289bea1
+guid: 5586ffbfac2904857b1f813bcb8c0e04
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,71 +102,154 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clocktower_Tilemap_3_0
+      name: New_Clocktower_Tilemap_Fresh 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 174
-        width: 49
-        height: 64
+        y: 175
+        width: 48
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d9310a6f51e025a70800000000000000
-      internalID: 8814122908212269981
+      spriteID: b68a366ccc6384fb8968c2a08c67869c
+      internalID: -1576589797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clocktower_Tilemap_3_1
+      name: New_Clocktower_Tilemap_Fresh 1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 45
-        width: 145
-        height: 178
+        x: 54
+        y: 116
+        width: 106
+        height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ef3afdf5c061f57f0800000000000000
-      internalID: -621753981149928450
+      spriteID: ae832f4daeedf425f8f503e3f8fbeae2
+      internalID: 476634804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clocktower_Tilemap_3_2
+      name: New_Clocktower_Tilemap_Fresh 1_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 115
-        width: 107
-        height: 123
+        x: 2
+        y: 64
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 97af8d9b0964fe240800000000000000
-      internalID: 4823151313344330361
+      spriteID: c93e9a8683f7443f185c63ef345f50dd
+      internalID: -1379505086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Clocktower_Tilemap_Fresh 1_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 65
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e906e5c0f25b342dfb1c027464a6bb42
+      internalID: -1973752476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Clocktower_Tilemap_Fresh 1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 46
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a481aa45aa514ada87ff2d46c7cb531
+      internalID: -492746041
       vertices: []
       indices: 
       edges: []
@@ -175,7 +258,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4124c9a4aa2374deca649bfd04bd4870
     internalID: 0
     vertices: []
     indices: 
@@ -183,11 +266,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Clocktower_Tilemap_3_0: 8814122908212269981
-      Clocktower_Tilemap_3_1: -621753981149928450
-      Clocktower_Tilemap_3_2: 4823151313344330361
+      New_Clocktower_Tilemap_Fresh 1_0: -1576589797
+      New_Clocktower_Tilemap_Fresh 1_1: -1379505086
+      New_Clocktower_Tilemap_Fresh 1_2: 476634804
+      New_Clocktower_Tilemap_Fresh 1_3: -1973752476
+      New_Clocktower_Tilemap_Fresh 1_4: -492746041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
