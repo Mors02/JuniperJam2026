@@ -753,6 +753,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             if (damageInfo.damageType == DamageType.Knockback)
             {
+                _rb.linearVelocity = Vector2.zero;
                 _rb.AddForce(damageInfo.force, ForceMode2D.Impulse);
                 FlipCharacter(-damageInfo.force.x);
             }
