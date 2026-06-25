@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -143,7 +143,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -172,12 +172,12 @@ TextureImporter:
       name: Ringleader_0
       rect:
         serializedVersion: 2
-        x: 354
+        x: 0
         y: 528
-        width: 73
-        height: 87
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: Ringleader_1
       rect:
         serializedVersion: 2
-        x: 791
-        y: 529
-        width: 68
-        height: 87
+        x: 437
+        y: 528
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: Ringleader_2
       rect:
         serializedVersion: 2
-        x: 1229
-        y: 529
-        width: 67
-        height: 88
+        x: 874
+        y: 528
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: Ringleader_3
       rect:
         serializedVersion: 2
-        x: 1665
+        x: 1311
         y: 528
-        width: 68
-        height: 93
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: Ringleader_4
       rect:
         serializedVersion: 2
-        x: 2102
-        y: 529
-        width: 70
-        height: 94
+        x: 1748
+        y: 528
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +282,12 @@ TextureImporter:
       name: Ringleader_5
       rect:
         serializedVersion: 2
-        x: 355
-        y: 397
-        width: 69
-        height: 95
+        x: 0
+        y: 396
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +304,12 @@ TextureImporter:
       name: Ringleader_6
       rect:
         serializedVersion: 2
-        x: 791
+        x: 437
         y: 396
-        width: 76
-        height: 100
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,12 +326,12 @@ TextureImporter:
       name: Ringleader_7
       rect:
         serializedVersion: 2
-        x: 1228
+        x: 874
         y: 396
-        width: 75
-        height: 104
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,12 +348,12 @@ TextureImporter:
       name: Ringleader_8
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 481
-        width: 9
-        height: 8
+        x: 1311
+        y: 396
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,12 +370,12 @@ TextureImporter:
       name: Ringleader_9
       rect:
         serializedVersion: 2
-        x: 1665
+        x: 1748
         y: 396
-        width: 83
-        height: 103
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,12 +392,12 @@ TextureImporter:
       name: Ringleader_10
       rect:
         serializedVersion: 2
-        x: 2102
-        y: 396
-        width: 74
-        height: 87
+        x: 0
+        y: 264
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -414,12 +414,12 @@ TextureImporter:
       name: Ringleader_11
       rect:
         serializedVersion: 2
-        x: 354
-        y: 265
-        width: 74
-        height: 87
+        x: 437
+        y: 264
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -436,12 +436,12 @@ TextureImporter:
       name: Ringleader_12
       rect:
         serializedVersion: 2
-        x: 792
-        y: 265
-        width: 73
-        height: 86
+        x: 874
+        y: 264
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -458,12 +458,12 @@ TextureImporter:
       name: Ringleader_13
       rect:
         serializedVersion: 2
-        x: 1228
+        x: 1311
         y: 264
-        width: 74
-        height: 88
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -480,12 +480,12 @@ TextureImporter:
       name: Ringleader_14
       rect:
         serializedVersion: 2
-        x: 1634
-        y: 265
-        width: 112
-        height: 89
+        x: 1748
+        y: 264
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -502,12 +502,12 @@ TextureImporter:
       name: Ringleader_15
       rect:
         serializedVersion: 2
-        x: 2064
-        y: 265
-        width: 103
-        height: 87
+        x: 0
+        y: 132
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -524,12 +524,12 @@ TextureImporter:
       name: Ringleader_16
       rect:
         serializedVersion: 2
-        x: 282
-        y: 133
-        width: 137
-        height: 90
+        x: 437
+        y: 132
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -546,12 +546,12 @@ TextureImporter:
       name: Ringleader_17
       rect:
         serializedVersion: 2
-        x: 688
-        y: 133
-        width: 173
-        height: 95
+        x: 874
+        y: 132
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -568,12 +568,12 @@ TextureImporter:
       name: Ringleader_18
       rect:
         serializedVersion: 2
-        x: 1074
-        y: 133
-        width: 224
-        height: 101
+        x: 1311
+        y: 132
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -590,12 +590,12 @@ TextureImporter:
       name: Ringleader_19
       rect:
         serializedVersion: 2
-        x: 1461
-        y: 133
-        width: 274
-        height: 107
+        x: 1748
+        y: 132
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -612,12 +612,12 @@ TextureImporter:
       name: Ringleader_20
       rect:
         serializedVersion: 2
-        x: 1851
-        y: 133
-        width: 321
-        height: 113
+        x: 0
+        y: 0
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -634,12 +634,12 @@ TextureImporter:
       name: Ringleader_21
       rect:
         serializedVersion: 2
-        x: 55
-        y: 1
-        width: 369
-        height: 119
+        x: 437
+        y: 0
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -656,12 +656,12 @@ TextureImporter:
       name: Ringleader_22
       rect:
         serializedVersion: 2
-        x: 444
-        y: 1
-        width: 417
-        height: 125
+        x: 874
+        y: 0
+        width: 437
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -674,33 +674,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Ringleader_23
-      rect:
-        serializedVersion: 2
-        x: 873
-        y: 1
-        width: 425
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acbb416fe98baebd0800000000000000
-      internalID: -2600062841980142646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d566144d6a2a08e4f976cafa0001d311
     internalID: 0
     vertices: []
     indices: 
@@ -708,7 +686,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":437.0,"y":132.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Ringleader_0: 8827078708206887880
       Ringleader_1: 102769456453725881
@@ -726,7 +706,6 @@ TextureImporter:
       Ringleader_20: -3113535209257990852
       Ringleader_21: 2696946139568003105
       Ringleader_22: -3820861113765486271
-      Ringleader_23: -2600062841980142646
       Ringleader_3: 4590491650076466894
       Ringleader_4: 945849277882624879
       Ringleader_5: -5597177721518675759

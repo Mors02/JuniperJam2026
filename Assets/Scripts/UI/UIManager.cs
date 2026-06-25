@@ -17,17 +17,7 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        //_playerController = player.GetComponent<PlayerSMController>();
-        _playerDamage = player.GetComponent<DamageReceiver>();
-        
-        _playerDamage.OnHealthChanged.AddListener(UpdateLifeUI);
-    }
-
-    public void UpdateLifeUI(int _currentLives)
-    {
-        Debug.Log("Now has " + _currentLives);
     }
 
     public void UpdateWinConUI(string progressText, bool completed)
