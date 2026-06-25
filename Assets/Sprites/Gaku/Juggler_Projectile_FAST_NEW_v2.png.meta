@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3f5fa87ed8e7e6d45ac442b2ab685e5c
+guid: ae25d71c3378a0d42844f75807dae3e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6796121429336029477
-    second: Juggling_Clown_Projectile_v2_SLOW_0
+      213: 420292995928503994
+    second: Juggler_Projectile_FAST_NEW_v2_0
+  - first:
+      213: -7142203066678989607
+    second: Juggler_Projectile_FAST_NEW_v2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juggling_Clown_Projectile_v2_SLOW_0
+      name: Juggler_Projectile_FAST_NEW_v2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6
-        height: 6
+        width: 25
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd6810241935fa1a0800000000000000
-      internalID: -6796121429336029477
+      spriteID: ab637e3c04e25d500800000000000000
+      internalID: 420292995928503994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggler_Projectile_FAST_NEW_v2_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 51
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dca4e0e62cc1ec90800000000000000
+      internalID: -7142203066678989607
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Juggling_Clown_Projectile_v2_SLOW_0: -6796121429336029477
+      Juggler_Projectile_FAST_NEW_v2_0: 420292995928503994
+      Juggler_Projectile_FAST_NEW_v2_1: -7142203066678989607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

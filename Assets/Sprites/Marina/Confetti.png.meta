@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 990818eb05552d24697ac6609268b840
+guid: 1d5223ad84cf93c45aaef93666c76c4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8534041925199173470
-    second: Juggling_Clown_Projectile_FAST_0
-  - first:
-      213: -2803461296687402269
-    second: Juggling_Clown_Projectile_FAST_1
+      213: 937378224477805318
+    second: Confetti_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +100,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Juggling_Clown_Projectile_FAST_0
+      name: Confetti_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 8
+        width: 2
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a86636951ef09980800000000000000
-      internalID: -8534041925199173470
+      spriteID: 60b9f2a578c320d00800000000000000
+      internalID: 937378224477805318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Juggling_Clown_Projectile_FAST_1
+      name: Confetti_1
       rect:
         serializedVersion: 2
-        x: 15
+        x: 4
         y: 0
-        width: 15
-        height: 8
+        width: 2
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3e23465ddca1819d0800000000000000
-      internalID: -2803461296687402269
+      spriteID: 30f0a40f8f2bf324cbb226b6199c8f4a
+      internalID: 490740786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confetti_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab56eaa587763844bd64a81cc2b48ad
+      internalID: 1576507061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confetti_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15da2a6c7638b74a94c3c0a20015500
+      internalID: -1394304502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confetti_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb09bd4fe58cac46976ae672fdb912a
+      internalID: -1170715412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confetti_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249c615251047a14db3ea607984e6997
+      internalID: -187992401
       vertices: []
       indices: 
       edges: []
@@ -150,7 +235,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -158,10 +243,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":2.0,"y":5.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Juggling_Clown_Projectile_FAST_0: -8534041925199173470
-      Juggling_Clown_Projectile_FAST_1: -2803461296687402269
+      Confetti_0: 937378224477805318
+      Confetti_1: 490740786
+      Confetti_2: 1576507061
+      Confetti_3: -1394304502
+      Confetti_4: -1170715412
+      Confetti_5: -187992401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
