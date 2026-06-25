@@ -96,7 +96,7 @@ public class WheelSpinning : MonoBehaviour
             }
         } 
         
-        if (_rewardNumber > 0)
+        if (_rewardNumber >= 0)
         {
             Debug.Log(_rewardNumber);
             _animator.SetTrigger("Exit");
