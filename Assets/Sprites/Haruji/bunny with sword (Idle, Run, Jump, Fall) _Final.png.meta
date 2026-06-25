@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: f97d48d92aa6e664c899ef9bba9c1486
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9058051522965310367
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_0
+  - first:
+      213: -3849380237648401675
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_1
+  - first:
+      213: 9095194316733702217
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_2
+  - first:
+      213: 4555370779477865030
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_3
+  - first:
+      213: 5953824356219244004
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_4
+  - first:
+      213: -270500259787580622
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_5
+  - first:
+      213: 1836779979996336626
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_6
+  - first:
+      213: 8265815785966839980
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_7
+  - first:
+      213: 1473915593746784051
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_8
+  - first:
+      213: -2751227723942690818
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_9
+  - first:
+      213: -7901854549405446879
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_10
+  - first:
+      213: -5199086548622007068
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_11
+  - first:
+      213: -9048236694549374174
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_12
+  - first:
+      213: 3931483899491266069
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_13
+  - first:
+      213: 8864305391779923624
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_14
+  - first:
+      213: 3336071628479904421
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_15
+  - first:
+      213: -762872330276987532
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_16
+  - first:
+      213: 9181000354028881251
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_17
+  - first:
+      213: -5351827937679821432
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_18
+  - first:
+      213: -3324852960941560365
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_19
+  - first:
+      213: 377867579087310813
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_20
+  - first:
+      213: -8216348270945002507
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_21
+  - first:
+      213: -3769703588293239922
+    second: bunny with sword (Idle, Run, Jump, Fall) _Final_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b88875ed9a4bd70800000000000000
+      internalID: 9058051522965310367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5faee899111449ac0800000000000000
+      internalID: -3849380237648401675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940601cea0f983e70800000000000000
+      internalID: 9095194316733702217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642f8faa69de73f30800000000000000
+      internalID: 4555370779477865030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed448f05bb30a250800000000000000
+      internalID: 5953824356219244004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bd5b7627dfe3cf0800000000000000
+      internalID: -270500259787580622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 0
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f11b3ef8ad8d7910800000000000000
+      internalID: 1836779979996336626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8ae55c9a316b270800000000000000
+      internalID: 8265815785966839980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_8
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f9f226c66647410800000000000000
+      internalID: 1473915593746784051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff703236fca1d9d0800000000000000
+      internalID: -2751227723942690818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_10
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 3
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d42e33729f65290800000000000000
+      internalID: -7901854549405446879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_11
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4afd8745229d7b0800000000000000
+      internalID: -5199086548622007068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_12
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bdab97aa43e6280800000000000000
+      internalID: -9048236694549374174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_13
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e2855d6cf6f8630800000000000000
+      internalID: 3931483899491266069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_14
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 0
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a64f99e9c6540b70800000000000000
+      internalID: 8864305391779923624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_15
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aabdc8887b1c4e20800000000000000
+      internalID: 3336071628479904421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_16
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 5
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d9dd058abb965f0800000000000000
+      internalID: -762872330276987532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_17
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 9
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36580a0dd27796f70800000000000000
+      internalID: 9181000354028881251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_18
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 6
+        width: 48
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885359b88dc7ab5b0800000000000000
+      internalID: -5351827937679821432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_19
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 3
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd2cac09dfbbd1d0800000000000000
+      internalID: -3324852960941560365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_20
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfc2a7af847e3500800000000000000
+      internalID: 377867579087310813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_21
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 0
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb9d6797caa9fd80800000000000000
+      internalID: -8216348270945002507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with sword (Idle, Run, Jump, Fall) _Final_22
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 0
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b14472f825fabc0800000000000000
+      internalID: -3769703588293239922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bunny with sword (Idle, Run, Jump, Fall) _Final_0: 9058051522965310367
+      bunny with sword (Idle, Run, Jump, Fall) _Final_1: -3849380237648401675
+      bunny with sword (Idle, Run, Jump, Fall) _Final_10: -7901854549405446879
+      bunny with sword (Idle, Run, Jump, Fall) _Final_11: -5199086548622007068
+      bunny with sword (Idle, Run, Jump, Fall) _Final_12: -9048236694549374174
+      bunny with sword (Idle, Run, Jump, Fall) _Final_13: 3931483899491266069
+      bunny with sword (Idle, Run, Jump, Fall) _Final_14: 8864305391779923624
+      bunny with sword (Idle, Run, Jump, Fall) _Final_15: 3336071628479904421
+      bunny with sword (Idle, Run, Jump, Fall) _Final_16: -762872330276987532
+      bunny with sword (Idle, Run, Jump, Fall) _Final_17: 9181000354028881251
+      bunny with sword (Idle, Run, Jump, Fall) _Final_18: -5351827937679821432
+      bunny with sword (Idle, Run, Jump, Fall) _Final_19: -3324852960941560365
+      bunny with sword (Idle, Run, Jump, Fall) _Final_2: 9095194316733702217
+      bunny with sword (Idle, Run, Jump, Fall) _Final_20: 377867579087310813
+      bunny with sword (Idle, Run, Jump, Fall) _Final_21: -8216348270945002507
+      bunny with sword (Idle, Run, Jump, Fall) _Final_22: -3769703588293239922
+      bunny with sword (Idle, Run, Jump, Fall) _Final_3: 4555370779477865030
+      bunny with sword (Idle, Run, Jump, Fall) _Final_4: 5953824356219244004
+      bunny with sword (Idle, Run, Jump, Fall) _Final_5: -270500259787580622
+      bunny with sword (Idle, Run, Jump, Fall) _Final_6: 1836779979996336626
+      bunny with sword (Idle, Run, Jump, Fall) _Final_7: 8265815785966839980
+      bunny with sword (Idle, Run, Jump, Fall) _Final_8: 1473915593746784051
+      bunny with sword (Idle, Run, Jump, Fall) _Final_9: -2751227723942690818
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

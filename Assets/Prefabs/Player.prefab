@@ -5250,7 +5250,7 @@ MonoBehaviour:
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
         launchSpot: {fileID: 1693788543128924821}
-        launchAnim: Player_fireball
+        launchAnim: Player_windPush
         projectileAudio: {fileID: 0}
         projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}
     - rid: 2533004854806184016

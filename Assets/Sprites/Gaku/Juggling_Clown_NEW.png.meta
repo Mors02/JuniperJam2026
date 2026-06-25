@@ -1,0 +1,1573 @@
+fileFormatVersion: 2
+guid: a2a9d0b2e47cc0042a8bf49d65c48405
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3939229426040239174
+    second: Juggling_Clown_NEW_0
+  - first:
+      213: 1322651372539599053
+    second: Juggling_Clown_NEW_1
+  - first:
+      213: 2980867272812595376
+    second: Juggling_Clown_NEW_2
+  - first:
+      213: 9727333031652012
+    second: Juggling_Clown_NEW_3
+  - first:
+      213: 7205088064460273657
+    second: Juggling_Clown_NEW_4
+  - first:
+      213: -8175234572424373870
+    second: Juggling_Clown_NEW_5
+  - first:
+      213: -7666330865002522219
+    second: Juggling_Clown_NEW_6
+  - first:
+      213: -4183218452661570755
+    second: Juggling_Clown_NEW_7
+  - first:
+      213: -6037090795869224682
+    second: Juggling_Clown_NEW_8
+  - first:
+      213: -7190965905357959634
+    second: Juggling_Clown_NEW_9
+  - first:
+      213: -660818964961726474
+    second: Juggling_Clown_NEW_10
+  - first:
+      213: -6420642213926478557
+    second: Juggling_Clown_NEW_11
+  - first:
+      213: -8697686869354066798
+    second: Juggling_Clown_NEW_12
+  - first:
+      213: 4219095624520937211
+    second: Juggling_Clown_NEW_13
+  - first:
+      213: -3449360344895801830
+    second: Juggling_Clown_NEW_14
+  - first:
+      213: 8953686497107764461
+    second: Juggling_Clown_NEW_15
+  - first:
+      213: 5395696704656692964
+    second: Juggling_Clown_NEW_16
+  - first:
+      213: -8478020748038075070
+    second: Juggling_Clown_NEW_17
+  - first:
+      213: -5067895339479738494
+    second: Juggling_Clown_NEW_18
+  - first:
+      213: -2124310706787603915
+    second: Juggling_Clown_NEW_19
+  - first:
+      213: 921168500280479421
+    second: Juggling_Clown_NEW_20
+  - first:
+      213: -6707281309595795154
+    second: Juggling_Clown_NEW_21
+  - first:
+      213: -2497310899880469498
+    second: Juggling_Clown_NEW_22
+  - first:
+      213: 2490719698785384205
+    second: Juggling_Clown_NEW_23
+  - first:
+      213: 3321797652527412630
+    second: Juggling_Clown_NEW_24
+  - first:
+      213: 5256648965988571388
+    second: Juggling_Clown_NEW_25
+  - first:
+      213: -8047690253292537824
+    second: Juggling_Clown_NEW_26
+  - first:
+      213: 9147247252677206908
+    second: Juggling_Clown_NEW_27
+  - first:
+      213: -7231939970803513471
+    second: Juggling_Clown_NEW_28
+  - first:
+      213: 804328115518616403
+    second: Juggling_Clown_NEW_29
+  - first:
+      213: 4165354984812862496
+    second: Juggling_Clown_NEW_30
+  - first:
+      213: -8550830116860560009
+    second: Juggling_Clown_NEW_31
+  - first:
+      213: 5480383402151629785
+    second: Juggling_Clown_NEW_32
+  - first:
+      213: 8778109554845868281
+    second: Juggling_Clown_NEW_33
+  - first:
+      213: -707126627843158888
+    second: Juggling_Clown_NEW_34
+  - first:
+      213: 1594094840844897256
+    second: Juggling_Clown_NEW_35
+  - first:
+      213: -8488570964232534439
+    second: Juggling_Clown_NEW_36
+  - first:
+      213: -218498264272543548
+    second: Juggling_Clown_NEW_37
+  - first:
+      213: 8383311467379493304
+    second: Juggling_Clown_NEW_38
+  - first:
+      213: 8622288910605703072
+    second: Juggling_Clown_NEW_39
+  - first:
+      213: 224901856124818737
+    second: Juggling_Clown_NEW_40
+  - first:
+      213: 465878885779633842
+    second: Juggling_Clown_NEW_41
+  - first:
+      213: -5817092674386078239
+    second: Juggling_Clown_NEW_42
+  - first:
+      213: 272287055775544556
+    second: Juggling_Clown_NEW_43
+  - first:
+      213: -7810530818825277172
+    second: Juggling_Clown_NEW_44
+  - first:
+      213: 3815807436556988541
+    second: Juggling_Clown_NEW_45
+  - first:
+      213: -185810948399314198
+    second: Juggling_Clown_NEW_46
+  - first:
+      213: 872520315553787649
+    second: Juggling_Clown_NEW_47
+  - first:
+      213: 5514739566372289823
+    second: Juggling_Clown_NEW_48
+  - first:
+      213: -7934048369029657654
+    second: Juggling_Clown_NEW_49
+  - first:
+      213: -9183511503586506101
+    second: Juggling_Clown_NEW_50
+  - first:
+      213: 2318312611665401455
+    second: Juggling_Clown_NEW_51
+  - first:
+      213: 6499843792526418523
+    second: Juggling_Clown_NEW_52
+  - first:
+      213: 3064968583444407421
+    second: Juggling_Clown_NEW_53
+  - first:
+      213: 8367267133639044128
+    second: Juggling_Clown_NEW_54
+  - first:
+      213: 2661843117462864463
+    second: Juggling_Clown_NEW_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 412
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb0b1c35bb0559c0800000000000000
+      internalID: -3939229426040239174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 465
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8d7e56a600b5210800000000000000
+      internalID: 1322651372539599053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 466
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b80596cdfa2e5920800000000000000
+      internalID: 2980867272812595376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 466
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caaa6f535fe822000800000000000000
+      internalID: 9727333031652012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 464
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7bf81ab6d9df360800000000000000
+      internalID: 7205088064460273657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 463
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299172b787bbb8e80800000000000000
+      internalID: -8175234572424373870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 456
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59959ec32b8bb9590800000000000000
+      internalID: -7666330865002522219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 459
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d337f3f1bf832f5c0800000000000000
+      internalID: -4183218452661570755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_8
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 462
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6114f6338e1f73ca0800000000000000
+      internalID: -6037090795869224682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 465
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e8133cb9e843c90800000000000000
+      internalID: -7190965905357959634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 412
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff6d9c07ac44d6f0800000000000000
+      internalID: -660818964961726474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 412
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dd809aceb45e6a0800000000000000
+      internalID: -6420642213926478557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_12
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 444
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c4298efdb9b4780800000000000000
+      internalID: -8697686869354066798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_13
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 412
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfea9f4ed1d3d8a30800000000000000
+      internalID: 4219095624520937211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_14
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 412
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16ba24ba096120d0800000000000000
+      internalID: -3449360344895801830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_15
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 412
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4e1523e62e14c70800000000000000
+      internalID: 8953686497107764461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_16
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 412
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6dec4b09d51ea40800000000000000
+      internalID: 5395696704656692964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 387
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d8cc25c05085a80800000000000000
+      internalID: -8478020748038075070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_18
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 385
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287d3732a083ba9b0800000000000000
+      internalID: -5067895339479738494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 379
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53aad51daaee482e0800000000000000
+      internalID: -2124310706787603915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_20
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 332
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe4f75ded5a8cc00800000000000000
+      internalID: 921168500280479421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_21
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 332
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e210de48f23fae2a0800000000000000
+      internalID: -6707281309595795154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 332
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cd9e6c7f4c75dd0800000000000000
+      internalID: -2497310899880469498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 332
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07bb21ae50d09220800000000000000
+      internalID: 2490719698785384205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_24
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 332
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6957f968d55691e20800000000000000
+      internalID: 3321797652527412630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_25
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 332
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf85ca6326e53f840800000000000000
+      internalID: 5256648965988571388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_26
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 332
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028ff166a5cd05090800000000000000
+      internalID: -8047690253292537824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_27
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 238
+        width: 51
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c732e7089ec81fe70800000000000000
+      internalID: 9147247252677206908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_28
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 252
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187ce4bb9ecf2ab90800000000000000
+      internalID: -7231939970803513471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_29
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 238
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353b858d82c892b00800000000000000
+      internalID: 804328115518616403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_30
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 238
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c5c292a405ec930800000000000000
+      internalID: 4165354984812862496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_31
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 252
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d70dd1059555980800000000000000
+      internalID: -8550830116860560009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_32
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 252
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3d13efaab3e0c40800000000000000
+      internalID: 5480383402151629785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_33
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 172
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0ec08b12c12d970800000000000000
+      internalID: 8778109554845868281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_34
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 172
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c40381418cf26f0800000000000000
+      internalID: -707126627843158888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_35
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 172
+        width: 51
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebc7d6dfcc5f1610800000000000000
+      internalID: 1594094840844897256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9568932bea9823a80800000000000000
+      internalID: -8488570964232534439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_37
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 92
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0eefd7cfcb7fcf0800000000000000
+      internalID: -218498264272543548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_38
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 92
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b90d96ec51875470800000000000000
+      internalID: 8383311467379493304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 137
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a75173d41688a770800000000000000
+      internalID: 8622288910605703072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_40
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 144
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13555abeb030f1300800000000000000
+      internalID: 224901856124818737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_41
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 148
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6ff37d062277600800000000000000
+      internalID: 465878885779633842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_42
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 146
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5d0bd6809854fa0800000000000000
+      internalID: -5817092674386078239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_43
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 140
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4307472ab57c300800000000000000
+      internalID: 272287055775544556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_44
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 92
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01bdac2a9b6b9390800000000000000
+      internalID: -7810530818825277172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_45
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 92
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70f54385a874f430800000000000000
+      internalID: 3815807436556988541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_46
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 92
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeac7494deddb6df0800000000000000
+      internalID: -185810948399314198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_47
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 92
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f25ebaa90db1c00800000000000000
+      internalID: 872520315553787649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 61
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d7962da6a488c40800000000000000
+      internalID: 5514739566372289823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_49
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 64
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb48357b0994e190800000000000000
+      internalID: -7934048369029657654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_50
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 57
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a430e91fc9d8080800000000000000
+      internalID: -9183511503586506101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_51
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66df90990d4c2020800000000000000
+      internalID: 2318312611665401455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_52
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52a01ddd75143a50800000000000000
+      internalID: 6499843792526418523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_53
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74afef00b4f88a20800000000000000
+      internalID: 3064968583444407421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_54
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 12
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c2b5950218e1470800000000000000
+      internalID: 8367267133639044128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Juggling_Clown_NEW_55
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 12
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4241385634c0f420800000000000000
+      internalID: 2661843117462864463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Juggling_Clown_NEW_0: -3939229426040239174
+      Juggling_Clown_NEW_1: 1322651372539599053
+      Juggling_Clown_NEW_10: -660818964961726474
+      Juggling_Clown_NEW_11: -6420642213926478557
+      Juggling_Clown_NEW_12: -8697686869354066798
+      Juggling_Clown_NEW_13: 4219095624520937211
+      Juggling_Clown_NEW_14: -3449360344895801830
+      Juggling_Clown_NEW_15: 8953686497107764461
+      Juggling_Clown_NEW_16: 5395696704656692964
+      Juggling_Clown_NEW_17: -8478020748038075070
+      Juggling_Clown_NEW_18: -5067895339479738494
+      Juggling_Clown_NEW_19: -2124310706787603915
+      Juggling_Clown_NEW_2: 2980867272812595376
+      Juggling_Clown_NEW_20: 921168500280479421
+      Juggling_Clown_NEW_21: -6707281309595795154
+      Juggling_Clown_NEW_22: -2497310899880469498
+      Juggling_Clown_NEW_23: 2490719698785384205
+      Juggling_Clown_NEW_24: 3321797652527412630
+      Juggling_Clown_NEW_25: 5256648965988571388
+      Juggling_Clown_NEW_26: -8047690253292537824
+      Juggling_Clown_NEW_27: 9147247252677206908
+      Juggling_Clown_NEW_28: -7231939970803513471
+      Juggling_Clown_NEW_29: 804328115518616403
+      Juggling_Clown_NEW_3: 9727333031652012
+      Juggling_Clown_NEW_30: 4165354984812862496
+      Juggling_Clown_NEW_31: -8550830116860560009
+      Juggling_Clown_NEW_32: 5480383402151629785
+      Juggling_Clown_NEW_33: 8778109554845868281
+      Juggling_Clown_NEW_34: -707126627843158888
+      Juggling_Clown_NEW_35: 1594094840844897256
+      Juggling_Clown_NEW_36: -8488570964232534439
+      Juggling_Clown_NEW_37: -218498264272543548
+      Juggling_Clown_NEW_38: 8383311467379493304
+      Juggling_Clown_NEW_39: 8622288910605703072
+      Juggling_Clown_NEW_4: 7205088064460273657
+      Juggling_Clown_NEW_40: 224901856124818737
+      Juggling_Clown_NEW_41: 465878885779633842
+      Juggling_Clown_NEW_42: -5817092674386078239
+      Juggling_Clown_NEW_43: 272287055775544556
+      Juggling_Clown_NEW_44: -7810530818825277172
+      Juggling_Clown_NEW_45: 3815807436556988541
+      Juggling_Clown_NEW_46: -185810948399314198
+      Juggling_Clown_NEW_47: 872520315553787649
+      Juggling_Clown_NEW_48: 5514739566372289823
+      Juggling_Clown_NEW_49: -7934048369029657654
+      Juggling_Clown_NEW_5: -8175234572424373870
+      Juggling_Clown_NEW_50: -9183511503586506101
+      Juggling_Clown_NEW_51: 2318312611665401455
+      Juggling_Clown_NEW_52: 6499843792526418523
+      Juggling_Clown_NEW_53: 3064968583444407421
+      Juggling_Clown_NEW_54: 8367267133639044128
+      Juggling_Clown_NEW_55: 2661843117462864463
+      Juggling_Clown_NEW_6: -7666330865002522219
+      Juggling_Clown_NEW_7: -4183218452661570755
+      Juggling_Clown_NEW_8: -6037090795869224682
+      Juggling_Clown_NEW_9: -7190965905357959634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
