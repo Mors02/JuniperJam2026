@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 589b8063e0a284e978cd8b862f4b1941
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8827078708206887880
+    second: Ringleader_0
+  - first:
+      213: 102769456453725881
+    second: Ringleader_1
+  - first:
+      213: 5925687238833161314
+    second: Ringleader_2
+  - first:
+      213: 4590491650076466894
+    second: Ringleader_3
+  - first:
+      213: 945849277882624879
+    second: Ringleader_4
+  - first:
+      213: -5597177721518675759
+    second: Ringleader_5
+  - first:
+      213: -6368289307482196335
+    second: Ringleader_6
+  - first:
+      213: -5202203144778508393
+    second: Ringleader_7
+  - first:
+      213: 3057880473574211401
+    second: Ringleader_8
+  - first:
+      213: 4278510125924758756
+    second: Ringleader_9
+  - first:
+      213: -7798520384738613243
+    second: Ringleader_10
+  - first:
+      213: 2566398850008542926
+    second: Ringleader_11
+  - first:
+      213: 5313875512366228028
+    second: Ringleader_12
+  - first:
+      213: 3152278672267044671
+    second: Ringleader_13
+  - first:
+      213: -5420165758062167385
+    second: Ringleader_14
+  - first:
+      213: 5653327303252490807
+    second: Ringleader_15
+  - first:
+      213: -2873723158990856527
+    second: Ringleader_16
+  - first:
+      213: -2490509114814884162
+    second: Ringleader_17
+  - first:
+      213: 6730570031464008872
+    second: Ringleader_18
+  - first:
+      213: 1131429320828013425
+    second: Ringleader_19
+  - first:
+      213: -3113535209257990852
+    second: Ringleader_20
+  - first:
+      213: 2696946139568003105
+    second: Ringleader_21
+  - first:
+      213: -3820861113765486271
+    second: Ringleader_22
+  - first:
+      213: -2600062841980142646
+    second: Ringleader_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ringleader_0
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 528
+        width: 73
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3e5173155108a70800000000000000
+      internalID: 8827078708206887880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_1
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 529
+        width: 68
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be2fa1b64c1d6100800000000000000
+      internalID: 102769456453725881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_2
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 529
+        width: 67
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26447b8e5254c3250800000000000000
+      internalID: 5925687238833161314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_3
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 528
+        width: 68
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece543395d3b4bf30800000000000000
+      internalID: 4590491650076466894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_4
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 529
+        width: 70
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6be04b28e4502d00800000000000000
+      internalID: 945849277882624879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 397
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d826247484d252b0800000000000000
+      internalID: -5597177721518675759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 396
+        width: 76
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196fa909d9a4f97a0800000000000000
+      internalID: -6368289307482196335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_7
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 396
+        width: 75
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7979e026dcf0ec7b0800000000000000
+      internalID: -5202203144778508393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_8
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 481
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f7ef0e616cf6a20800000000000000
+      internalID: 3057880473574211401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_9
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 396
+        width: 83
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e438af7a42506b30800000000000000
+      internalID: 4278510125924758756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_10
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 396
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5082306470716c390800000000000000
+      internalID: -7798520384738613243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_11
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 265
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceeabe182ead9320800000000000000
+      internalID: 2566398850008542926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 265
+        width: 73
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c326c37df9daeb940800000000000000
+      internalID: 5313875512366228028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_13
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 264
+        width: 74
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37648d30c42fbb20800000000000000
+      internalID: 3152278672267044671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_14
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 265
+        width: 112
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaf7f6d5f3b7c4b0800000000000000
+      internalID: -5420165758062167385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_15
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 265
+        width: 103
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ab16dca37a47e40800000000000000
+      internalID: 5653327303252490807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 133
+        width: 137
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be5985330c7e18d0800000000000000
+      internalID: -2873723158990856527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_17
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 133
+        width: 173
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb61695c72fef6dd0800000000000000
+      internalID: -2490509114814884162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_18
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 133
+        width: 224
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac4d4598c9c76d50800000000000000
+      internalID: 6730570031464008872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_19
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 133
+        width: 274
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b4a6409f4a3bf00800000000000000
+      internalID: 1131429320828013425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_20
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 133
+        width: 321
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c35818039308ac4d0800000000000000
+      internalID: -3113535209257990852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_21
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1
+        width: 369
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128df43993a7d6520800000000000000
+      internalID: 2696946139568003105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_22
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1
+        width: 417
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141a7e19f0399fac0800000000000000
+      internalID: -3820861113765486271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ringleader_23
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1
+        width: 425
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acbb416fe98baebd0800000000000000
+      internalID: -2600062841980142646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ringleader_0: 8827078708206887880
+      Ringleader_1: 102769456453725881
+      Ringleader_10: -7798520384738613243
+      Ringleader_11: 2566398850008542926
+      Ringleader_12: 5313875512366228028
+      Ringleader_13: 3152278672267044671
+      Ringleader_14: -5420165758062167385
+      Ringleader_15: 5653327303252490807
+      Ringleader_16: -2873723158990856527
+      Ringleader_17: -2490509114814884162
+      Ringleader_18: 6730570031464008872
+      Ringleader_19: 1131429320828013425
+      Ringleader_2: 5925687238833161314
+      Ringleader_20: -3113535209257990852
+      Ringleader_21: 2696946139568003105
+      Ringleader_22: -3820861113765486271
+      Ringleader_23: -2600062841980142646
+      Ringleader_3: 4590491650076466894
+      Ringleader_4: 945849277882624879
+      Ringleader_5: -5597177721518675759
+      Ringleader_6: -6368289307482196335
+      Ringleader_7: -5202203144778508393
+      Ringleader_8: 3057880473574211401
+      Ringleader_9: 4278510125924758756
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
