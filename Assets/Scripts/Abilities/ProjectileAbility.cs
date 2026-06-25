@@ -6,6 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class ProjectileAbility : Ability
 {
+    public Transform cloudSpot;
     public Transform launchSpot;
     public string launchAnim;
     public FMODAudioScriptable projectileAudio;
@@ -19,6 +20,8 @@ public class ProjectileAbility : Ability
 
     private bool _hasAnimEnded = false;
     private Coroutine _waitRoutine;
+
+    private Cloud _cloud;
 
     public override void Initialize(GameObject go = null)
     {
@@ -43,6 +46,13 @@ public class ProjectileAbility : Ability
             }
 
             if (!launchSpot) launchSpot = transform;
+
+            var cloudObject = GameObject.FindWithTag("Cloud");
+            Debug.Log(cloudObject);
+            if (cloudObject)
+            {
+                _cloud = cloudObject.GetComponent<Cloud>();
+            }
         }
 
     }
@@ -59,7 +69,8 @@ public class ProjectileAbility : Ability
         _animator = null;
         _animationSubscriber = null;
         _playerSMController = null;
-}
+        _cloud = null;
+    }
 
     public override bool IsExecuting()
     {
@@ -103,6 +114,8 @@ public class ProjectileAbility : Ability
 
             _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
 
+            if (_cloud && cloudSpot) _cloud.Disappear();
+
             onExecutionCancel?.Invoke();
 
             _waitRoutine = null;
@@ -119,11 +132,16 @@ public class ProjectileAbility : Ability
         _animator.Play(launchAnim, 0, 0);
         _hasAnimEnded = false;
 
+        if (_cloud && cloudSpot && !_playerSMController.Grounded()) 
+            _cloud.Appear(cloudSpot.position, cloudSpot.rotation);
+
         _playerSMController.FreezeConstraints(RigidbodyConstraints2D.FreezePosition);
 
         while (!_hasAnimEnded) yield return null;
 
         _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
+
+        if (_cloud && cloudSpot) _cloud.Disappear();
 
         onExecutionComplete?.Invoke();
 
