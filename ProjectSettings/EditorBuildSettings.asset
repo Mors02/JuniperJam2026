@@ -17,5 +17,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/MainMenu.unity
     guid: d2ce163205d985a498f6e85b1c4a63f9
+  - enabled: 1
+    path: Assets/Scenes/Levels/1 Tutorial/Tutorial level.unity
+    guid: 04ae377ab882b45afa80cc132c94f4e8
+  - enabled: 1
+    path: Assets/Scenes/Levels/2 Opening level/OpeningLevel.unity
+    guid: bf7b9ea43ea8f491281dba818fade38e
+  - enabled: 1
+    path: Assets/Scenes/Levels/3 Carousel/CarouselLevel1.unity
+    guid: 4a541923a43624d9aac487285bf66291
+  - enabled: 1
+    path: Assets/Scenes/Levels/3 Carousel/CarouselLevel2.unity
+    guid: ae87c37d6a3df4a22aa33e474d51d0c3
+  - enabled: 1
+    path: Assets/Scenes/Levels/4 Ferris Wheel/FW1.unity
+    guid: 07019fb8ee3224d6182fa3714583adb5
+  - enabled: 1
+    path: Assets/Scenes/Levels/5 Outside the circus/OC1Tilemap.unity
+    guid: e4a7561f46b91484e82f50f38426a774
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

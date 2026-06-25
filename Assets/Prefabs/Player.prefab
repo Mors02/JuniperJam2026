@@ -200,7 +200,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _jumpForce: 20
+  _jumpForce: 25
   _downwardForce: 6
   _totalJumps: 1
   _coyoteTime: 0.1
@@ -5485,7 +5485,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8954229513809968723, guid: bf031e7f9513e5a40ab4ad5281b7a8e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
