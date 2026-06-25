@@ -803,6 +803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea501b790c9d617448ad382cff1ed5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spikes
+  _knockbackScale: 2
+  _damage: 1
 --- !u!1001 &745204448
 PrefabInstance:
   m_ObjectHideFlags: 0

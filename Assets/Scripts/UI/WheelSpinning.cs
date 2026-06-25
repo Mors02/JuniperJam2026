@@ -90,7 +90,9 @@ public class WheelSpinning : MonoBehaviour
                 Debug.Log(_rewards.Count);
                 Debug.Log(_rewardNumber);
                 Debug.Log(_isSpinning);
-                
+
+                if (FMODAudioManager.Instance && _wheelAudio)
+                    FMODAudioManager.Instance.StopAudio(_wheelAudio);
             }
         } 
         
