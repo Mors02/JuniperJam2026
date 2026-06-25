@@ -43,6 +43,7 @@ Transform:
   - {fileID: 3794609037812703924}
   - {fileID: 1693788543128924821}
   - {fileID: 6123390508349480630}
+  - {fileID: 6910450294613006424}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3383827292155690880
@@ -263,6 +264,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f90ce10d98d764d88617fd93336939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlatformMotion2D
+--- !u!1 &631025256529256183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6910450294613006424}
+  m_Layer: 6
+  m_Name: swordWaveLanchSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6910450294613006424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631025256529256183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.68, y: -0.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6857651498396704654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083603171620641557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,6 +5260,9 @@ MonoBehaviour:
     - name: Wind Push
       parasiteBehaviour:
         rid: 2533004851591774280
+    - name: Sword Wave
+      parasiteBehaviour:
+        rid: 2533004891505033308
   parasiteSOHolders: []
   references:
     version: 2
@@ -5263,6 +5298,13 @@ MonoBehaviour:
         _dashForce: 20
         _dashCooldown: 1
         _allowFirst: 1
+    - rid: 2533004891505033308
+      type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
+      data:
+        launchSpot: {fileID: 6910450294613006424}
+        launchAnim: Player_sword
+        projectileAudio: {fileID: 0}
+        projectilePrefab: {fileID: 7238960287163630550, guid: 4936d05c1c0222244b0197e87cc3d94e, type: 3}
 --- !u!1 &4169935096652388112
 GameObject:
   m_ObjectHideFlags: 0
