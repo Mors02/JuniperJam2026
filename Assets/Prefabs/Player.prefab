@@ -44,6 +44,7 @@ Transform:
   - {fileID: 1693788543128924821}
   - {fileID: 6123390508349480630}
   - {fileID: 6910450294613006424}
+  - {fileID: 242238432819375483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3383827292155690880
@@ -5270,6 +5271,7 @@ MonoBehaviour:
     - rid: 2533004851591774278
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 1693788543128924821}
         launchAnim: Player_fireball
         projectileAudio: {fileID: 11400000, guid: b119fd10424327d47a0ce0b99b8776fa, type: 2}
@@ -5277,6 +5279,7 @@ MonoBehaviour:
     - rid: 2533004851591774279
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 1693788543128924821}
         launchAnim: Player_stasis
         projectileAudio: {fileID: 11400000, guid: 3b5c277452391554db6834ab0d9bfa6f, type: 2}
@@ -5284,6 +5287,7 @@ MonoBehaviour:
     - rid: 2533004851591774280
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 1693788543128924821}
         launchAnim: Player_windPush
         projectileAudio: {fileID: 0}
@@ -5301,6 +5305,7 @@ MonoBehaviour:
     - rid: 2533004891505033308
       type: {class: ProjectileAbility, ns: , asm: Assembly-CSharp}
       data:
+        cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 6910450294613006424}
         launchAnim: Player_sword
         projectileAudio: {fileID: 0}
@@ -5443,6 +5448,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.21, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6857651498396704654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4925592131372465203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242238432819375483}
+  m_Layer: 6
+  m_Name: cloudSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &242238432819375483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925592131372465203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -13,6 +13,7 @@ TagManager:
   - LavaFloor
   - FireRing
   - PlayerCanvas
+  - Cloud
   layers:
   - Default
   - TransparentFX
