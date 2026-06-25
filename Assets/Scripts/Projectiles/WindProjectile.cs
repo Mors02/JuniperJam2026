@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class WindProjectile : MonoBehaviour
+public class WindProjectile : Projectile
 {
     [Min(0)] public float destroyTime = 10f;
     public AnimationCurve animationCurve = AnimationCurve.Constant(0f, 1f, 1f);
@@ -11,6 +12,8 @@ public class WindProjectile : MonoBehaviour
     private Rigidbody2D _rb;
     private float _elapsed = 0;
     private float _perc = 0;
+
+    private HashSet<GameObject> _damagedObjects = new();
     
     private void Awake()
     {
@@ -30,6 +33,28 @@ public class WindProjectile : MonoBehaviour
             _elapsed += Time.fixedDeltaTime;
         }
         else Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == _owner) return;
+
+        if (_damagedObjects.Contains(collision.gameObject)) return;
+
+        _damagedObjects.Add(collision.gameObject);
+
+        //to do
+        //Stop enemies by stasis amount
+        //effects
+
+        if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
+        {
+            Vector2 knockback = (collision.transform.position - transform.position).normalized;
+            knockback.y = 0;
+
+            iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Knockback, 0, 
+                knockbackForceScale * knockback));
+        }
     }
 
     void Move(Vector2 motion)

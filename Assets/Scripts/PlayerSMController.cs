@@ -696,6 +696,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(DamageInfo damageInfo)
     {
+        if (_dashAbility.IsExecuting()) return;
+
         GameManager.Instance.CurrentLives = _damageReceiver.CurrentHealth;
         // Knockback on the player would go here.
     }

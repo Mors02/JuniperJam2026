@@ -2,10 +2,16 @@ using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 [System.Serializable]
 public class DashAbility : Ability
 {
+    [Header("Damage settings")]
+    [SerializeField] private Hitbox _hitbox;
+    [SerializeField] private int _damage = 1;
+
+    [Header("Dash settings")]
     [SerializeField] private FMODAudioScriptable _dashAudio;
     [SerializeField] private string _dashAnim;
     [SerializeField] private float _dashForce = 10f;
@@ -33,6 +39,11 @@ public class DashAbility : Ability
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _playerSMController = gameObject.GetComponent<PlayerSMController>();
 
+        if (_hitbox)
+        {
+            _hitbox.gameObject.SetActive(false);
+        }
+
         if (_animationSubscriber)
         {
             _animationSubscriber.SubscribeEndAction(() => {
@@ -59,6 +70,8 @@ public class DashAbility : Ability
         _rb = null;
         _playerSMController = null;
         _dashAudio = null;
+
+        _hitbox = null;
     }
 
     bool CanDash()
@@ -73,13 +86,16 @@ public class DashAbility : Ability
 
     public override bool CanTrigger()
     {
-        return base.CanTrigger() && _dashCoroutine == null 
+        return base.CanTrigger() && _dashCoroutine == null && _hitbox
             && CanDash() && _monoBehaviour && _animator && _animationSubscriber;
     }
 
     public override void Trigger()
     {
         base.Trigger();
+
+        _hitbox.gameObject.SetActive(true);
+        _hitbox.onEnter2D += HitboxEnter2D;
 
         if (FMODAudioManager.Instance)
             FMODAudioManager.Instance.PlayOnce(_dashAudio, null, true);
@@ -101,9 +117,27 @@ public class DashAbility : Ability
 
             _curDashTime = Time.time;
 
+            _hitbox.onEnter2D -= HitboxEnter2D;
+            _hitbox.gameObject.SetActive(false);
+
+
             onExecutionCancel?.Invoke();
 
             _dashCoroutine = null;
+        }
+    }
+
+    void HitboxEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == gameObject) return;
+
+        //to do
+        //Stop enemies by stasis amount
+        //effects
+
+        if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
+        {
+            iTakeDamage.TakeDamage(new DamageInfo(_damage));
         }
     }
 
@@ -121,6 +155,9 @@ public class DashAbility : Ability
         _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
 
         _curDashTime = Time.time;
+
+        _hitbox.onEnter2D -= HitboxEnter2D;
+        _hitbox.gameObject.SetActive(false);
 
         onExecutionComplete?.Invoke();
         _dashCoroutine = null;
