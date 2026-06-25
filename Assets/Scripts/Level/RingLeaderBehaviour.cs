@@ -88,8 +88,11 @@ public class RingLeaderBehaviour : MonoBehaviour
     {
         if (collision.TryGetComponent<ITakeDamage>(out ITakeDamage damageReceiver))
         {
-            DamageInfo info = new DamageInfo(1, DamageType.None);
-            damageReceiver.TakeDamage(info);
+            if (collision.CompareTag("Player"))
+            {
+                DamageInfo info = new DamageInfo(1, DamageType.None);
+                damageReceiver.TakeDamage(info);
+            }
         }
     }
 
