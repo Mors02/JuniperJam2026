@@ -197,7 +197,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,7 +219,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,7 +241,7 @@ TextureImporter:
         width: 64
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,6 +250,50 @@ TextureImporter:
       bones: []
       spriteID: 6a481aa45aa514ada87ff2d46c7cb531
       internalID: -492746041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Clocktower_Tilemap_Fresh 1_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abba47b6ce25f4cf3b1125da473fc767
+      internalID: -1224181563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New_Clocktower_Tilemap_Fresh 1_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b453462be960c4bdca9558cf95ac1bac
+      internalID: -1898908124
       vertices: []
       indices: 
       edges: []
@@ -275,6 +319,8 @@ TextureImporter:
       New_Clocktower_Tilemap_Fresh 1_2: 476634804
       New_Clocktower_Tilemap_Fresh 1_3: -1973752476
       New_Clocktower_Tilemap_Fresh 1_4: -492746041
+      New_Clocktower_Tilemap_Fresh 1_5: -1224181563
+      New_Clocktower_Tilemap_Fresh 1_6: -1898908124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

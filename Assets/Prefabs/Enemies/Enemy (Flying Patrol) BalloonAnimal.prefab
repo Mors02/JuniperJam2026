@@ -5355,7 +5355,7 @@ MonoBehaviour:
   _popAudio: {fileID: 11400000, guid: 29f2097176167164e944c8081db4c8a9, type: 2}
   _hitboxes:
   - {fileID: 771534122416062280}
-  _contactDamage: 1
+  _contactDamage: 3
   _knockback: {x: 3, y: 3}
   _floorMask:
     serializedVersion: 2

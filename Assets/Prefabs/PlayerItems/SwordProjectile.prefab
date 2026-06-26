@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SwordProjectile
   destroyTime: 0.2
   force: 30
-  damage: 1
+  damage: 3
   _animator: {fileID: 0}
   _animationSubscriber: {fileID: 0}
   _swordWaveAnim: 

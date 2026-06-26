@@ -225,7 +225,7 @@ MonoBehaviour:
   _hitboxes:
   - {fileID: 4805257056576994144}
   - {fileID: 2636974199146433940}
-  _contactDamage: 1
+  _contactDamage: 15
   _knockback: {x: 10, y: 5}
   _moveSpeed: 1
   _ledgeCheckDistance: 0.5
