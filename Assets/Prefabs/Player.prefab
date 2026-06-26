@@ -250,7 +250,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _jumpForce: 25
+  _jumpForce: 27
   _downwardForce: 6
   _totalJumps: 1
   _coyoteTime: 0.1
