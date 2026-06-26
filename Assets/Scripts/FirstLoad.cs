@@ -21,11 +21,12 @@ public class FirstLoad : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadEnumerator());
-        button.interactable = false;
     }
 
     IEnumerator LoadEnumerator()
     {
+        yield return new WaitForEndOfFrame();
+        //button.interactable = false;
         if (loadingSlider) loadingSlider.UpdateBar(0);
 
         if (audioPreloader)
@@ -40,18 +41,22 @@ public class FirstLoad : MonoBehaviour
                 yield return null;
             }
         }
+        
+        yield return new WaitForEndOfFrame();
 
         if (loadingSlider) loadingSlider.UpdateBar(1);
 
         if (loadingTextGUI) loadingTextGUI.text = startGameString;
 
         isDoneLoading = true;
-        button.interactable = true;
     }
 
     public void StartScene()
     {
-        print("Itworks");
-        SceneManager.LoadSceneAsync(startSceneName);
+        if (isDoneLoading && !isSceneLoading)
+        {
+            isSceneLoading = true;
+            SceneManager.LoadSceneAsync(startSceneName);
+        }
     }
 }
