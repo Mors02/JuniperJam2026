@@ -31,7 +31,7 @@ public class MainMenuManager : MonoBehaviour
     private IEnumerator ChangeSceneRoutine()
     {
         yield return new WaitForSeconds(0.90f);
-        SceneManager.LoadScene("CharacterScene");
+        SceneManager.LoadScene("Tutorial level");
     }
 
     private IEnumerator WaitForOpening()

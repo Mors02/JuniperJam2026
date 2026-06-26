@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WC_Survive
   m_EditorClassIdentifier: Assembly-CSharp::WC_Survive
   Name: Survive
-  Description: Survive the gauntlet
+  Description: Survive the balloons
