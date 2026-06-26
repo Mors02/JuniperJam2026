@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6153752979492490481}
   m_Layer: 0
-  m_Name: ferris wheel for testing
+  m_Name: FerrisWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

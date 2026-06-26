@@ -15,6 +15,7 @@ TagManager:
   - PlayerCanvas
   - Cloud
   - PauseManager
+  - Moving
   layers:
   - Default
   - TransparentFX
