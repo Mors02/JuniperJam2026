@@ -250,6 +250,6 @@ MonoBehaviour:
   destroyTime: 0.2
   force: 30
   damage: 3
-  _animator: {fileID: 0}
-  _animationSubscriber: {fileID: 0}
-  _swordWaveAnim: 
+  _animator: {fileID: 8817115557018720200}
+  _animationSubscriber: {fileID: 5941344829123910364}
+  _swordWaveAnim: SwordWave
