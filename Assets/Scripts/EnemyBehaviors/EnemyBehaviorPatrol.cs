@@ -9,6 +9,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     private Rigidbody2D _rb;
+    private Collider2D _collider;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -81,6 +82,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 
     void Awake()
     {
+        _collider = GetComponent<Collider2D>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _damageReceiver.Initialize();
         _damageReceiver.OnDeath += OnDeathStart;
@@ -356,6 +358,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 
     private void OnDeathStart()
     {
+        foreach (var hitbox in _hitboxes)
+            hitbox.gameObject.SetActive(false);
+        _collider.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
         _dead = true;
         _animator.SetTrigger("Death");
         if (_walkAudio) _audioManager.StopAudio(_walkAudio);
