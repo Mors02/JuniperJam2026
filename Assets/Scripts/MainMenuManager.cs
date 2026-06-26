@@ -7,6 +7,12 @@ public class MainMenuManager : MonoBehaviour
     
     private Animator _curtainAnimator;
 
+    [SerializeField]
+    private GameObject _mainMenu;
+
+    [SerializeField]
+    private GameObject _credits;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +37,23 @@ public class MainMenuManager : MonoBehaviour
     private IEnumerator WaitForOpening()
     {
         yield return new WaitForSecondsRealtime(0.20f);
+        _curtainAnimator.SetTrigger("Open");
+    }
+
+    public void ChangeSection()
+    {
+        _curtainAnimator.SetTrigger("Exit");
+        StartCoroutine(WaitForCloseCurtains());
+
+    }
+
+    public IEnumerator WaitForCloseCurtains()
+    {
+        yield return new WaitForSeconds(1f);
+        
+        _mainMenu.SetActive(!_mainMenu.activeSelf);
+        _credits.SetActive(!_credits.activeSelf);
+    
         _curtainAnimator.SetTrigger("Open");
     }
 }
