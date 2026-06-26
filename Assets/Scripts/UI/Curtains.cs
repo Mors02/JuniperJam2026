@@ -8,11 +8,11 @@ public class Curtains : MonoBehaviour
     public void ActivateWinConAnimation()
     {
         GameManager.Instance.ActivateWinConAnimation();
-        Time.timeScale = 1f;
+        PauseManager.instance.SetPause("curtains", 1f);
     }
 
     public void StopGame()
     {
-        Time.timeScale = 0f;
+        PauseManager.instance.SetPause("curtains", 0f);
     }
 }
