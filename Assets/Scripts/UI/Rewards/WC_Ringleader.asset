@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7c166d5cef39b429c2e2713ec33185, type: 3}
   m_Name: WC_Ringleader
   m_EditorClassIdentifier: Assembly-CSharp::WC_Ringleader
-  Name: Ring\nLeader
+  Name: Escape
   Description: Avoid the Ring Leader

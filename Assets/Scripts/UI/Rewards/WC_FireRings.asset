@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbde4afd1dbc2104a868d5eff75fe60e, type: 3}
   m_Name: WC_FireRings
   m_EditorClassIdentifier: Assembly-CSharp::WC_FireRings
-  Name: Fire\nHoops
+  Name: Jump
   Description: Jump throught all hoops
