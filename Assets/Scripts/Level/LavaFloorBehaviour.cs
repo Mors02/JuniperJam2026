@@ -6,6 +6,8 @@ public class LavaFloorBehaviour : MonoBehaviour
     [SerializeField]
     private float _speed;
     [SerializeField]
+    private int _damage;
+    [SerializeField]
     private Transform _transform;
     private bool _active;
 
@@ -46,7 +48,7 @@ public class LavaFloorBehaviour : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.linearVelocityY = 0;
             rb.AddForceY(_knockbackForce);
-            DamageInfo info = new DamageInfo(3, DamageType.Normal);
+            DamageInfo info = new DamageInfo(_damage, DamageType.Normal);
 
 
             collision.gameObject.GetComponent<ITakeDamage>().TakeDamage(info);
