@@ -1,4 +1,5 @@
-using System.Threading;
+using AbyssWorks.FMODAudioManager;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RingLeaderBehaviour : MonoBehaviour
@@ -33,6 +34,11 @@ public class RingLeaderBehaviour : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
+    [Header("Audio")]
+    [SerializeField] private FMODAudioScriptable _attackAudio;
+    [SerializeField] private FMODAudioScriptable _laughAudio;
+    [SerializeField] private FMODAudioScriptable _shortLaughAudio;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -85,6 +91,24 @@ public class RingLeaderBehaviour : MonoBehaviour
     {
         _attacking = false;
         _damageCollider.enabled = false;
+    }
+
+    public void PlayAttackSFX()
+    {
+        if (_attackAudio && FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_attackAudio);
+    }
+
+    public void PlayShortLaughSFX()
+    {
+        if (_shortLaughAudio && FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_shortLaughAudio);
+    }
+
+    public void PlayLaughSFX()
+    {
+        if (_laughAudio && FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_laughAudio);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
