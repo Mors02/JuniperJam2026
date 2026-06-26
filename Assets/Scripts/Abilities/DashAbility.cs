@@ -118,7 +118,7 @@ public class DashAbility : Ability
         {
             _monoBehaviour.StopCoroutine(_dashCoroutine);
 
-            _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
+            //_playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
 
             _curDashTime = Time.time;
 
@@ -159,10 +159,15 @@ public class DashAbility : Ability
         _hasAnimEnded = false;
 
         _rb.linearVelocityX = 0;
-        _playerSMController.FreezeConstraints(RigidbodyConstraints2D.FreezePositionY);
-        while (!_hasAnimEnded) yield return null;
+        //_playerSMController.FreezeConstraints(RigidbodyConstraints2D.FreezePositionY);
+        while (!_hasAnimEnded)
+        {
+            if (!_playerSMController.Grounded()) _rb.linearVelocityY = 0;
 
-        _playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
+            yield return null;
+        }
+
+        //_playerSMController.FreezeConstraints(_playerSMController.BaseConstraints);
 
         _curDashTime = Time.time;
 

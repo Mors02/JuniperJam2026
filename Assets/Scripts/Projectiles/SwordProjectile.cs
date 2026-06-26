@@ -23,17 +23,15 @@ public class SwordProjectile : Projectile
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*
-        _animator.Play(_waveAnim, 0, 0);
-        _animationSubscriber.SubscribeAction("SwordWaveEnd", () =>
+        
+        _animator.Play(_swordWaveAnim, 0, 0);
+        _animationSubscriber.SubscribeEndAction(() =>
         {
             Destroy(gameObject);
         });
-        */
+        
 
         _rb.AddForce(transform.right * force, ForceMode2D.Impulse);
-
-        Destroy(gameObject, destroyTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

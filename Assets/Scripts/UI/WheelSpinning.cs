@@ -46,6 +46,12 @@ public class WheelSpinning : MonoBehaviour
 
     [SerializeField]
     private List<Sprite> _confettiSprites;
+
+    [SerializeField]
+    private List<Color> _wheelColors;
+
+    [SerializeField]
+    private Image _announcementWheel;
     private const string WHEELSPINPARAMETER = "WheelSpinState";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -104,6 +110,7 @@ public class WheelSpinning : MonoBehaviour
         {
             
             _animator.SetTrigger("Exit");
+            _announcementWheel.color = _wheelColors[_rewardNumber];
             _announcementText.text = _rewards[_rewardNumber].Name;
             _rewards[_rewardNumber].Execute();
             _rewardNumber = -1;

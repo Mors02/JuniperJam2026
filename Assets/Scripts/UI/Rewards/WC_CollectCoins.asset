@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WC_CollectCoins
   m_EditorClassIdentifier: Assembly-CSharp::WC_CollectCoins
   Name: Collect
-  Description: Collect all the coins
+  Description: Collect all coins

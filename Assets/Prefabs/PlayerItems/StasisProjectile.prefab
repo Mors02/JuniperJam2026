@@ -114,6 +114,7 @@ MonoBehaviour:
   force: 8
   stasisDuration: 1
   damage: 1
+  _impactAudio: {fileID: 11400000, guid: 1888b62fbac369f419b72e3ae2d3b16d, type: 2}
   _animator: {fileID: 785416837787623165}
   _animationSubscriber: {fileID: 9010424388034470872}
   _startAnim: Stasis_grow
