@@ -315,6 +315,11 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
         _collider.enabled = false;
         _rb.constraints = RigidbodyConstraints2D.FreezePosition;
 
+        if (GameManager.Instance.CurrentWinCon.Type == WinConType.KillEnemies)
+            GameManager.Instance.CurrentWinCon.UpdateWinCon();
+        
+        GameManager.Instance.KilledEnemies++;
+
         _dead = true;
         //print("S");
         _animator.SetTrigger("Death");

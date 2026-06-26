@@ -325,6 +325,11 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
         _collider.enabled = false;
         _rb.constraints = RigidbodyConstraints2D.FreezePosition;
 
+        if (GameManager.Instance.CurrentWinCon.Type == WinConType.KillEnemies)
+            GameManager.Instance.CurrentWinCon.UpdateWinCon();
+        
+        GameManager.Instance.KilledEnemies++;
+
         _dead = true;
         _animator.SetTrigger("Death");
     }
