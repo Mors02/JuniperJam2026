@@ -788,7 +788,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: orthographic size
-      value: 11.25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
@@ -800,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.99979913
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -1076,6 +1076,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1218910307713145527, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -142
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426590398452062672, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426590398452062672, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2203,6 +2215,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   _wheelAudio: {fileID: 0}
+  _confetti: {fileID: 0}
+  _confettiSprites: []
 --- !u!95 &1796253253
 Animator:
   serializedVersion: 7

@@ -147,6 +147,9 @@ MonoBehaviour:
   _X: 12
   _damage: 7
   _animator: {fileID: 2561659514518496318}
+  _attackAudio: {fileID: 11400000, guid: 8831e7a4ac121a74ba0362530c78447d, type: 2}
+  _laughAudio: {fileID: 11400000, guid: 6b3f5d5406ba4434683e730d113266ed, type: 2}
+  _shortLaughAudio: {fileID: 11400000, guid: b73e429bc0e55be4699295e2b451406b, type: 2}
 --- !u!95 &2561659514518496318
 Animator:
   serializedVersion: 7
