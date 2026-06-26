@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LavaFloorBehaviour
   _speed: 0.5
+  _damage: 3
   _transform: {fileID: 5260974073618884584}
   _knockbackForce: 900
   _animator: {fileID: 1301009002014865691}
