@@ -5569,7 +5569,7 @@ MonoBehaviour:
         cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 1693788543128924821}
         launchAnim: Player_windPush
-        projectileAudio: {fileID: 0}
+        projectileAudio: {fileID: 11400000, guid: 0978d5eb9e94c8d4c9304d3573e595c2, type: 2}
         projectilePrefab: {fileID: 1786459888457743207, guid: f795957fce5461d4cbe909a7a077a06f, type: 3}
     - rid: 2533004854806184016
       type: {class: DashAbility, ns: , asm: Assembly-CSharp}
@@ -5587,7 +5587,7 @@ MonoBehaviour:
         cloudSpot: {fileID: 242238432819375483}
         launchSpot: {fileID: 6910450294613006424}
         launchAnim: Player_sword
-        projectileAudio: {fileID: 0}
+        projectileAudio: {fileID: 11400000, guid: 571625626451d0d479f88d3fb5f6ce26, type: 2}
         projectilePrefab: {fileID: 7238960287163630550, guid: 4936d05c1c0222244b0197e87cc3d94e, type: 3}
 --- !u!1 &4169935096652388112
 GameObject:
