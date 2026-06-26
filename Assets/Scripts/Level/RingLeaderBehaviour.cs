@@ -28,6 +28,9 @@ public class RingLeaderBehaviour : MonoBehaviour
     private bool _attacking;
 
     [SerializeField]
+    private int _damage;
+
+    [SerializeField]
     private Animator _animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -90,7 +93,7 @@ public class RingLeaderBehaviour : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                DamageInfo info = new DamageInfo(1, DamageType.None);
+                DamageInfo info = new DamageInfo(_damage, DamageType.None);
                 damageReceiver.TakeDamage(info);
             }
         }
