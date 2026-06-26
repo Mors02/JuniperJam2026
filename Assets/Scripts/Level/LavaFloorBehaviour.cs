@@ -13,6 +13,9 @@ public class LavaFloorBehaviour : MonoBehaviour
     private float _knockbackForce;
     [SerializeField]
     private Animator _animator;
+
+    [SerializeField]
+    private float _lerpSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +28,8 @@ public class LavaFloorBehaviour : MonoBehaviour
         if (_active)
         {
             float verticalMovement = _speed * Time.fixedDeltaTime;
-            this._transform.position = new Vector2(_transform.position.x, _transform.position.y + verticalMovement);
+            Vector2 position = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0));
+            this._transform.position = Vector2.Lerp(this._transform.position, new Vector2(position.x, _transform.position.y + verticalMovement), _lerpSpeed);
         }
     }
 

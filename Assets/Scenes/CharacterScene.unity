@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!20 &14029416 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
-  m_PrefabInstance: {fileID: 745204448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &16952296
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +953,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 11.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.999584
       objectReference: {fileID: 0}
     - target: {fileID: 1491174138304913884, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_Name
@@ -1805,7 +1812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887007933446126542, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2358,3 +2365,4 @@ SceneRoots:
   - {fileID: 772989646}
   - {fileID: 480504596}
   - {fileID: 259175773}
+  - {fileID: 6939729025064736931}
