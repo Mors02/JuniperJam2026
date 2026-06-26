@@ -183,6 +183,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _mayJump = 0;
 
         _damageReceiver.Initialize();
+        _damageReceiver.OnHealthChanged.Invoke(_damageReceiver.MaxHealth);
         /*_damageReceiver.OnDeath += () =>
         {
             SwitchState(PlayerState.Death);
@@ -293,7 +294,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     }
     private GondolaScript GetPlatformBelow()
     {
-        print("WHATA");
+        
         float castDistance = 5;
         
         Debug.DrawRay(transform.position, Vector2.down * castDistance, Color.blue);
@@ -301,7 +302,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                             castDistance, _floorMask);
         if (ledgeHit)
         {
-            print(ledgeHit.transform.name);
+
             if (ledgeHit.transform.CompareTag("Moving"))
                 return ledgeHit.collider.GetComponentInParent<GondolaScript>();
         }
@@ -329,7 +330,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
         if (!_isGrounded)
         {
-            print("DSD");
+
             _currentMovement = movement;
             _rb.linearVelocityX = 0;
             _rb.position += movement * Time.fixedDeltaTime;

@@ -48,7 +48,7 @@ public class ProjectileAbility : Ability
             if (!launchSpot) launchSpot = transform;
 
             var cloudObject = GameObject.FindWithTag("Cloud");
-            Debug.Log(cloudObject);
+
             if (cloudObject)
             {
                 _cloud = cloudObject.GetComponent<Cloud>();

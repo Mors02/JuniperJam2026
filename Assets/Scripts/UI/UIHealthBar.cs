@@ -6,9 +6,10 @@ public class UIHealthBar : MonoBehaviour
     
     private DamageReceiver _playerDamage;
 
+    [SerializeField]
     private Slider _slider;
 
-    private int _targetPercentage;
+    private float _targetPercentage;
     [SerializeField]
     private float _sliderSpeed;
     
@@ -18,6 +19,7 @@ public class UIHealthBar : MonoBehaviour
          GameObject player = GameObject.FindGameObjectWithTag("Player");
          _playerDamage = player.GetComponent<DamageReceiver>();
          _playerDamage.OnHealthChanged.AddListener(UpdateHealthUI);
+         _targetPercentage = 1;
     }
 
     public void Update()
@@ -30,6 +32,8 @@ public class UIHealthBar : MonoBehaviour
 
     private void UpdateHealthUI(int health)
     {
-        _targetPercentage = health / _playerDamage.MaxHealth;
+        
+        _targetPercentage = (float)health / (float)_playerDamage.MaxHealth;
+        Debug.Log(health + " " + _playerDamage.MaxHealth + " " + _targetPercentage);
     }
 }

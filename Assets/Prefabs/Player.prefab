@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3517d4f51602443bb5e99c61847c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageReceiver
-  _currentHealth: 0
+  _currentHealth: 100
   _maxHealth: 100
   _canTakeDamage: 1
   _invicibilityTime: 2
