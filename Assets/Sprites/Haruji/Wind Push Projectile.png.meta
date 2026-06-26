@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32091467eaf65a4499fe60067dcadc51
+guid: 94bcec50329ad4847b083938b336b2c5
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -109,7 +109,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,7 +123,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,7 +146,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -175,12 +175,12 @@ TextureImporter:
       name: Wind Push Projectile_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 14
-        width: 33
-        height: 23
+        x: 0
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Wind Push Projectile_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 14
-        width: 29
-        height: 25
+        x: 40
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: Wind Push Projectile_2
       rect:
         serializedVersion: 2
-        x: 164
-        y: 14
-        width: 35
-        height: 26
+        x: 80
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: Wind Push Projectile_3
       rect:
         serializedVersion: 2
-        x: 210
-        y: 25
-        width: 15
-        height: 15
+        x: 120
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,12 +263,12 @@ TextureImporter:
       name: Wind Push Projectile_4
       rect:
         serializedVersion: 2
-        x: 223
-        y: 17
-        width: 13
-        height: 22
+        x: 160
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,12 +285,12 @@ TextureImporter:
       name: Wind Push Projectile_5
       rect:
         serializedVersion: 2
-        x: 254
-        y: 28
-        width: 21
-        height: 12
+        x: 200
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: Wind Push Projectile_6
       rect:
         serializedVersion: 2
-        x: 293
-        y: 4
-        width: 16
-        height: 34
+        x: 240
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: Wind Push Projectile_7
       rect:
         serializedVersion: 2
-        x: 303
-        y: 23
-        width: 9
-        height: 15
+        x: 280
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: Wind Push Projectile_8
       rect:
         serializedVersion: 2
-        x: 336
-        y: 31
-        width: 9
-        height: 6
+        x: 320
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,363 +369,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_9
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 11
-        width: 22
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c555a783288a3550800000000000000
-      internalID: 6141370728054085056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_10
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 5
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac418a9b7cc6c59f0800000000000000
-      internalID: -478387855339023158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_11
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 11
-        width: 25
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 608d238d6e641f7e0800000000000000
-      internalID: -1733526424277297146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_12
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 1
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7cdcedaad93e5bb0800000000000000
-      internalID: -4945451729422590850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_13
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 3
-        width: 23
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86732c5bd1e6e3710800000000000000
-      internalID: 1674897185310914408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_14
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 1
-        width: 19
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c17007c13d5f469d0800000000000000
-      internalID: -2781828382744115428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_15
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 0
-        width: 24
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b53c6ecfd92ffd490800000000000000
-      internalID: -7719184475922971813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_16
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 7
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 040ed74e49a722a90800000000000000
-      internalID: -7340169662753284032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_17
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 0
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3933d97f207d777d0800000000000000
-      internalID: -2920629425582296173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_18
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 15
-        width: 12
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc8d1c0f262c815f0800000000000000
-      internalID: -785664404774332211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_19
-      rect:
-        serializedVersion: 2
-        x: 218
-        y: 20
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c4d8aff1d5198bf30800000000000000
-      internalID: 4591579649258720588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_20
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 19
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1214a93cc7af1efb0800000000000000
-      internalID: -4620136328940863199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_21
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 3
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e17b10d5b272d6eb0800000000000000
-      internalID: -4725077366844311778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_22
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 6
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58dd9374433dac070800000000000000
-      internalID: 8127540699030216069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_23
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 16
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c608da3fc0cebd60800000000000000
-      internalID: 7907969991987168968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wind Push Projectile_24
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 5
-        width: 13
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e61289b6dd8748690800000000000000
-      internalID: -7600817378706316946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af9e64e4003d0ed45b52abde9e0e0e1d
     internalID: 0
     vertices: []
     indices: 
@@ -733,33 +381,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":40.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Wind Push Projectile_0: -5420316249246157239
       Wind Push Projectile_1: 1912163140544524866
-      Wind Push Projectile_10: -478387855339023158
-      Wind Push Projectile_11: -1733526424277297146
-      Wind Push Projectile_12: -4945451729422590850
-      Wind Push Projectile_13: 1674897185310914408
-      Wind Push Projectile_14: -2781828382744115428
-      Wind Push Projectile_15: -7719184475922971813
-      Wind Push Projectile_16: -7340169662753284032
-      Wind Push Projectile_17: -2920629425582296173
-      Wind Push Projectile_18: -785664404774332211
-      Wind Push Projectile_19: 4591579649258720588
       Wind Push Projectile_2: -156250575494090688
-      Wind Push Projectile_20: -4620136328940863199
-      Wind Push Projectile_21: -4725077366844311778
-      Wind Push Projectile_22: 8127540699030216069
-      Wind Push Projectile_23: 7907969991987168968
-      Wind Push Projectile_24: -7600817378706316946
       Wind Push Projectile_3: 8825035060598614210
       Wind Push Projectile_4: -5053782209859855188
       Wind Push Projectile_5: 5629129677467396556
       Wind Push Projectile_6: -1498259529513904188
       Wind Push Projectile_7: 763424473060737133
       Wind Push Projectile_8: 2841009060084164497
-      Wind Push Projectile_9: 6141370728054085056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

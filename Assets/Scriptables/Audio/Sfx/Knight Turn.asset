@@ -19,7 +19,7 @@ MonoBehaviour:
       Data3: -2084297330
       Data4: 886023179
     Path: event:/Enemies/Knight Turn
-  volumeScale: 1
+  volumeScale: 2
   pitchScale: 1
   attenuationMin: 1
   attenuationMax: 20

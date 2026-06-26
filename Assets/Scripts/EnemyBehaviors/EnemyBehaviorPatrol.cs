@@ -9,6 +9,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     private Rigidbody2D _rb;
+    private Collider2D _collider;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -21,6 +22,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     private LayerMask _floorMask;
     private ContactFilter2D _contactFilter;
     private Transform _transform;
+
+    [Header("Damage")]
+    [SerializeField] private System.Collections.Generic.List<Hitbox> _hitboxes;
+    [SerializeField] private int _contactDamage;
+    [SerializeField] private Vector2 _knockback;
+    private DamageInfo _contactDamageInfo;
 
     [Header("Movement")]
     [Tooltip("The speed at which the enemy moves")]
@@ -55,12 +62,13 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     [SerializeField] private FMODAudioScriptable _turnAudioScr;
     [SerializeField] private FMODAudioScriptable _swingAudioScr;
 
-    private enum MovementState {
+    private enum MovementState
+    {
         Moving,
         Turning,
         Stopped
     };
-
+    bool _dead = false;
     bool _isStasis = false;
     bool _isKnockedBack = false;
     float _knockbackTimer = 0f;
@@ -72,10 +80,12 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
 
     FMODAudioManager _audioManager;
 
-    void Awake() 
+    void Awake()
     {
+        _collider = GetComponent<Collider2D>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _damageReceiver.Initialize();
+        _damageReceiver.OnDeath += OnDeathStart;
         _rb = GetComponent<Rigidbody2D>();
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
@@ -85,17 +95,58 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         if (_turnAudioScr) _turnAudio = Instantiate(_turnAudioScr);
         if (_swingAudioScr) _swingAudio = Instantiate(_swingAudioScr);
         _audioManager = FMODAudioManager.Instance;
+
+        if (_audioManager)
+        {
+            _audioManager.RegisterAudio(_walkAudio);
+            _audioManager.RegisterAudio(_turnAudio);
+            _audioManager.RegisterAudio(_swingAudio);
+        }
+        InitHitBoxes();
+    }
+
+    private void InitHitBoxes()
+    {
+        _contactDamageInfo = new DamageInfo(_contactDamage, DamageType.Knockback, 0, _knockback);
+        foreach (Hitbox hitbox in _hitboxes)
+        {
+            hitbox.onEnter2D += DealDamageToPlayer;
+            hitbox.onStay2D += DealDamageToPlayer;
+        }
+    }
+
+    private void DealDamageToPlayer(Collider2D collider2D)
+    {
+        if (collider2D.CompareTag("Player"))
+        {
+                        DamageInfo newDamageInfo = new DamageInfo
+            (
+                _contactDamageInfo.damage,
+                _contactDamageInfo.damageType,
+                _contactDamageInfo.duration,
+                new Vector2 (
+                    collider2D.transform.position.x > this.transform.position.x ? Mathf.Abs(_contactDamageInfo.force.x) : Mathf.Abs(_contactDamageInfo.force.x) * -1,
+                    collider2D.transform.position.y > this.transform.position.y ? Mathf.Abs(_contactDamageInfo.force.y) : Mathf.Abs(_contactDamageInfo.force.y) * -1
+                )
+            );
+
+            collider2D.GetComponent<ITakeDamage>().TakeDamage(newDamageInfo);
+        }
     }
 
     private void Update()
     {
         if (Keyboard.current.bKey.wasPressedThisFrame)
         {
-            TakeDamage(new DamageInfo(10, DamageType.Stasis, 5f, new Vector2(10, 10)));
+            //OnDeathStart();
         }
     }
+
     private void FixedUpdate()
     {
+        if (_dead)
+            return;
+
         if (_isKnockedBack)
         {
             // Possible damping of the knockback force
@@ -134,10 +185,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         }
     }
 
-    private void HandleMovement() {
+    private void HandleMovement()
+    {
         if (_audioManager && _walkAudio)
         {
-            if(!_audioManager.IsPlaying(_walkAudio)) _audioManager.PlayAudio(_walkAudio);
+            if (!_audioManager.IsPlaying(_walkAudio)) _audioManager.PlayAudio(_walkAudio);
             _audioManager.SetPosition(_walkAudio, transform.position);
         }
 
@@ -146,7 +198,8 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         Vector2 ledgeCheckOrigin = (Vector2)_transform.position + Vector2.right * direction * _ledgeCheckDistance;
         Debug.DrawRay(ledgeCheckOrigin, Vector2.down * _ledgeCheckRange, Color.red);
         RaycastHit2D ledgeHit = Physics2D.Raycast(ledgeCheckOrigin, Vector2.down, _ledgeCheckRange, _floorMask);
-        if (!ledgeHit) {
+        if (!ledgeHit)
+        {
             StartTurning();
             return;
         }
@@ -155,17 +208,19 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         Vector2 wallCheckOrigin = (Vector2)_transform.position + Vector2.right * 0.5f * direction;
         Debug.DrawRay(wallCheckOrigin, Vector2.right * direction * _wallCheckDistance, Color.blue);
         RaycastHit2D wallHit = Physics2D.Raycast(wallCheckOrigin, Vector2.right * direction, _wallCheckDistance, _floorMask);
-        if (wallHit) {
+        if (wallHit)
+        {
             StartTurning();
             return;
         }
 
-        
+
         // Move in the current direction
         _rb.linearVelocity = new Vector2(transform.localScale.x * _moveSpeed * direction, _rb.linearVelocity.y);
     }
 
-    private void StartTurning() {
+    private void StartTurning()
+    {
         if (_audioManager)
         {
             if (_turnAudio) _audioManager.PlayOnce(_turnAudio, transform.position);
@@ -177,32 +232,38 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         _turnTimer = 0f;
         _rb.linearVelocity = Vector2.zero;
     }
-    
-    private void HandleTurning() {
+
+    private void HandleTurning()
+    {
         _turnTimer += Time.fixedDeltaTime;
-        if (_turnTimer >= _turnDelay) {
+        if (_turnTimer >= _turnDelay)
+        {
             FinishTurning();
         }
     }
 
-    public void FinishTurning() {
+    public void FinishTurning()
+    {
         _facingRight = !_facingRight;
         _movementState = MovementState.Moving;
     }
 
-    private void StartStopping() {
+    private void StartStopping()
+    {
         _movementState = MovementState.Stopped;
         _rb.linearVelocity = Vector2.zero;
     }
 
-    private void HandleStopping() {
+    private void HandleStopping()
+    {
         _rb.linearVelocity = Vector2.zero;
     }
 
     /// <summary>
     /// lol
     /// </summary>
-    private void StopStopping() {
+    private void StopStopping()
+    {
         _movementState = MovementState.Moving;
     }
 
@@ -214,7 +275,7 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
     Coroutine damageFlashRoutine;
     public void TakeDamage(DamageInfo damageInfo)
     {
-        Debug.Log("TakeDamage");
+        Debug.Log("TakeDamage " + damageInfo.damageType + " " + damageInfo.damage);
 
         if (damageInfo.damageType == DamageType.Stasis)
         {
@@ -292,6 +353,23 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
             if (_swingAudio) Destroy(_swingAudio);
             if (_turnAudio) Destroy(_turnAudio);
         }
-        
+
+    }
+
+    private void OnDeathStart()
+    {
+        foreach (var hitbox in _hitboxes)
+            hitbox.gameObject.SetActive(false);
+        _collider.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
+        _dead = true;
+        _animator.SetTrigger("Death");
+        if (_walkAudio) _audioManager.StopAudio(_walkAudio);
+    }
+
+    public void OnDeathEnd()
+    {
+        this.gameObject.SetActive(false);
     }
 }

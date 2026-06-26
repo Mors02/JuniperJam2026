@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityReward
   Name: Fireball
   Description: 
+  sprite: {fileID: 4198893072520975888, guid: 14fa35e4d37bfae49bff8e93c1c335d5, type: 3}

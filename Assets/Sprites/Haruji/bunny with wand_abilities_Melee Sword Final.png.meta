@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03af1b44ed999294082cffd5b265cf5a
+guid: f6b64a19b6b32fa46a235e7bc0621cbc
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -136,7 +136,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +150,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -173,7 +173,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -202,12 +202,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 99
-        width: 36
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 99
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 50
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 99
-        width: 33
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_3
       rect:
         serializedVersion: 2
-        x: 157
-        y: 99
-        width: 35
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 150
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,12 +290,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_4
       rect:
         serializedVersion: 2
-        x: 207
-        y: 99
-        width: 37
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_5
       rect:
         serializedVersion: 2
-        x: 257
-        y: 99
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 250
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,12 +334,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_6
       rect:
         serializedVersion: 2
-        x: 307
-        y: 99
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 100
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,12 +356,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_7
       rect:
         serializedVersion: 2
-        x: 11
-        y: 49
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_8
       rect:
         serializedVersion: 2
-        x: 61
-        y: 49
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 50
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,12 +400,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_9
       rect:
         serializedVersion: 2
-        x: 111
-        y: 49
-        width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_10
       rect:
         serializedVersion: 2
-        x: 161
-        y: 49
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 150
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -444,12 +444,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_11
       rect:
         serializedVersion: 2
-        x: 211
-        y: 49
-        width: 24
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -466,12 +466,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_12
       rect:
         serializedVersion: 2
-        x: 256
-        y: 49
-        width: 29
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 250
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,12 +488,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_13
       rect:
         serializedVersion: 2
-        x: 304
-        y: 49
-        width: 29
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -510,12 +510,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_14
       rect:
         serializedVersion: 2
-        x: 357
-        y: 49
-        width: 26
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 350
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -532,12 +532,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_15
       rect:
         serializedVersion: 2
-        x: 413
-        y: 49
-        width: 27
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -554,12 +554,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_16
       rect:
         serializedVersion: 2
-        x: 464
-        y: 49
-        width: 36
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 450
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -576,12 +576,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_17
       rect:
         serializedVersion: 2
-        x: 485
-        y: 77
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -598,12 +598,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_18
       rect:
         serializedVersion: 2
-        x: 514
-        y: 49
-        width: 37
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 550
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -620,12 +620,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_19
       rect:
         serializedVersion: 2
-        x: 564
-        y: 49
-        width: 36
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 50
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -642,12 +642,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_20
       rect:
         serializedVersion: 2
-        x: 614
-        y: 49
-        width: 36
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -664,12 +664,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_21
       rect:
         serializedVersion: 2
-        x: 10
+        x: 50
         y: 0
-        width: 26
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -686,12 +686,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_22
       rect:
         serializedVersion: 2
-        x: 60
+        x: 100
         y: 0
-        width: 20
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -708,12 +708,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_23
       rect:
         serializedVersion: 2
-        x: 110
+        x: 150
         y: 0
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -730,12 +730,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_24
       rect:
         serializedVersion: 2
-        x: 160
+        x: 200
         y: 0
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -752,12 +752,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_25
       rect:
         serializedVersion: 2
-        x: 210
+        x: 250
         y: 0
-        width: 20
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -774,12 +774,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_26
       rect:
         serializedVersion: 2
-        x: 260
+        x: 300
         y: 0
-        width: 20
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -796,12 +796,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_27
       rect:
         serializedVersion: 2
-        x: 304
+        x: 350
         y: 0
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -818,12 +818,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_28
       rect:
         serializedVersion: 2
-        x: 351
+        x: 400
         y: 0
-        width: 37
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -840,12 +840,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_29
       rect:
         serializedVersion: 2
-        x: 402
+        x: 450
         y: 0
-        width: 40
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -862,12 +862,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_30
       rect:
         serializedVersion: 2
-        x: 454
-        y: 2
-        width: 41
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 0
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -884,12 +884,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_31
       rect:
         serializedVersion: 2
-        x: 508
+        x: 550
         y: 0
-        width: 37
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -906,12 +906,12 @@ TextureImporter:
       name: bunny with wand_abilities_Melee Sword Final_32
       rect:
         serializedVersion: 2
-        x: 560
+        x: 600
         y: 0
-        width: 36
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -924,33 +924,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bunny with wand_abilities_Melee Sword Final_33
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 0
-        width: 36
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08680bff0191be9d0800000000000000
-      internalID: -2744071987152255360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f013fcf0f09b3674088afa78e079dcba
     internalID: 0
     vertices: []
     indices: 
@@ -958,7 +936,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":50.0,"y":50.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       bunny with wand_abilities_Melee Sword Final_0: 17454287671815038
       bunny with wand_abilities_Melee Sword Final_1: 7712151256542637862
@@ -987,7 +967,6 @@ TextureImporter:
       bunny with wand_abilities_Melee Sword Final_30: -1585605594547671556
       bunny with wand_abilities_Melee Sword Final_31: 2281387297188938238
       bunny with wand_abilities_Melee Sword Final_32: 1301412817987613161
-      bunny with wand_abilities_Melee Sword Final_33: -2744071987152255360
       bunny with wand_abilities_Melee Sword Final_4: 3001522871393832904
       bunny with wand_abilities_Melee Sword Final_5: -219093290755834006
       bunny with wand_abilities_Melee Sword Final_6: -3054190880981401458

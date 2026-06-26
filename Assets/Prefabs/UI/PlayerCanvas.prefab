@@ -80,7 +80,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 320, y: 180}
+  m_ReferenceResolution: {x: 640, y: 360}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -290,15 +290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.20000002
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.20000002
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.20000002
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalPosition.x
@@ -330,11 +330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145.7
+      value: -277
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.9
+      value: -133
       objectReference: {fileID: 0}
     - target: {fileID: 4634415044668472711, guid: 0c016df3bb9df8f44a3173e67af0e582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -50,6 +50,9 @@ public class StasisProjectile : Projectile
 
         if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
         {
+            if (QuickHitEffectHandler.instance)
+                QuickHitEffectHandler.instance.PlayHitEffect(transform.position);
+
             iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Stasis, stasisDuration));
         }
 

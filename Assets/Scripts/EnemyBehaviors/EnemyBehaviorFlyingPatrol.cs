@@ -1,5 +1,7 @@
+using AbyssWorks.FMODAudioManager;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +14,7 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     private Rigidbody2D _rb;
+    private Collider2D _collider;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -21,6 +24,14 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
     private Vector3 _patrolMarkerAPosition;
     private Vector3 _patrolMarkerBPosition;
     private DamageReceiver _damageReceiver;
+
+    [SerializeField] private FMODAudioScriptable _popAudio;
+
+    [Header("Damage")]
+    [SerializeField] private List<Hitbox> _hitboxes;
+    [SerializeField] private int _contactDamage;
+    [SerializeField] private Vector2 _knockback;
+    private DamageInfo _contactDamageInfo;
 
     [Tooltip("What is considered ground for grounded checks")]
     [SerializeField]
@@ -54,6 +65,7 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
     };
     private bool _headingToA = true;
 
+    bool _dead = false;
     bool _isStasis = false;
     bool _isKnockedBack = false;
     float _knockbackTimer = 0f;
@@ -61,8 +73,10 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
 
     void Awake()
     {
+        _collider = GetComponent<Collider2D>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _damageReceiver.Initialize();
+        _damageReceiver.OnDeath += OnDeathStart;
         _rb = GetComponent<Rigidbody2D>();
         _contactFilter.SetLayerMask(_floorMask);
         _contactFilter.useTriggers = false;
@@ -77,18 +91,57 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
             s.x *= -1f;
             transform.localScale = s;
         }
+        InitHitBoxes();
+    }
+
+
+    private void InitHitBoxes()
+    {
+        _contactDamageInfo = new DamageInfo(_contactDamage, DamageType.Knockback, 0, _knockback);
+        foreach (Hitbox hitbox in _hitboxes)
+        {
+            hitbox.onEnter2D += DealDamageToPlayer;
+            hitbox.onStay2D += DealDamageToPlayer;
+        }
+    }
+
+    private void DealDamageToPlayer(Collider2D collider2D)
+    {
+        if (collider2D.CompareTag("Player"))
+        {
+                        DamageInfo newDamageInfo = new DamageInfo
+            (
+                _contactDamageInfo.damage,
+                _contactDamageInfo.damageType,
+                _contactDamageInfo.duration,
+                new Vector2 (
+                    collider2D.transform.position.x > this.transform.position.x ? Mathf.Abs(_contactDamageInfo.force.x) : Mathf.Abs(_contactDamageInfo.force.x) * -1,
+                    collider2D.transform.position.y > this.transform.position.y ? Mathf.Abs(_contactDamageInfo.force.y) : Mathf.Abs(_contactDamageInfo.force.y) * -1
+                )
+            );
+            collider2D.GetComponent<ITakeDamage>().TakeDamage(newDamageInfo);
+        }
+    }
+
+    public void PlayPopAudio()
+    {
+        if (FMODAudioManager.Instance && _popAudio)
+            FMODAudioManager.Instance.PlayOnce(_popAudio, transform.position, true);
     }
 
     private void Update()
     {
         if (Keyboard.current.bKey.wasPressedThisFrame)
         {
-            //TakeDamage(new DamageInfo(10, DamageType.Knockback, 5f, new Vector2(10, 10)));
+            OnDeathStart();
         }
     }
 
     private void FixedUpdate()
     {
+        if (_dead)
+            return;
+
         if (_isKnockedBack)
         {
             _rb.linearVelocity *= 0.9f;
@@ -253,5 +306,22 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
             yield return new WaitForEndOfFrame();
         }
         _spriteRenderer.color = _defaultColor;
+    }
+
+    private void OnDeathStart()
+    {
+        foreach (var hitbox in _hitboxes)
+            hitbox.gameObject.SetActive(false);
+        _collider.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
+        _dead = true;
+        //print("S");
+        _animator.SetTrigger("Death");
+    }
+
+    public void OnDeathEnd()
+    {
+        this.gameObject.SetActive(false);
     }
 }
