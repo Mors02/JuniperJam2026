@@ -55,7 +55,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
         Windup,
         Firing,
     }
-    bool _dead = true;
+    bool _dead = false;
     bool _isStasis = false;
     bool _isKnockedBack = false;
     float _knockbackTimer = 0f;
@@ -151,6 +151,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 
         _spriteRenderer.flipX = FacingRight;
 
+
         switch (_currentState)
         {
             case AutoFireState.Idle:
@@ -161,6 +162,8 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
 
     private void HandleIdle()
     {
+        
+
         _fireTimer += Time.deltaTime;
         if (_fireTimer >= _fireInterval)
         {
@@ -173,7 +176,7 @@ public class EnemyBehaviorAutoFire : MonoBehaviour, ITakeDamage
     {
         if (FMODAudioManager.Instance && _audioSFX)
             FMODAudioManager.Instance.PlayOnce(_audioSFX, transform.position);
-
+        
         _animator.SetTrigger("Fire");
         _currentState = AutoFireState.Windup;
     }

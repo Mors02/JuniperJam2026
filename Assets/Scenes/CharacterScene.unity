@@ -1777,7 +1777,7 @@ PrefabInstance:
     - target: {fileID: 2335151238891280705, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: '_rewards.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 84bb9920fa2ff9f4a90e016607e9eae5, type: 2}
+      objectReference: {fileID: 11400000, guid: 9263fa7157ff1d54f8b2d403dd684863, type: 2}
     - target: {fileID: 2378453308621570431, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: m_SizeDelta.x
       value: 55.1072
