@@ -265,8 +265,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSMController
   _dustParticles: {fileID: 2145920982505208989}
   _speed: 10
-  _acceleration: 60
-  _maxAcceleration: 60
+  _acceleration: 75
+  _maxAcceleration: 80
   _accelerationFactorFromDot:
     serializedVersion: 2
     m_Curve:
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _jumpForce: 27
+  _jumpForce: 25
   _downwardForce: 6
   _totalJumps: 1
   _coyoteTime: 0.1
@@ -5578,7 +5578,7 @@ MonoBehaviour:
         _damage: 1
         _dashAudio: {fileID: 11400000, guid: ef58d5f417963ed458baf3f674fdf000, type: 2}
         _dashAnim: Player_spin
-        _dashForce: 20
+        _dashForce: 30
         _dashCooldown: 1
         _allowFirst: 1
     - rid: 2533004891505033308
