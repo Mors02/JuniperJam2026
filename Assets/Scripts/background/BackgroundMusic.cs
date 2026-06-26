@@ -17,7 +17,13 @@ public class BackgroundMusic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (_audioManager && backgroundAudio && !_audioManager.IsPlaying(backgroundAudio))
+        if (_audioManager && backgroundAudio)
             FMODAudioManager.Instance.PlayAudio(backgroundAudio);
+    }
+
+    private void OnDestroy()
+    {
+        if (_audioManager && backgroundAudio)
+            FMODAudioManager.Instance.StopAudioLinear(backgroundAudio, 0.5f);
     }
 }

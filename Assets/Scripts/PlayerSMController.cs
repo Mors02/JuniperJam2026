@@ -97,6 +97,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
     [SerializeField] private UIAbilityWheelSpin _wheelSpin;
+    [SerializeField] private PlayerEffects _playerEffect;
 
     [Header("Debug")]
     public PlayerState debugState;
@@ -725,7 +726,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     if (_animator) _animator.Play(damagedAnim, 0, 0);
                     if (_damagedAudio && FMODAudioManager.Instance)
                         FMODAudioManager.Instance.PlayOnce(_damagedAudio, null, true);
-
+                    if (_playerEffect) _playerEffect.PlayDamagedEffect();
                     break;
                 }
             case StateExecutionType.Exit:
