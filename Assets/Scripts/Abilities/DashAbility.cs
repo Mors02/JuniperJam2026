@@ -1,6 +1,7 @@
 using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
@@ -29,6 +30,8 @@ public class DashAbility : Ability
     private float _curDashTime = 0;
 
     private bool _hasAnimEnded = false;
+
+    private HashSet<Collider2D> _hitColliders = new();
     public override void Initialize(GameObject go = null)
     {
         base.Initialize(go);
@@ -94,8 +97,10 @@ public class DashAbility : Ability
     {
         base.Trigger();
 
+        _hitColliders.Clear();
+
         _hitbox.gameObject.SetActive(true);
-        _hitbox.onEnter2D += HitboxEnter2D;
+        _hitbox.onEnter2D += HitboxStay2D;
 
         if (FMODAudioManager.Instance)
             FMODAudioManager.Instance.PlayOnce(_dashAudio, null, true);
@@ -117,7 +122,7 @@ public class DashAbility : Ability
 
             _curDashTime = Time.time;
 
-            _hitbox.onEnter2D -= HitboxEnter2D;
+            _hitbox.onEnter2D -= HitboxStay2D;
             _hitbox.gameObject.SetActive(false);
 
 
@@ -127,14 +132,16 @@ public class DashAbility : Ability
         }
     }
 
-    void HitboxEnter2D(Collider2D collision)
+    void HitboxStay2D(Collider2D collision)
     {
         if (collision.gameObject == gameObject) return;
+
+        if (_hitColliders.Contains(collision)) return;
+        _hitColliders.Add(collision);
 
         //to do
         //Stop enemies by stasis amount
         //effects
-
         if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
         {
             iTakeDamage.TakeDamage(new DamageInfo(_damage));
@@ -156,7 +163,7 @@ public class DashAbility : Ability
 
         _curDashTime = Time.time;
 
-        _hitbox.onEnter2D -= HitboxEnter2D;
+        _hitbox.onEnter2D -= HitboxStay2D;
         _hitbox.gameObject.SetActive(false);
 
         onExecutionComplete?.Invoke();

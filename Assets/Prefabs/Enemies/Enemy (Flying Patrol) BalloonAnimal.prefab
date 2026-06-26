@@ -5352,6 +5352,7 @@ MonoBehaviour:
   _animator: {fileID: 8094396471299975009}
   _patrolMarkerA: {fileID: 8722209749316477503}
   _patrolMarkerB: {fileID: 2287797039995621178}
+  _popAudio: {fileID: 11400000, guid: 29f2097176167164e944c8081db4c8a9, type: 2}
   _hitboxes:
   - {fileID: 771534122416062280}
   _contactDamage: 3

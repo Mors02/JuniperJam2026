@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
 {
     [Header("References")]
     private Rigidbody2D _rb;
+    private Collider2D _collider;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
@@ -22,6 +24,8 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
     private Vector3 _patrolMarkerAPosition;
     private Vector3 _patrolMarkerBPosition;
     private DamageReceiver _damageReceiver;
+
+    [SerializeField] private FMODAudioScriptable _popAudio;
 
     [Header("Damage")]
     [SerializeField] private List<Hitbox> _hitboxes;
@@ -69,6 +73,7 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
 
     void Awake()
     {
+        _collider = GetComponent<Collider2D>();
         _damageReceiver = GetComponent<DamageReceiver>();
         _damageReceiver.Initialize();
         _damageReceiver.OnDeath += OnDeathStart;
@@ -116,6 +121,12 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
             );
             collider2D.GetComponent<ITakeDamage>().TakeDamage(newDamageInfo);
         }
+    }
+
+    public void PlayPopAudio()
+    {
+        if (FMODAudioManager.Instance && _popAudio)
+            FMODAudioManager.Instance.PlayOnce(_popAudio, transform.position, true);
     }
 
     private void Update()
@@ -299,8 +310,13 @@ public class EnemyBehaviorFlyingPatrol : MonoBehaviour, ITakeDamage
 
     private void OnDeathStart()
     {
+        foreach (var hitbox in _hitboxes)
+            hitbox.gameObject.SetActive(false);
+        _collider.enabled = false;
+        _rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
         _dead = true;
-        print("S");
+        //print("S");
         _animator.SetTrigger("Death");
     }
 
