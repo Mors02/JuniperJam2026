@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 8772779705286309990}
   m_Layer: 7
   m_Name: Enemy (Flying Patrol) Balloon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,8 +580,9 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _patrolMarkerA: {fileID: 2214056862872785442}
   _patrolMarkerB: {fileID: 1188495311158316750}
+  _popAudio: {fileID: 0}
   _hitboxes: []
-  _contactDamage: 2
+  _contactDamage: 0
   _knockback: {x: 0, y: 0}
   _floorMask:
     serializedVersion: 2
