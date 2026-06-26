@@ -1,10 +1,12 @@
 using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
+using NUnit.Framework;
 using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 public class PlayerSMController : MonoBehaviour, ITakeDamage
@@ -196,8 +198,33 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         ExecuteState(StateExecutionType.Enter);
     }
 
+    private bool onMovingPlatform = false;
+    private GondolaScript currentPlatform;
+    private Vector2 platformVelocity = Vector2.zero;
     private void FixedUpdate()
     {
+        GondolaScript platform = GetPlatformBelow();
+        if (platform != null)
+        {
+
+            // Carry the player along with the platform's motion this step.
+            //Vector3 delta = platform.Velocity * Time.fixedDeltaTime;
+            //_rb.MovePosition((Vector2)_rb.position + (Vector2)delta);
+            print("SHSDFA " + platform.Velocity);
+            //_currentMovement += platform.Velocity;
+            platformVelocity = platform.Velocity;
+            onMovingPlatform = true;
+            currentPlatform = platform;
+            currentPlatform.usedByCharacter = true;
+        }
+        else
+        {
+            if (currentPlatform != null)
+                currentPlatform.usedByCharacter = false;
+            currentPlatform = null;
+            onMovingPlatform = false;
+        }
+
         ExecuteState(StateExecutionType.FixedUpdate);
 
         _isGrounded = Grounded();
@@ -257,18 +284,33 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         {
             SwitchState(PlayerState.Glide);
         }
-            
+
         //if (Grounded())
         //{
-        
+
         //}
     }
-
+    private GondolaScript GetPlatformBelow()
+    {
+        print("WHATA");
+        float castDistance = 5;
+        
+        Debug.DrawRay(transform.position, Vector2.down * castDistance, Color.blue);
+        RaycastHit2D ledgeHit = Physics2D.Raycast(transform.position, Vector2.down * castDistance,
+                            castDistance, _floorMask);
+        if (ledgeHit)
+        {
+            print(ledgeHit.transform.name);
+            if (ledgeHit.transform.CompareTag("Moving"))
+                return ledgeHit.collider.GetComponentInParent<GondolaScript>();
+        }
+        return null;
+    }
     private void OnJumpRelease(InputAction.CallbackContext context)
     {
         if (!_hasJumpForce) return;
 
-        if (!_isGrounded && !_isInstantJump && _currentState == PlayerState.Jump) 
+        if (!_isGrounded && !_isInstantJump && _currentState == PlayerState.Jump)
             _rb.AddForceY(-_downwardForce, ForceMode2D.Impulse);
     }
 
@@ -286,19 +328,21 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
         if (!_isGrounded)
         {
+            print("DSD");
             _currentMovement = movement;
             _rb.linearVelocityX = 0;
             _rb.position += movement * Time.fixedDeltaTime;
         }
         else
         {
+
             //calculate the new goal velocity
             Vector3 unitVel = _currentMovement.normalized;
             //calculate dot velocity based on current movement
             float velDot = Vector3.Dot(new Vector2(_move, 0), unitVel);
             //and evaluate current acceleration
             //check what is the ideal movement and rotate to match the camera
-            
+
 
             float accel = _acceleration * _accelerationFactorFromDot.Evaluate(velDot);
             //checks the ideal direciton and speed and moves it towards it
@@ -312,7 +356,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
             neededAccel = Vector3.ClampMagnitude(neededAccel, maxAccel);
             _rb.AddForce(Vector3.Scale(neededAccel * _rb.mass, new Vector2(1f, 0)));
         }
-        
+
     }
 
     void FlipCharacter(float direction)
@@ -423,7 +467,13 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                 }
             case StateExecutionType.FixedUpdate:
                 {
-                    _rb.linearVelocityX = 0;
+                    if (!onMovingPlatform)
+                        _rb.linearVelocityX = 0;
+                    else
+                    {
+                        print("SDFSD");
+                        _rb.MovePosition(_rb.position + (platformVelocity * Time.fixedDeltaTime));
+                    }
                     break;
                 }
             default:
@@ -739,7 +789,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(DamageInfo damageInfo)
     {
-        bool checkState = _currentState == PlayerState.Damaged || 
+        bool checkState = _currentState == PlayerState.Damaged ||
             _currentState == PlayerState.Death;
 
         if (_dashAbility.IsExecuting() || !_damageReceiver.CanTakeDamage
@@ -757,7 +807,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                 _rb.AddForce(damageInfo.force, ForceMode2D.Impulse);
                 FlipCharacter(-damageInfo.force.x);
             }
-            
+
             SwitchState(PlayerState.Damaged);
         }
         else SwitchState(PlayerState.Death);
@@ -766,11 +816,11 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
     private void StartInvincibilityAnimation()
     {
-        _animator.SetBool("Invincible", true); 
+        _animator.SetBool("Invincible", true);
     }
 
     private void StopInvincibilityAnimation()
     {
-        _animator.SetBool("Invincible", false); 
+        _animator.SetBool("Invincible", false);
     }
 }
