@@ -1,8 +1,6 @@
 using FMOD.Studio;
 using System.Collections.Generic;
-using UnityEditor.Playables;
 using UnityEngine;
-using static FMODUnity.EditorParamRef;
 
 namespace AbyssWorks.FMODAudioManager
 {
