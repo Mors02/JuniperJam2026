@@ -70,8 +70,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.0921998}
-  m_SizeDelta: {x: 0, y: -1.6593}
+  m_AnchoredPosition: {x: 1.2725983, y: 0.09220028}
+  m_SizeDelta: {x: -2.5451, y: -14.7483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6868071260758492072
 CanvasRenderer:
@@ -185,7 +185,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.64082336}
-  m_SizeDelta: {x: 160, y: 20}
+  m_SizeDelta: {x: 256, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6307811474413434494
 MonoBehaviour:
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce35a89d91b09d4a95f68074d636c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHealthBar
+  _sliderSpeed: 0
 --- !u!1 &4770556954719630877
 GameObject:
   m_ObjectHideFlags: 0
