@@ -10,6 +10,7 @@ public class DamageReceiver : MonoBehaviour
     public int CurrentHealth => _currentHealth;
     [SerializeField]
     private int _maxHealth;
+    public int MaxHealth => _maxHealth;
     [SerializeField]
     private bool _canTakeDamage;
 

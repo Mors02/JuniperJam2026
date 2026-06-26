@@ -9,10 +9,12 @@ public class ChangeScene : MonoBehaviour
     [SerializeField]
 
     private Animator _curtainAnimator;
+    private Animator _animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GameObject.FindGameObjectWithTag("Curtains").TryGetComponent(out _curtainAnimator);
+        _animator = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +22,7 @@ public class ChangeScene : MonoBehaviour
         
         if (collision.CompareTag("Player") && GameManager.Instance.Won())
         {
+            _animator.SetTrigger("Activate");
             //collision.GetComponent<PlayerController>().Hide();
             StartCoroutine(ChangeSceneRoutine());
             

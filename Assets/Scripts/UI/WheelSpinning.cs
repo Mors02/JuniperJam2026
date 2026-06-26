@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using AbyssWorks.FMODAudioManager;
+using Unity.VisualScripting;
 
 
 public class WheelSpinning : MonoBehaviour
@@ -39,6 +40,12 @@ public class WheelSpinning : MonoBehaviour
 
     [SerializeField]
     private FMODAudioScriptable _wheelAudio;
+
+    [SerializeField]
+    private ParticleSystem _confetti;
+
+    [SerializeField]
+    private List<Sprite> _confettiSprites;
     private const string WHEELSPINPARAMETER = "WheelSpinState";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,7 +59,7 @@ public class WheelSpinning : MonoBehaviour
         //add some randomness
         _spinSpeed = Random.Range(_spinSpeed-_spinSpeedRandomness, _spinSpeed+_spinSpeedRandomness);
         _rotation = Random.Range(0f, 360f);
-        Debug.Log(_rotation);
+        
         _wheelImage.transform.localRotation = Quaternion.Euler(0, 0, -_rotation);
     }
 
@@ -84,21 +91,18 @@ public class WheelSpinning : MonoBehaviour
             {
                 _spinSpeed = 0;
                 _isSpinning = false;
-                Debug.Log(_rotation);
                 //get the current rotation and divide it by the reward angle (360 divided by the number of rewards)
                 _rewardNumber = (int)_rotation % 360 / (360 / _rewards.Count);
-                Debug.Log(_rewards.Count);
-                Debug.Log(_rewardNumber);
-                Debug.Log(_isSpinning);
+               // this.ShootConfetti();
 
                 if (FMODAudioManager.Instance && _wheelAudio)
                     FMODAudioManager.Instance.StopAudio(_wheelAudio);
             }
         } 
         
-        if (_rewardNumber > 0)
+        if (_rewardNumber >= 0)
         {
-            Debug.Log(_rewardNumber);
+            
             _animator.SetTrigger("Exit");
             _announcementText.text = _rewards[_rewardNumber].Name;
             _rewards[_rewardNumber].Execute();
@@ -120,5 +124,11 @@ public class WheelSpinning : MonoBehaviour
     public void OpenCurtains()
     {
         _uiManager.OpenCurtains();
+    }
+
+    public void ShootConfetti()
+    {
+        this._confetti.Play();
+        Debug.Log(this._confetti.isPlaying);
     }
 }
