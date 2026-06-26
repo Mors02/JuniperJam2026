@@ -5038,7 +5038,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6581438471673636739
 GameObject:
@@ -5138,7 +5138,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: efba433c3df397a42beb0c3723c494f4, type: 2}
   _animator: {fileID: 0}
   _deathEffect: {fileID: 8325153126125195283}
-  _popAudio: {fileID: 11400000, guid: 29f2097176167164e944c8081db4c8a9, type: 2}
+  _popAudio: {fileID: 11400000, guid: 3f3acfe9aaf19f241bf2b3f7555e1fbd, type: 2}
 --- !u!50 &6265433766183845491
 Rigidbody2D:
   serializedVersion: 5
