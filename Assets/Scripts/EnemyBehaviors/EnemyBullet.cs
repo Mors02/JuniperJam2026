@@ -84,9 +84,11 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //print("Bullet collided with: " + collision.gameObject.name);
+
         if (!_active)
             return;
-        print("Bullet collided with: " + collision.gameObject.name);
+        
         if (collision.gameObject.TryGetComponent(out ITakeDamage itakeDamage))
         {
             Vector2 knockback = (collision.transform.position - transform.position).normalized;

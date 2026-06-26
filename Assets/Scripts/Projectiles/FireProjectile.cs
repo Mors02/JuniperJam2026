@@ -1,4 +1,5 @@
 using AbyssWorks.AnimatorSignal;
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class FireProjectile : Projectile
     public int bounce = 1;
     [Min(0)] public float damp = 0.95f;
     [Min(0)] public int damage = 1;
+    [SerializeField] private FMODAudioScriptable _impactAudio;
 
     [Header("Animation")]
     [SerializeField] private Animator _animator;
@@ -60,6 +62,9 @@ public class FireProjectile : Projectile
 
             iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Normal));
         }
+
+        if (FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_impactAudio, transform.position, true);
 
         if (_bounceCount >= bounce)
         {

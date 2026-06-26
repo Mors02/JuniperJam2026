@@ -1,4 +1,5 @@
 using AbyssWorks.AnimatorSignal;
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class StasisProjectile : Projectile
     [Min(0)] public float force = 10;
     [Min(0)] public float stasisDuration = 1f;
     [Min(0)] public int damage = 1;
+    [SerializeField] private FMODAudioScriptable _impactAudio;
 
     [Header("Animation")]
     [SerializeField] private Animator _animator;
@@ -44,16 +46,22 @@ public class StasisProjectile : Projectile
     {
         if (collision.gameObject == _owner) return;
 
-        //to do
-        //Stop enemies by stasis amount
-        //effects
+        int audioHitCheck = 0;
 
         if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
         {
             if (QuickHitEffectHandler.instance)
                 QuickHitEffectHandler.instance.PlayHitEffect(transform.position);
 
+            audioHitCheck = 1;
+
             iTakeDamage.TakeDamage(new DamageInfo(damage, DamageType.Stasis, stasisDuration));
+        }
+
+        if (FMODAudioManager.Instance && _impactAudio)
+        {
+            var impactInstance = FMODAudioManager.Instance.PlayOnce(_impactAudio, transform.position, true);
+            if (impactInstance.HasValue) impactInstance.Value.setParameterByName("StasisHitCheck", audioHitCheck);
         }
 
         _collider2D.enabled = false;
