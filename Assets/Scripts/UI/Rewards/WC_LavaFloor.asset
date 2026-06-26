@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01f7254f541a02419a96aa7d8ca6370, type: 3}
   m_Name: WC_LavaFloor
   m_EditorClassIdentifier: Assembly-CSharp::WC_LavaFloor
-  Name: Lava
-  Description: Survive the lava floor
+  Name: Lava\nFloor
+  Description: Avoid the lava

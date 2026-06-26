@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381d6e7e0db16224eb2c209b861cc1b0, type: 3}
   m_Name: WC_KillEnemies
   m_EditorClassIdentifier: Assembly-CSharp::WC_KillEnemies
-  Name: Slaughter
-  Description: Kill all enemies
+  Name: Defeat\nEnemies
+  Description: Defeat all enemies
