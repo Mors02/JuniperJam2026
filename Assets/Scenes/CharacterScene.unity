@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &14029416 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+  m_PrefabInstance: {fileID: 745204448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &16952296
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,11 +852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9995676
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.999584
       objectReference: {fileID: 0}
     - target: {fileID: 1491174138304913884, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_Name
@@ -1609,6 +1614,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -17.023
       objectReference: {fileID: 0}
+    - target: {fileID: 2733876370606724643, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733876370606724643, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733876370606724643, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3842875575673410834, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1617,6 +1634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6853582578739781933, guid: e2ef7ae37b750a54ea58cc19a02e9457, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 14029416}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -106,11 +106,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4182250033359557804}
   - {fileID: 7304371340794397322}
   - {fileID: 3042983103216068568}
   - {fileID: 8389253954346342405}
   - {fileID: 2885228432549291993}
+  - {fileID: 4182250033359557804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -146,6 +146,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9263fa7157ff1d54f8b2d403dd684863, type: 2}
   - {fileID: 11400000, guid: 715a82350f4e76a4195c8d20b3f45779, type: 2}
   _wheelAudio: {fileID: 11400000, guid: 1157140333571f840848d7a3c03dc4e6, type: 2}
+  _confetti: {fileID: 4713164847394410820}
+  _confettiSprites:
+  - {fileID: -187992401, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
+  - {fileID: -1170715412, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
+  - {fileID: -1394304502, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
+  - {fileID: 1576507061, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
+  - {fileID: 490740786, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
+  - {fileID: 937378224477805318, guid: 1d5223ad84cf93c45aaef93666c76c4b, type: 3}
 --- !u!95 &5573714864588900165
 Animator:
   serializedVersion: 7
@@ -179,13 +187,15 @@ GameObject:
   - component: {fileID: 4182250033359557804}
   - component: {fileID: 4713164847394410820}
   - component: {fileID: 8691462176353864455}
+  - component: {fileID: 7995235964504854680}
+  - component: {fileID: 1153143652565405890}
   m_Layer: 5
   m_Name: Confetti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4182250033359557804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -202,7 +212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.7, y: 48.6}
+  m_AnchoredPosition: {x: 76.4, y: 29.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!198 &4713164847394410820
@@ -222,7 +232,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 1
   autoRandomSeed: 1
   startDelay:
@@ -341,8 +351,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 600
-      minScalar: 400
+      scalar: 400
+      minScalar: 200
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -459,7 +469,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -617,8 +627,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -670,8 +680,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -723,8 +733,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -980,7 +990,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 180
       mode: 0
       spread: 0
       speed:
@@ -1368,11 +1378,11 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1424,8 +1434,8 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1477,8 +1487,8 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.7853982
+      minMaxState: 3
+      scalar: 1.5707963
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -5066,6 +5076,50 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!222 &7995235964504854680
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371767661566464823}
+  m_CullTransparentMesh: 1
+--- !u!114 &1153143652565405890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371767661566464823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f0b0b6d0b7542bfbd20a3e05b04ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Coffee.UIParticle::Coffee.UIExtensions.UIParticle
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_IsTrail: 0
+  m_IgnoreCanvasScaler: 0
+  m_AbsoluteMode: 0
+  m_Scale3D: {x: 8, y: 8, z: 8}
+  m_AnimatableProperties: []
+  m_Particles:
+  - {fileID: 4713164847394410820}
+  m_MeshSharing: 0
+  m_GroupId: 0
+  m_GroupMaxId: 0
+  m_PositionMode: 0
+  m_AutoScaling: 0
+  m_AutoScalingMode: 2
+  m_UseCustomView: 0
+  m_CustomViewSize: 10
+  m_TimeScaleMultiplier: 1
 --- !u!1 &2597637072023529071
 GameObject:
   m_ObjectHideFlags: 0
