@@ -2395,6 +2395,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4372499386823426150, guid: 64e0b96b87528c244a711c188e442a83, type: 3}
+      propertyPath: _url
+      value: https://mckay-makes-games.itch.io/
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372499386823426150, guid: 64e0b96b87528c244a711c188e442a83, type: 3}
       propertyPath: _name
       value: McKay - Game Designer
       objectReference: {fileID: 0}
