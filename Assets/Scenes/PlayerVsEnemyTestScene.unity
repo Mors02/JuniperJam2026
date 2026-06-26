@@ -2217,6 +2217,8 @@ MonoBehaviour:
   _wheelAudio: {fileID: 0}
   _confetti: {fileID: 0}
   _confettiSprites: []
+  _wheelColors: []
+  _announcementWheel: {fileID: 0}
 --- !u!95 &1796253253
 Animator:
   serializedVersion: 7
