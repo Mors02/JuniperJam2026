@@ -13,45 +13,47 @@ public class PlayerEffects : MonoBehaviour
     public float damagedTimeStopDuration = 0.1f;
     public float damagedTimeResumeDuration = 0.1f;
     public float damagedImpulseForce = 0.2f;
-    public ImpulseShape damagedImpulseShape = ImpulseShape.Bump;
-    public float damagedImpulseDuration = 0.2f;
-    public Vector3 damagedImpulseVelocity = Vector3.up;
+    [SerializeField] private CinemachineImpulseSource _damagedImpulseSource;
 
     [Header("Windpush effect")]
     public float windTimeStopDuration = 0.05f;
     public float windImpulseForce = 0.25f;
-    public ImpulseShape windImpulseShape = ImpulseShape.Explosion;
-    public float windImpulseDuration = 0.1f;
+    [SerializeField] private CinemachineImpulseSource _windImpulseSource;
 
-    private CinemachineImpulseSource _impulseSource;
-    
+    [Header("Sword effect")]
+    public float swordTimeStopDuration = 0.125f;
+    public float swordTimeResumeDuration = 0.05f;
+    public float swordImpulseForce = 0.25f;
+    [SerializeField] private CinemachineImpulseSource _swordImpulseSource;
+
     private Coroutine _timeStopRoutine;
 
     private const string TIMESTOPNAME = "OnPlayerStopTime";
 
     private void Awake()
     {
-        _impulseSource = GetComponent<CinemachineImpulseSource>();
-
         _animationSubscriber.SubscribeAction("WindLaunchEffect", PlayWindEffect);
+        _animationSubscriber.SubscribeAction("SwordHitEffect", PlaySwordHitEffect);
     }
 
     void PlayWindEffect()
     {
-        _impulseSource.ImpulseDefinition.ImpulseShape = windImpulseShape;
-        _impulseSource.ImpulseDefinition.ImpulseDuration = windImpulseDuration;
-        _impulseSource.DefaultVelocity = System.MathF.Sign(transform.position.x) * Vector3.right;
-        _impulseSource.GenerateImpulseWithForce(windImpulseForce);
+        Vector3 velocity = System.MathF.Sign(transform.position.x) * Vector3.right;
+        _windImpulseSource.GenerateImpulseWithVelocity(windImpulseForce * velocity);
 
         MakeTimeStop(windTimeStopDuration, 0);
     }
 
+    void PlaySwordHitEffect()
+    {
+        _swordImpulseSource.GenerateImpulseWithForce(swordImpulseForce);
+
+        MakeTimeStop(swordTimeStopDuration, swordTimeResumeDuration);
+    }
+
     public void PlayDamagedEffect()
     {
-        _impulseSource.ImpulseDefinition.ImpulseShape = damagedImpulseShape;
-        _impulseSource.ImpulseDefinition.ImpulseDuration = damagedImpulseDuration;
-        _impulseSource.DefaultVelocity = damagedImpulseVelocity;
-        _impulseSource.GenerateImpulseWithForce(damagedImpulseForce);
+        _damagedImpulseSource.GenerateImpulseWithForce(damagedImpulseForce);
 
         MakeTimeStop(damagedTimeStopDuration, damagedTimeResumeDuration);
     }

@@ -440,6 +440,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &126292625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126292626}
+  - component: {fileID: 126292627}
+  - component: {fileID: 126292628}
+  m_Layer: 0
+  m_Name: QuickHitEffectHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &126292626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126292625}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00537, y: 0.44275, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &126292627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126292625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1c5aa9cbd36624fbcea27c275fe044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitTimeStopHandler
+  timeStopDuration: 0.05
+  timeResumeDuration: 0
+  impulseForce: 0.1
+  maxDistance: 20
+--- !u!114 &126292628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126292625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.1
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!1 &312927129
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +935,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 11.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -841,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.99979913
       objectReference: {fileID: 0}
     - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -2830,3 +2936,4 @@ SceneRoots:
   - {fileID: 312927131}
   - {fileID: 5208579516575842345}
   - {fileID: 31538706}
+  - {fileID: 126292626}

@@ -144,6 +144,9 @@ public class DashAbility : Ability
         //effects
         if (collision.TryGetComponent<ITakeDamage>(out var iTakeDamage))
         {
+            if (QuickHitEffectHandler.instance) 
+                QuickHitEffectHandler.instance.PlayHitEffect(gameObject.transform.position);
+
             iTakeDamage.TakeDamage(new DamageInfo(_damage));
         }
     }
