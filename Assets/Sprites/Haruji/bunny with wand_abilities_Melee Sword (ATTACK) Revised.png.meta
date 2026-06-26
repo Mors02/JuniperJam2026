@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 44e1e4566b6c64e7bb9b40585c663a7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 49097443032914663
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_0
+  - first:
+      213: 945387445960794449
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_1
+  - first:
+      213: 8613076689715599862
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_2
+  - first:
+      213: -2105699813006996250
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_3
+  - first:
+      213: -3271131557618647494
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_4
+  - first:
+      213: -1113579717505637767
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_5
+  - first:
+      213: -4158474361448202553
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_6
+  - first:
+      213: 3789190799853392651
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_7
+  - first:
+      213: -6648878956459151933
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_8
+  - first:
+      213: -2869854762744873160
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_9
+  - first:
+      213: -4976274644402122253
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_10
+  - first:
+      213: 2954404763989976979
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_11
+  - first:
+      213: -6164583165102940242
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_12
+  - first:
+      213: -1349864826742176510
+    second: bunny with wand_abilities_Melee Sword (ATTACK) Revised_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea5b534ddd6ea000800000000000000
+      internalID: 49097443032914663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1516b9b8fd0be1d00800000000000000
+      internalID: 945387445960794449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f912b18d9bc78770800000000000000
+      internalID: 8613076689715599862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec8c123d2d07c2e0800000000000000
+      internalID: -2105699813006996250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ef196fd2b9a92d0800000000000000
+      internalID: -3271131557618647494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9722ffc9525cb80f0800000000000000
+      internalID: -1113579717505637767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_6
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce7f4ec9912a46c0800000000000000
+      internalID: -4158474361448202553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03907bd4f8e59430800000000000000
+      internalID: 3789190799853392651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 0
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cdaeadf0df6ab3a0800000000000000
+      internalID: -6648878956459151933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ff0a56c4a3c28d0800000000000000
+      internalID: -2869854762744873160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 2
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1d0ab8398b0fab0800000000000000
+      internalID: -4976274644402122253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_11
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3972850da77200920800000000000000
+      internalID: 2954404763989976979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_12
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf9fafc540037aa0800000000000000
+      internalID: -6164583165102940242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny with wand_abilities_Melee Sword (ATTACK) Revised_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2050d3b8711544de0800000000000000
+      internalID: -1349864826742176510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_0: 49097443032914663
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_1: 945387445960794449
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_10: -4976274644402122253
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_11: 2954404763989976979
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_12: -6164583165102940242
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_13: -1349864826742176510
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_2: 8613076689715599862
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_3: -2105699813006996250
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_4: -3271131557618647494
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_5: -1113579717505637767
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_6: -4158474361448202553
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_7: 3789190799853392651
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_8: -6648878956459151933
+      bunny with wand_abilities_Melee Sword (ATTACK) Revised_9: -2869854762744873160
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
