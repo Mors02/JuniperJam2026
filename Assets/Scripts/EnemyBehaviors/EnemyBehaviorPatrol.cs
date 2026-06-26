@@ -363,6 +363,11 @@ public class EnemyBehaviorPatrol : MonoBehaviour, ITakeDamage
         _collider.enabled = false;
         _rb.constraints = RigidbodyConstraints2D.FreezePosition;
 
+        if (GameManager.Instance.CurrentWinCon.Type == WinConType.KillEnemies)
+            GameManager.Instance.CurrentWinCon.UpdateWinCon();
+        
+        GameManager.Instance.KilledEnemies++;
+
         _dead = true;
         _animator.SetTrigger("Death");
         if (_walkAudio) _audioManager.StopAudio(_walkAudio);

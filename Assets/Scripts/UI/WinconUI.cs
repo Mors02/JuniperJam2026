@@ -8,6 +8,9 @@ public class WinconUI : MonoBehaviour
     [SerializeField]
     private TMP_Text _winConDescriptionText;
     private Animator _animator;
+
+    [SerializeField]
+    private Color _wonColor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +28,7 @@ public class WinconUI : MonoBehaviour
         _winConProgressText.text = progressText;
 
         if (completed)
-            _winConProgressText.color = Color.green;
+            _winConProgressText.color = _wonColor;
     }
 
     public void UpdateWinConDescriptionUI(WinCon winCon)
