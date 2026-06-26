@@ -95,14 +95,11 @@ public class RingLeaderBehaviour : MonoBehaviour
 
     public void PlayAttackSFX()
     {
-        if (_attackAudio && FMODAudioManager.Instance)
-            FMODAudioManager.Instance.PlayOnce(_attackAudio);
-    }
-
-    public void PlayShortLaughSFX()
-    {
         if (_shortLaughAudio && FMODAudioManager.Instance)
             FMODAudioManager.Instance.PlayOnce(_shortLaughAudio);
+
+        if (_attackAudio && FMODAudioManager.Instance)
+            FMODAudioManager.Instance.PlayOnce(_attackAudio);
     }
 
     public void PlayLaughSFX()
