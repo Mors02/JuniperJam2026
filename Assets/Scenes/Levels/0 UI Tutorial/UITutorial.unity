@@ -1361,7 +1361,7 @@ MonoBehaviour:
     TutorialImage: {fileID: 0}
     _shouldChangeImage: 0
   - _text: And my fellow performers have gone haywire!
-    TutorialImage: {fileID: 21300000, guid: 41a943b1ecfb6d84995168f73b12fa19, type: 3}
+    TutorialImage: {fileID: 3983635355746028461, guid: 1bc7515d410c2af4d9f846a57096acba, type: 3}
     _shouldChangeImage: 1
   - _text: But I trust you'll find a way to handle them...
     TutorialImage: {fileID: 0}
