@@ -9,6 +9,7 @@ public class EndingSceneMenu : MonoBehaviour
     [SerializeField] private Button menuButton;
     [SerializeField] private FMODAudioScriptable _endAudio;
     [SerializeField] private FMODAudioScriptable menuClickAudio;
+    [SerializeField] private FMODAudioScriptable hoverAudio;
 
     private Animator _curtainAnimator;
 
@@ -25,6 +26,12 @@ public class EndingSceneMenu : MonoBehaviour
         {
             menuButton.onClick.AddListener(MainMenu);
         }
+    }
+
+    public void PlayHoverAudio()
+    {
+        if (FMODAudioManager.Instance && hoverAudio)
+            FMODAudioManager.Instance.PlayOnce(hoverAudio, null, true);
     }
 
     void MainMenu()

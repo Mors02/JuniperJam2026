@@ -124,6 +124,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _dashAction;
+    private InputAction _attackAction;
     #endregion
 
     private Ability _dashAbility;
@@ -152,6 +153,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _moveAction = _playerInput.FindActionMap("Player").FindAction("Move");
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
         _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
+        _attackAction = _playerInput.FindActionMap("Player").FindAction("Attack");
 
         _animationSubscriber.SubscribeAction("PlayerLand", () =>
         {
@@ -200,6 +202,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _jumpAction.canceled += OnJumpRelease;
 
         _dashAction.performed += OnDash;
+
+        _attackAction.performed += OnAttack;
     }
 
     private void OnDisable()
@@ -208,6 +212,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _jumpAction.canceled -= OnJumpRelease;
 
         _dashAction.performed -= OnDash;
+
+        _attackAction.performed -= OnAttack;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -253,22 +259,7 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.fKey.wasPressedThisFrame
-            && !KeyBlockedByState())
-        {
-            if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
-            {
-                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(wheelAbilityName);
-                if (parasiteBehaviour is Ability ability)
-                {
-                    wheelAbilityName = null;
-                    _wheelSpin.Spin();
-
-                    _ability = ability;
-                    SwitchState(PlayerState.Special);
-                }
-            }
-        }
+        
 
         /*if (Keyboard.current.tKey.wasPressedThisFrame)
         {
@@ -310,6 +301,26 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
 
         //}
     }
+
+    void OnAttack(InputAction.CallbackContext context)
+    {
+        if (!KeyBlockedByState())
+        {
+            if (abilityLibrary && !string.IsNullOrWhiteSpace(wheelAbilityName))
+            {
+                var parasiteBehaviour = abilityLibrary.GetAnyParasiteB(wheelAbilityName);
+                if (parasiteBehaviour is Ability ability)
+                {
+                    wheelAbilityName = null;
+                    _wheelSpin.Spin();
+
+                    _ability = ability;
+                    SwitchState(PlayerState.Special);
+                }
+            }
+        }
+    }
+
     private GondolaScript GetPlatformBelow()
     {
         

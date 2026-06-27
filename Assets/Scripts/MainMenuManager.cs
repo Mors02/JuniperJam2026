@@ -15,6 +15,7 @@ public class MainMenuManager : MonoBehaviour
     private GameObject _credits;
 
     [SerializeField] private FMODAudioScriptable clickAudio;
+    [SerializeField] private FMODAudioScriptable hoverAudio;
 
     [SerializeField] private FMODAudioScriptable volumeAudioScriptable;
 
@@ -62,6 +63,12 @@ public class MainMenuManager : MonoBehaviour
     {
         if (FMODAudioManager.Instance && clickAudio)
             FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
+    }
+
+    public void PlayHoverAudio()
+    {
+        if (FMODAudioManager.Instance && hoverAudio)
+            FMODAudioManager.Instance.PlayOnce(hoverAudio, null, true);
     }
 
     private IEnumerator ChangeSceneRoutine()

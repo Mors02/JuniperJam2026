@@ -23,7 +23,7 @@ public class UIIngameMenu : MonoBehaviour
     [SerializeField] private FMODAudioScriptable resumeAudioScriptable;
     [SerializeField] private FMODAudioScriptable volumeAudioScriptable;
     [SerializeField] private FMODAudioScriptable clickAudio;
-
+    
     bool isBusy = false;
 
     private InputAction _toggleAction;

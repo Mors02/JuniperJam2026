@@ -5,6 +5,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using AbyssWorks.FMODAudioManager;
 
 public class UITutorial : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class UITutorial : MonoBehaviour
 
     [SerializeField]
     private Button _backButton, _nextButton;
+
+    [SerializeField] private FMODAudioScriptable clickAudio;
+    [SerializeField] private FMODAudioScriptable hoverAudio;
 
     private int _activeStep;
 
@@ -75,6 +79,18 @@ public class UITutorial : MonoBehaviour
             StartCoroutine(ChangeSceneRoutine());
             GameObject.FindGameObjectWithTag("Curtains").GetComponent<Animator>().SetTrigger("Exit");    
         }
+    }
+
+    public void PlayClickAudio()
+    {
+        if (FMODAudioManager.Instance && clickAudio)
+            FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
+    }
+
+    public void PlayHoverAudio()
+    {
+        if (FMODAudioManager.Instance && hoverAudio)
+            FMODAudioManager.Instance.PlayOnce(hoverAudio, null, true);
     }
 
     private IEnumerator ChangeSceneRoutine()

@@ -537,6 +537,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1562601474}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHoverAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3269111855609320227, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
       propertyPath: m_text
       value: Credits
@@ -1641,6 +1669,7 @@ MonoBehaviour:
   _mainMenu: {fileID: 631115170}
   _credits: {fileID: 1698851287}
   clickAudio: {fileID: 11400000, guid: 27085e733b80f524dba37cf2be10d397, type: 2}
+  hoverAudio: {fileID: 11400000, guid: c7251e8f1767485428a5a01ad0f19ac2, type: 2}
   volumeAudioScriptable: {fileID: 11400000, guid: 502b7bf72cbe45447a41ec613abd5f26, type: 2}
 --- !u!224 &1576525208 stripped
 RectTransform:
@@ -2019,6 +2048,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1562601474}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHoverAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3269111855609320227, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
       propertyPath: m_text
       value: Back
@@ -2317,6 +2374,34 @@ PrefabInstance:
     - target: {fileID: 1411054276534253585, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
       propertyPath: m_Name
       value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1562601474}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHoverAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742450110362113003, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
+      propertyPath: onHover.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6114231465776441008, guid: 3c08cf25015ba6e4e9cf7204689a930a, type: 3}
       propertyPath: m_Pivot.x
