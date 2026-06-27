@@ -30,6 +30,8 @@ public class MainMenuManager : MonoBehaviour
     {
         _audioManager = FMODAudioManager.Instance;
 
+        _audioManager.RegisterAudio(volumeAudioScriptable);
+
         if (!_audioManager.IsPlaying(volumeAudioScriptable))
             _audioManager.PlayAudio(volumeAudioScriptable);
 
