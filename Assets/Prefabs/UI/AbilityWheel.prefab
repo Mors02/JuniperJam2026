@@ -128,8 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIAbilityWheelSpin
   _abilityImage: {fileID: 1835025670059503444}
   _spinSpeed: 1000
-  _minSpinDuration: 0.75
-  _maxSpinDuration: 1.25
+  _minSpinDuration: 0.5
+  _maxSpinDuration: 1
   _lerpToSpeed: 2
   _speedUpRange: 0.5
   _speedUpScale: 1.5
