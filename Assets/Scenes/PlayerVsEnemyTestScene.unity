@@ -2215,6 +2215,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   - {fileID: 11400000, guid: fce946ce959bae041b4ba5c252b84a9d, type: 2}
   _wheelAudio: {fileID: 0}
+  _winConditionSelectedAudio: {fileID: 0}
   _confetti: {fileID: 0}
   _confettiSprites: []
   _wheelColors: []
