@@ -1551,6 +1551,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1426590398452062672, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426590398452062672, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6168775715442143400, guid: f331f8bb6ab4de249b559cfe820f64bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1648,6 +1656,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 188737725450774743, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1491174138304913884, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -1710,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6928948663354753817, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0890336
+      value: -2.085476
       objectReference: {fileID: 0}
     - target: {fileID: 6928948663354753817, guid: f0a1a18f7855b5944a08418ef7478e10, type: 3}
       propertyPath: m_LocalPosition.y

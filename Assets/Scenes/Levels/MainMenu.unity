@@ -1606,6 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
   _mainMenu: {fileID: 631115170}
   _credits: {fileID: 1698851287}
+  volumeAudioScriptable: {fileID: 11400000, guid: 502b7bf72cbe45447a41ec613abd5f26, type: 2}
 --- !u!224 &1576525208 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 184162574371504624, guid: 64e0b96b87528c244a711c188e442a83, type: 3}
