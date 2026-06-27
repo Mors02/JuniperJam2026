@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestTravelScene.unity
     guid: 0b9958b6940f08f429b05d46013cf383
   - enabled: 1
+    path: Assets/Scenes/Levels/LoadingScreen.unity
+    guid: a7a3d851cbdf74ffbb5255b3c5c4aa28
+  - enabled: 1
     path: Assets/Scenes/Levels/MainMenu.unity
     guid: 63d0dee9d988d6f449bc9175cc147420
   - enabled: 1
@@ -35,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/5 Outside the circus/OC1Tilemap.unity
     guid: e4a7561f46b91484e82f50f38426a774
+  - enabled: 1
+    path: Assets/Scenes/Levels/0 UI Tutorial/UITutorial.unity
+    guid: 341d140ec9f4a874ebbd61cf4c0dc5ac
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
