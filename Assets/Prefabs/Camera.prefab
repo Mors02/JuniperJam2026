@@ -398,10 +398,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parallax
       objectReference: {fileID: 0}
+    - target: {fileID: 3546722657300213300, guid: efc5014f9495749149d446d2928426a5, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 4519456329547515650, guid: efc5014f9495749149d446d2928426a5, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 6255178524140578749}
+    - target: {fileID: 4607130881453080633, guid: efc5014f9495749149d446d2928426a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -32.99
+      objectReference: {fileID: 0}
     - target: {fileID: 5323733454214377382, guid: efc5014f9495749149d446d2928426a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.027901
@@ -446,6 +454,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 6255178524140578749}
+    - target: {fileID: 7320175933900512413, guid: efc5014f9495749149d446d2928426a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320175933900512413, guid: efc5014f9495749149d446d2928426a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8787356040657177687, guid: efc5014f9495749149d446d2928426a5, type: 3}
       propertyPath: cam
       value: 
