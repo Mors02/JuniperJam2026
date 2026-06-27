@@ -1,12 +1,8 @@
 using AbyssWorks.AnimatorSignal;
 using AbyssWorks.FMODAudioManager;
 using AbyssWorks.ParasiteBehaviour;
-using NUnit.Framework;
 using System;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 public class PlayerSMController : MonoBehaviour, ITakeDamage
@@ -154,11 +150,6 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         _jumpAction = _playerInput.FindActionMap("Player").FindAction("Jump");
         _dashAction = _playerInput.FindActionMap("Player").FindAction("Sprint");
 
-        _jumpAction.performed += OnJump;
-        _jumpAction.canceled += OnJumpRelease;
-
-        _dashAction.performed += OnDash;
-
         _animationSubscriber.SubscribeAction("PlayerLand", () =>
         {
             SwitchState(PlayerState.Idle);
@@ -190,6 +181,22 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
         };*/
         _damageReceiver.OnInvincibilityStart += StartInvincibilityAnimation;
         _damageReceiver.OnInvincibilityEnd += StopInvincibilityAnimation;
+    }
+
+    private void OnEnable()
+    {
+        _jumpAction.performed += OnJump;
+        _jumpAction.canceled += OnJumpRelease;
+
+        _dashAction.performed += OnDash;
+    }
+
+    private void OnDisable()
+    {
+        _jumpAction.performed -= OnJump;
+        _jumpAction.canceled -= OnJumpRelease;
+
+        _dashAction.performed -= OnDash;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
