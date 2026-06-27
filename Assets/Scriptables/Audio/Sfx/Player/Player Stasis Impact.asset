@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
   audioEventReference:
     Guid:
-      Data1: -1326629853
-      Data2: 1114135331
-      Data3: -538331723
-      Data4: 943988545
+      Data1: 1291399958
+      Data2: 1208127831
+      Data3: -935160443
+      Data4: 853177566
     Path: event:/Player/Abilities/Stasis Impact
   volumeScale: 1
   pitchScale: 1
