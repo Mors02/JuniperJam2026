@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WC_FireRings
   m_EditorClassIdentifier: Assembly-CSharp::WC_FireRings
   Name: Jump
-  Description: Jump throught all hoops
+  Description: Dash through all hoops
