@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,8 @@ public class ChangeScene : MonoBehaviour
 
     private Animator _curtainAnimator;
     private Animator _animator;
+
+    [SerializeField] private FMODAudioScriptable _winAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +25,9 @@ public class ChangeScene : MonoBehaviour
         
         if (collision.CompareTag("Player") && GameManager.Instance.Won())
         {
+            if (FMODAudioManager.Instance && _winAudio)
+                FMODAudioManager.Instance.PlayOnce(_winAudio);
+
             _animator.SetTrigger("Activate");
             //collision.GetComponent<PlayerController>().Hide();
             StartCoroutine(ChangeSceneRoutine());

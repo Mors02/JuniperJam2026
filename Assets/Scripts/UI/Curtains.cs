@@ -5,6 +5,7 @@ public class Curtains : MonoBehaviour
 {
     [SerializeField] private FMODAudioScriptable _openAudio;
     [SerializeField] private FMODAudioScriptable _closeAudio;
+    [SerializeField] private BackgroundMusic _backgroundMusic;
 
     /// <summary>
     /// Called at the end of the close curtains animation
@@ -30,5 +31,6 @@ public class Curtains : MonoBehaviour
     {
         if (FMODAudioManager.Instance && _closeAudio)
             FMODAudioManager.Instance.PlayOnce(_closeAudio);
+        if (_backgroundMusic) _backgroundMusic.StopMusic(0.5f);
     }
 }

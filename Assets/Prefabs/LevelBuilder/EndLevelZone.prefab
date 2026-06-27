@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
   _nextLevel: CharacterScene
   _curtainAnimator: {fileID: 0}
+  _winAudio: {fileID: 11400000, guid: 98631fef3c4b3fc48ab83bb4c84a8eea, type: 2}
 --- !u!61 &5247999954118747564
 BoxCollider2D:
   m_ObjectHideFlags: 0

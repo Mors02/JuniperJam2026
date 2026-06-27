@@ -21,9 +21,15 @@ public class BackgroundMusic : MonoBehaviour
             FMODAudioManager.Instance.PlayAudio(backgroundAudio);
     }
 
+    public void StopMusic(float duration)
+    {
+        if (_audioManager && backgroundAudio)
+            FMODAudioManager.Instance.StopAudioLinear(backgroundAudio, duration);
+    }
+
     private void OnDestroy()
     {
         if (_audioManager && backgroundAudio)
-            FMODAudioManager.Instance.StopAudioLinear(backgroundAudio, 0.5f);
+            FMODAudioManager.Instance.StopAudio(backgroundAudio);
     }
 }
