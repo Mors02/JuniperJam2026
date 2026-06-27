@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570f3c53e7929974badb96156ed55fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Curtains
+  _openAudio: {fileID: 11400000, guid: 49cc9ccf972a03b46a5f46bd74e38cbb, type: 2}
+  _closeAudio: {fileID: 11400000, guid: bf41008f887b3ba47bbe154d9729cdf2, type: 2}

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
   audioEventReference:
     Guid:
-      Data1: 1340051140
-      Data2: 1320834884
-      Data3: -1395240819
-      Data4: 452699440
+      Data1: -1781178350
+      Data2: 1182452638
+      Data3: 1071693488
+      Data4: 245753845
     Path: event:/Player/Abilities/Fireball Impact
   volumeScale: 1
   pitchScale: 1

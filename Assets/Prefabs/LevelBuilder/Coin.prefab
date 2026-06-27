@@ -236,6 +236,7 @@ MonoBehaviour:
   _collider: {fileID: 7427977022787368121}
   _minimumJumpTime: 3
   _maximumJumpTime: 7
+  _coinAudio: {fileID: 11400000, guid: 595b11bd8ab5b1641ae5acc706e0d23f, type: 2}
 --- !u!1 &8980582173514093812
 GameObject:
   m_ObjectHideFlags: 0

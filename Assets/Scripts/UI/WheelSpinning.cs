@@ -40,6 +40,8 @@ public class WheelSpinning : MonoBehaviour
 
     [SerializeField]
     private FMODAudioScriptable _wheelAudio;
+    [SerializeField]
+    private FMODAudioScriptable _winConditionSelectedAudio;
 
     [SerializeField]
     private ParticleSystem _confetti;
@@ -103,6 +105,8 @@ public class WheelSpinning : MonoBehaviour
 
                 if (FMODAudioManager.Instance && _wheelAudio)
                     FMODAudioManager.Instance.StopAudio(_wheelAudio);
+                if (FMODAudioManager.Instance && _winConditionSelectedAudio)
+                    FMODAudioManager.Instance.PlayOnce(_winConditionSelectedAudio);
             }
         } 
         

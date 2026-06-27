@@ -339,6 +339,8 @@ MonoBehaviour:
   _jumpAudio: {fileID: 11400000, guid: e876173c59369e740a0325562fe7ee54, type: 2}
   _landAudio: {fileID: 11400000, guid: 4b1564a6534399048911cd0cd5bf99b9, type: 2}
   _damagedAudio: {fileID: 11400000, guid: f988e32fcf558ea44a0cb3fa7f0fec84, type: 2}
+  _glideAudio: {fileID: 11400000, guid: 17107793e7725454e87d3b6b1281c7cc, type: 2}
+  _deathAudio: {fileID: 11400000, guid: 2a5c4edbc3d2eb04cb195155b61c8e1a, type: 2}
   _playerInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _wheelSpin: {fileID: 0}
   _playerEffect: {fileID: 444977718088123399}

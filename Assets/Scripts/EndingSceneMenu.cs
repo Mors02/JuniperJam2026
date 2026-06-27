@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 public class EndingSceneMenu : MonoBehaviour
 {
     [SerializeField] private Button menuButton;
-
+    [SerializeField] private FMODAudioScriptable _endAudio;
     private Animator _curtainAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,5 +41,8 @@ public class EndingSceneMenu : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.20f);
         _curtainAnimator.SetTrigger("Open");
+
+        if (FMODAudioManager.Instance && _endAudio)
+            FMODAudioManager.Instance.PlayOnce(_endAudio);
     }
 }

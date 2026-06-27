@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -17,6 +18,8 @@ public class Coin : MonoBehaviour
     [SerializeField]
     private float _maximumJumpTime;
     private bool _active;
+
+    [SerializeField] private FMODAudioScriptable _coinAudio;
     private void Start()
     {
         _collider.enabled = false;
@@ -61,6 +64,9 @@ public class Coin : MonoBehaviour
             _animator.SetTrigger("Collect");
             _collider.enabled = false;
             _active = false;
+
+            if (FMODAudioManager.Instance && _coinAudio)
+                FMODAudioManager.Instance.PlayOnce(_coinAudio, null, true);
         }
     }
 

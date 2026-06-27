@@ -90,6 +90,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
     [SerializeField] private FMODAudioScriptable _jumpAudio;
     [SerializeField] private FMODAudioScriptable _landAudio;
     [SerializeField] private FMODAudioScriptable _damagedAudio;
+    [SerializeField] private FMODAudioScriptable _glideAudio;
+    [SerializeField] private FMODAudioScriptable _deathAudio;
 
     [Header("Misc")]
     [SerializeField] private InputActionAsset _playerInput;
@@ -602,6 +604,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     _rb.gravityScale = _glideGravityScale;
 
                     if (_animator) _animator.Play(glideAnim, 0, 0);
+                    if (_glideAudio && FMODAudioManager.Instance)
+                        FMODAudioManager.Instance.PlayOnce(_glideAudio, null, true);
                     break;
                 }
             case StateExecutionType.FixedUpdate:
@@ -767,6 +771,8 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
                     FreezeConstraints(RigidbodyConstraints2D.FreezePositionX);
 
                     if (_animator) _animator.Play(deathAnim, 0, 0);
+                    if (_deathAudio && FMODAudioManager.Instance)
+                        FMODAudioManager.Instance.PlayOnce(_deathAudio, null, true);
                     break;
                 }
             default:

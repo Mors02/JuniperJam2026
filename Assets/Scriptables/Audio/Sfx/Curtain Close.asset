@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a6fc56ecef34140bf4db707984cbba, type: 3}
+  m_Name: Curtain Close
+  m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
+  audioEventReference:
+    Guid:
+      Data1: 75126354
+      Data2: 1127317744
+      Data3: -306036840
+      Data4: 2147297058
+    Path: event:/Curtain Close
+  volumeScale: 1
+  pitchScale: 1
+  attenuationMin: 1
+  attenuationMax: 20
