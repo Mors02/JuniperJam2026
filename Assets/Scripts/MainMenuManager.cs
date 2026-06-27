@@ -1,3 +1,4 @@
+using AbyssWorks.FMODAudioManager;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,9 +14,34 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private GameObject _credits;
 
+    [SerializeField] private FMODAudioScriptable volumeAudioScriptable;
+
+    FMODAudioManager _audioManager;
+
+
+    const string MUSICKEY = "MusicVolume";
+    const string SFXKEY = "SfxVolume";
+
+    const string MUSICPARAM = "MX Volume";
+    const string SFXPARAM = "SFX Volume";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _audioManager = FMODAudioManager.Instance;
+
+        if (!_audioManager.IsPlaying(volumeAudioScriptable))
+            _audioManager.PlayAudio(volumeAudioScriptable);
+
+        if (PlayerPrefs.HasKey(MUSICKEY))
+        {
+            _audioManager.SetGlobalParameter(MUSICPARAM, PlayerPrefs.GetFloat(MUSICKEY));
+        }
+        if (PlayerPrefs.HasKey(SFXKEY))
+        {
+            _audioManager.SetGlobalParameter(SFXPARAM, PlayerPrefs.GetFloat(SFXKEY));
+        }
+
         GameObject.FindGameObjectWithTag("Curtains").TryGetComponent(out _curtainAnimator);
         Debug.Log("Entered");
         StartCoroutine(WaitForOpening());

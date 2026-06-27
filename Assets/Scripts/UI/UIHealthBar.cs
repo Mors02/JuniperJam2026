@@ -7,7 +7,7 @@ public class UIHealthBar : MonoBehaviour
     private DamageReceiver _playerDamage;
 
     [SerializeField]
-    private Slider _slider;
+    private Image _sliderImage;
 
     private float _targetPercentage;
     [SerializeField]
@@ -25,9 +25,9 @@ public class UIHealthBar : MonoBehaviour
     public void Update()
     {
         
-        float nextValue = Mathf.Lerp(_slider.value, _targetPercentage, _sliderSpeed);
+        float nextValue = Mathf.Lerp(_sliderImage.fillAmount, _targetPercentage, _sliderSpeed);
 
-        _slider.value = nextValue;
+        _sliderImage.fillAmount = nextValue;
     }
 
     private void UpdateHealthUI(int health)
