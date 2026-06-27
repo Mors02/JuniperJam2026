@@ -138,7 +138,10 @@ public class UIIngameMenu : MonoBehaviour
 
         isBusy = true;
 
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        if (LevelEndManager.instance) 
+            LevelEndManager.instance.CloseAndLoadScene(SceneManager.GetActiveScene().name);
+        else 
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 
     void MainMenu()
@@ -152,7 +155,10 @@ public class UIIngameMenu : MonoBehaviour
 
         GameManager.Instance.CurrentWinCon = null;
 
-        SceneManager.LoadSceneAsync("MainMenu");
+        if (LevelEndManager.instance)
+            LevelEndManager.instance.CloseAndLoadScene("MainMenu");
+        else
+            SceneManager.LoadSceneAsync("MainMenu");
     }
 
     /*void Quit()

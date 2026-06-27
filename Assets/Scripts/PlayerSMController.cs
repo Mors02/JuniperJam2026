@@ -4,6 +4,7 @@ using AbyssWorks.ParasiteBehaviour;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerSMController : MonoBehaviour, ITakeDamage
 {
@@ -163,6 +164,14 @@ public class PlayerSMController : MonoBehaviour, ITakeDamage
             SwitchState(PlayerState.Idle);
         });
         _animationSubscriber.SubscribeAction("Jump", Jump);
+
+        _animationSubscriber.SubscribeAction("PlayerDead", () =>
+        {
+            if (LevelEndManager.instance)
+                LevelEndManager.instance.CloseAndLoadScene(SceneManager.GetActiveScene().name);
+            else
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        });
 
 
         _wheelSpin.onSpinEnd += (string abilityName) =>
