@@ -391,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndingSceneMenu
   menuButton: {fileID: 1548299059}
   _endAudio: {fileID: 11400000, guid: 636619a21cfdb1e42b4266a9edff5c52, type: 2}
+  menuClickAudio: {fileID: 11400000, guid: 27085e733b80f524dba37cf2be10d397, type: 2}
 --- !u!1 &381076992
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private GameObject _credits;
 
+    [SerializeField] private FMODAudioScriptable clickAudio;
+
     [SerializeField] private FMODAudioScriptable volumeAudioScriptable;
 
     FMODAudioManager _audioManager;
@@ -54,6 +56,12 @@ public class MainMenuManager : MonoBehaviour
     {
         StartCoroutine(ChangeSceneRoutine());
         _curtainAnimator.SetTrigger("Exit");
+    }
+
+    public void PlayClickAudio()
+    {
+        if (FMODAudioManager.Instance && clickAudio)
+            FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
     }
 
     private IEnumerator ChangeSceneRoutine()

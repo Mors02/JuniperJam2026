@@ -21,7 +21,8 @@ public class UIIngameMenu : MonoBehaviour
     [Header("Audio Settings")]
     [SerializeField] private FMODAudioScriptable pauseAudioScriptable;
     [SerializeField] private FMODAudioScriptable resumeAudioScriptable;
-    [SerializeField] private FMODAudioScriptable volumeAudioScriptable; 
+    [SerializeField] private FMODAudioScriptable volumeAudioScriptable;
+    [SerializeField] private FMODAudioScriptable clickAudio;
 
     bool isBusy = false;
 
@@ -124,6 +125,9 @@ public class UIIngameMenu : MonoBehaviour
     {
         if (isBusy) return;
 
+        if (FMODAudioManager.Instance && clickAudio)
+            FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
+
         if (resumeAudioScriptable && _audioManager)
             _audioManager.PlayOnce(resumeAudioScriptable);
 
@@ -134,6 +138,9 @@ public class UIIngameMenu : MonoBehaviour
     void Restart()
     {
         if (isBusy) return;
+
+        if (FMODAudioManager.Instance && clickAudio)
+            FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
 
         if (resumeAudioScriptable && _audioManager)
             _audioManager.PlayOnce(resumeAudioScriptable);
@@ -149,6 +156,9 @@ public class UIIngameMenu : MonoBehaviour
     void MainMenu()
     {
         if (isBusy) return;
+
+        if (FMODAudioManager.Instance && clickAudio)
+            FMODAudioManager.Instance.PlayOnce(clickAudio, null, true);
 
         if (resumeAudioScriptable && _audioManager)
             _audioManager.PlayOnce(resumeAudioScriptable);
