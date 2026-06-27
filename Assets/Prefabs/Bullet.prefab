@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1995723513399143}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8534041925199173470, guid: 10e0b3ec0dff74df28514207f71292d7, type: 3}
+  m_Sprite: {fileID: 420292995928503994, guid: ab6ba33d29e33ce4e91b7eb68763bb54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,7 +189,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.35
+  m_Radius: 0.38
 --- !u!114 &7597259409574480230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5827e0fa2d7b1406dba9ad9cc92b2c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
+  _knockbackScale: 2
+  _damage: 1
   _spriteRenderer: {fileID: 1529404633375807894}
   _collisionMask:
     serializedVersion: 2

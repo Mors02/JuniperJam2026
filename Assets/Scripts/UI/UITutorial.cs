@@ -4,6 +4,7 @@ using System;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UITutorial : MonoBehaviour
 {
@@ -61,19 +62,25 @@ public class UITutorial : MonoBehaviour
 
     public void Next()
     { 
-        if (_activeStep < _steps.Count-1)
+        _activeStep++;
+        if (_activeStep < _steps.Count)
         {
             _backButton.interactable = true;
-            _activeStep++;
             ChangeActiveStep();
-            
-            
         }
-
-        if (_activeStep == _steps.Count-1)
+        
+        
+        if (_activeStep == _steps.Count)
         {
-            _nextButton.interactable = false;
+            StartCoroutine(ChangeSceneRoutine());
+            GameObject.FindGameObjectWithTag("Curtains").GetComponent<Animator>().SetTrigger("Exit");    
         }
+    }
+
+    private IEnumerator ChangeSceneRoutine()
+    {
+        yield return new WaitForSeconds(0.90f);
+        SceneManager.LoadScene("Tutorial level");
     }
 
     public void Before()

@@ -18,8 +18,15 @@ public class UIImageContainer : MonoBehaviour
 
     public void Change(Sprite nextSprite)
     {
-        _animator.ResetTrigger("Change");
-        _animator.SetTrigger("Change");
+        if (_image.sprite == null)
+        {
+            _animator.ResetTrigger("Appear");
+            _animator.SetTrigger("Appear");    
+        } else
+        {
+            _animator.ResetTrigger("Change");
+            _animator.SetTrigger("Change");    
+        }
 
         _nextSprite = nextSprite;
     }
