@@ -19,7 +19,7 @@ MonoBehaviour:
       Data3: 1002856086
       Data4: 459423213
     Path: event:/Player/Dash
-  volumeScale: 1
+  volumeScale: 0
   pitchScale: 1
   attenuationMin: 1
   attenuationMax: 20
