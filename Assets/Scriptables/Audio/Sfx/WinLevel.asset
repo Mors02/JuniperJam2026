@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbyssWorks.FMODAudioManager.FMODAudioScriptable
   audioEventReference:
     Guid:
-      Data1: 1218574299
-      Data2: 1270045725
-      Data3: -115056716
-      Data4: 1638182865
-    Path: event:/Win Level
+      Data1: 1239608821
+      Data2: 1137203035
+      Data3: 505736579
+      Data4: 1205167014
+    Path: event:/Objective Complete
   volumeScale: 1
   pitchScale: 1
   attenuationMin: 1

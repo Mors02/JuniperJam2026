@@ -24,7 +24,7 @@ public class FerrisWheelSpinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float zRotation = this.transform.eulerAngles.z + turnSpeed;
+        float zRotation = this.transform.eulerAngles.z + (turnSpeed * Time.deltaTime);
         this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, zRotation);
     }
 }
