@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a013c352ddc8384cae870a191dc58b1, type: 3}
   m_Name: WC_Survive
   m_EditorClassIdentifier: Assembly-CSharp::WC_Survive
-  Name: Survive
+  Name: Survive balloons
   Description: Survive the balloons
