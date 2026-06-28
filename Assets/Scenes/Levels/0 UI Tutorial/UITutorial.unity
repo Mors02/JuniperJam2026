@@ -1384,9 +1384,6 @@ MonoBehaviour:
   - _text: And don't forget to get in the other hat!
     TutorialImage: {fileID: 21300000, guid: 0a7b58c881daf00439099757d3373906, type: 3}
     _shouldChangeImage: 1
-  - _text: 'Note: Gamepad controls are also supported (work in progress)'
-    TutorialImage: {fileID: 0}
-    _shouldChangeImage: 0
   _dialogueText: {fileID: 2115129783}
   _jesterAnimator: {fileID: 1177261634}
   _characterCooldown: 0.01
